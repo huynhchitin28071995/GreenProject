@@ -8,5 +8,7 @@ environment.plugins.append(
         jQuery: 'jquery',
         Popper: ['popper.js', 'default']        
     })
+
+    //hello
 )
 module.exports = environment
