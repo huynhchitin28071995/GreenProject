@@ -14,14 +14,14 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <% if user_signed_in? %>
-    <%= link_to 'Sign Out', destroy_user_session_path , method: "delete" %>
+    <%# <%= link_to 'Sign Out', destroy_user_session_path , method: "delete" %> 
     <a href="<%=destroy_user_session_path%>" data-method="delete" class="btn btn-primary" data-confirm="Are u sure?">Sign Out</a>
     <% else %>
     
     <a href="<%=new_user_session_path%>" class="btn btn-primary">Sign In</a>
-    <%= link_to 'Sign In', new_user_session_path, data: {confirm: 'Are u sure'}%>
+    <%# <%= link_to 'Sign In', new_user_session_path, data: {confirm: 'Are u sure'}%>
     <a href="<%=new_user_registration_path%>" class="btn btn-primary">Sign Up</a>
-    <%= link_to 'Sign Up', new_user_registration_path %>
+    <%# <%= link_to 'Sign Up', new_user_registration_path %>
     <% end %>
     <%= yield %>
   </body>

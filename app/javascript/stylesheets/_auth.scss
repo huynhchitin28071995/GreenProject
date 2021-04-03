@@ -1,0 +1,29 @@
+.login{
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+    .login-form, .signup-form{
+        width: 70%;
+        height: 400px;
+        margin: 0 auto;
+        background-color: aquamarine;
+        color: white;
+        background-image: url('~images/Authentication2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: red;
+        }
+        #user_password, #user_email,#user_password_confirmation{
+            width: 300px;
+        }
+        .btn{
+            margin: 5px;
+        }
+    }
+}
