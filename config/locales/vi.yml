@@ -1,0 +1,22 @@
+vi:
+  hello: Xin Chào %{name}
+
+  menus:
+    home: Trang Chủ
+    about: Giới thiệu
+    contact: Liên hệ
+    product: Sản Phẩm
+
+  title:
+    login: Đăng Nhập
+    sign_up: Đăng Kí
+
+  label:
+    email: Email
+    pass: Mật Khẩu
+    remember: Ghi Nhớ
+    pass_confirm: Xác Nhận Mật Khẩu
+
+  btn:
+    login: Đăng Nhập
+    sign_up: Đăng Kí

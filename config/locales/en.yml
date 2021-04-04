@@ -31,3 +31,23 @@
 
 en:
   hello: "Hello world"
+
+  menus:
+    home: Home
+    about: About Us
+    contact: Contact
+    product: Product
+
+  title:
+    login: login
+    sign_up: sign up
+
+  label:
+    email: Email
+    pass: password
+    remember: remember me
+    pass_confirm: password confirmation
+
+  btn:
+    login: login
+    sign_up: sign up

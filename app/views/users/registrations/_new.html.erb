@@ -1,15 +1,15 @@
-<h2 class="regis">Sign up</h2>
+<h2 class="regis r_title"><%= I18n.t('title.sign_up') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field regis">
-    <%= f.label :email %><br />
+    <%= f.label :email, I18n.t('label.email') %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field regis">
-    <%= f.label :password %>
+    <%= f.label :password, I18n.t('label.pass') %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -17,12 +17,12 @@
   </div>
 
   <div class="field regis">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, I18n.t('label.pass_confirm') %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions regis" style="margin-top: 10px" >
-    <%= f.submit "Sign up",class:"btn btn-primary " %>
+    <%= f.submit I18n.t('btn.sign_up'),class:"btn btn-primary " %>
   </div>
 <% end %>
 
