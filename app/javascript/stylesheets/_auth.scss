@@ -4,21 +4,31 @@
     height: 100vh;
     position: relative;
     .login-form{
-        width:60%;
+        width:30%;
         height:600px;
         color: yellow;
         position: absolute;
         top: 10%;
-        left:10%;
+        left:30%;
         border: yellow 5px solid;
         border-radius: 12px;
-        padding-left: 2%;
-        padding-top: 2%;
-        background-image: url('~images/auth.jpg');
+        padding: 2%;
+        // background-image: url('~images/auth.jpg');
+        background-color: black;
         background-repeat:no-repeat;
         background-size: 100% 100%;
     }
     a {
         color: white;
+    }
+    #row_2{
+        border-top: yellow dashed 5px;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 30px;
+        color: wheat;
+    }
+    .regis{
+        text-align: right;
     }
 }
