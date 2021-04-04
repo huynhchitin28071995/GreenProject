@@ -5,10 +5,12 @@ vi:
     about: Giới Thiệu
     contact: Liên Hệ
     product: Sản Phẩm
-  btn: 
+  btn:
+    signin: Đăng Nhập 
     login: Đăng Nhập
     signup: Đăng Ký
     logout: Đăng Xuất
+    signout: Đăng Xuất
   label:
     email: Địa Chỉ Mail
     password: Mật Khẩu

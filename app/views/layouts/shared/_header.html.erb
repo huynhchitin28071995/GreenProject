@@ -1,0 +1,22 @@
+<header>
+    <div class="bg-warning py-2">
+        Some top header info
+    </div>
+
+    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="main_nav">
+                <% if user_signed_in? %>
+                    <%= render 'layouts/shared/header-signed-in' %>
+                <% else %>
+                    <%= render 'layouts/shared/header-not-signed-in' %>
+                <% end %>
+
+            </div> <!-- navbar-collapse.// -->
+        </div> <!-- container-fluid.// -->
+    </nav>
+</header>
