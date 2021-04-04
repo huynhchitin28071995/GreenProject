@@ -10,6 +10,7 @@ vi:
   title:
     login: Đăng Nhập
     sign_up: Đăng Kí
+    logout: Đăng xuất
 
   label:
     email: Email

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <h1><%= I18n.t('hello',{name:'thanh'})%></h1>
 
-  <h1><%= I18n.t('menus.home') %></h1>
     <title>ChoThuoc</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -14,20 +12,12 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  # <p class="notice"><%= notice %></p>
+  # <p class="alert"><%= alert %></p>
   
-  <% if user_signed_in? %>
-
-  <a href="<%= destroy_user_session_path %>" data-confirm="Are you sure?" data-method="delete" class="btn btn-primary"> Sign Out</a>
-      <% else %>
   
-      <a href="<%= new_user_session_path %>" class="btn btn-primary"> Sign In</a>
-  
-      <a href="<%= new_user_registration_path %>" class="btn btn-primary"> Sign Up</a>
-  
-      
-      <% end %>
+ 
+  <%= render 'layouts/share/header' %>
 
     <%= yield %>
   </body>
