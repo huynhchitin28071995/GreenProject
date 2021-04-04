@@ -1,0 +1,20 @@
+vi:
+  hello: Xin Chào %{name}
+  menus:
+    home: Trang Chủ
+    about: Giới Thiệu
+    contact: Liên Hệ
+    product: Sản Phẩm
+  btn: 
+    login: Đăng Nhập
+    signup: Đăng Ký
+    logout: Đăng Xuất
+  label:
+    email: Địa Chỉ Mail
+    password: Mật Khẩu
+    confirm_password: Xác Nhận Mật Khẩu
+    remember: Lưu Thông Tin
+  placeholders:
+    email: Nhập Địa Chỉ Mail 'vidu@vidu.com'
+    password: Nhập Mật Khẩu
+    confirm_password: Nhập Lại Mật Khẩu
