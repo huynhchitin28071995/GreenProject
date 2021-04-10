@@ -4,16 +4,15 @@
 .login{
     width: 100%;
     background-color: white;
-    height: 100vh;
-    position: absolute;
-    top:25%;
+    height: auto;
+    margin: 0 auto;
     .shared-links{
         color:blue;
         border-top: 2px solid black;
     }
     .login-form, .signup-form{
-        width: 70%;
-        height: 400px;
+        width: 100%;
+        height: auto;
         margin: 0 auto;
         background-color: aquamarine;
         color: white;
@@ -26,10 +25,19 @@
             color: red;
         }
         #user_password, #user_email,#user_password_confirmation{
-            width: 300px;
+            width: 75%;
         }
         .btn{
             margin: 5px 0;
         }
     }
+}
+#footer{
+    background-color: white;
+    .copyright{
+            float:left;
+        }
+    .update{
+            float:right;
+        }
 }

@@ -20,3 +20,7 @@ en:
     email: Input Your Email 'example@example.com'
     password: Input Your Password
     confirm_password: Input Your Password Again
+  links:
+    login_facebook: Login with your Facebook account
+    login_google: Login with your Google account
+    forgot_password: Forgot your password?
