@@ -1,10 +1,6 @@
-@import 'bootstrap/scss/bootstrap';
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/brands';
-@import '@fortawesome/fontawesome-free/scss/regular';
-@import '@fortawesome/fontawesome-free/scss/solid';
-@import './auth';
-body {
-    background-color:wheat;
-}
+@import '.variable'
+@import '.common'
+@import './vendors/bootstrap';
+@import './vendors/auth';
+@import './vendors/fonts/fontawesome';
+

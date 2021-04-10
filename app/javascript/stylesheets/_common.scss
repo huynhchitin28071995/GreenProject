@@ -1,0 +1,13 @@
+*{
+    box-sizing:border-box;
+}
+body {
+    background-color:$wheat-color;
+}
+a {
+    color: $white-color;
+    &:hover{
+        color:$aqua-color;
+        text-decoration:none;
+    }
+}
