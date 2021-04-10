@@ -11,5 +11,10 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-import '../stylesheets/application.scss'
+import '../stylesheets/application'
+import NavBarTrigger from "../js/events/navbar_events"
 const images = require.context('../images', true)
+
+document.addEventListener("DOMContentLoaded",function () {
+    NavBarTrigger()
+})

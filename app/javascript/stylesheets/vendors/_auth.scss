@@ -19,6 +19,7 @@
         background-image: url('~images/Authentication2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         padding: 30px;
        
         a:hover{
@@ -33,13 +34,13 @@
     }
 }
 #footer{
-    background-color: black;
-    height: auto;
-    padding: 0;
+    height: 50px;
     .copyright{
             float:left;
+            padding: 5px;
         }
     .update{
             float:right;
+            padding: 5px;
         }
 }
