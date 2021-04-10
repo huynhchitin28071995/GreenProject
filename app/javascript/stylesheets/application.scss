@@ -1,6 +1,11 @@
-@import '.variable'
-@import '.common'
+@import './variables';
+@import './common';
 @import './vendors/bootstrap';
-@import './vendors/auth';
 @import './vendors/fonts/fontawesome';
+
+@import './vendors/auth';
+@import './vendors/header';
+
+
+
 
