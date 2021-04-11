@@ -11,10 +11,42 @@
   </head>
  
   <body>
-  <%= render 'layouts/shared/header' %>
+  <!-- <%= render 'layouts/shared/header' %> -->
+  <header class='container'>
+    <div class="bg-warning" id='notice'>
+        <button id="open-navbar" data-trigger="navbar_main" class="d-lg-none btn btn-transparent text-white" type="button"><i class="fas fa-bars"></i></button>
+
+    </div>
+    <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <div class="offcanvas-header">
+                <button class="btn-close float-end"></button>
+            </div>
+            <a class="navbar-brand" href="#">Brand</a>
+            <ul class="navbar-nav">
+                <% if user_signed_in? %>
+                    <%= render 'layouts/shared/header-signed-in' %>
+                        <% else %>
+                            <%= render 'layouts/shared/header-not-signed-in' %>
+                                <% end %>
+            </ul>
+        </div> <!-- container// -->
+    </nav>
+</header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-  <%= render 'layouts/shared/footer' %>
+  <!-- <%= render 'layouts/shared/footer' %> -->
+  <footer class="container bg-primary">
+    <div >
+            <div class="copyright">
+                <p>Copyright &copy;</p>
+            </div>
+    
+            <div class="update">
+                <p>Updated at...</p>
+            </div>
+    </div>
+    </footer>
   </body>
 </html>

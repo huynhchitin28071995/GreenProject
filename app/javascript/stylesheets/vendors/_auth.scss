@@ -33,14 +33,15 @@
         }
     }
 }
-#footer{
+footer{
+    padding: 15px !important;
     height: 50px;
     .copyright{
             float:left;
-            padding: 5px;
+            margin: 5px;
         }
     .update{
             float:right;
-            padding: 5px;
+            margin: 5px;
         }
 }
