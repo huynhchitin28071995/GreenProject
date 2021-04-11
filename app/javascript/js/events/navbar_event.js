@@ -20,7 +20,7 @@ function show_offcanvas(offcanvas_id) {
 }
 
 const NavBarTrigger = () => {
-    document.querySelectorAll('[data-trigger]').forEach(function (everyelement) {
+    document.querySelectorAll('[data-trigger="navbar_main"]').forEach(function (everyelement) {
         let offcanvas_id = everyelement.getAttribute('data-trigger');
         everyelement.addEventListener('click', function (e) {
             e.preventDefault();
