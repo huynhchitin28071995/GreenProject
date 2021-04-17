@@ -34,10 +34,12 @@ const NavBarTrigger = () => {
         });
     });
 
-    document.querySelector('.screen-darken').addEventListener('click', function (event) {
-        close_offcanvas();
-    });
-
+    let element = document.querySelector('.screen-darken');
+    if(element){
+        document.querySelector('.screen-darken').addEventListener('click', function (event) {
+            close_offcanvas();
+        });
+    }
 }
 
   // DOMContentLoaded  end

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <%= render 'layouts/shared/header_content' %>
- 
   <body>
-  <span class='screen-darken'></span>
-    <%= render 'layouts/shared/header' %>
     <%= yield %>
   </body>
+  <% if content_for?(:js_page) %>
+    <%= yield (:js_page) %>
+  <% end %>
 </html>
