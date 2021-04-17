@@ -33,10 +33,12 @@ function darken_screen(yesno){
               close_offcanvas();
           });
       });
-    
-      document.querySelector('.screen-darken').addEventListener('click', function(event){
+    let element = document.querySelector('.screen-darken')
+    if (element){
+      element.addEventListener('click', function(event){
         close_offcanvas();
       });
+    }
   }
 
   export default NavbarTrigger

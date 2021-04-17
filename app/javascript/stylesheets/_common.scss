@@ -5,10 +5,10 @@ body {
     background-color:$wheat-color;
 }
 a {
-    color: $white-color;
+    color: $white-color !important;
     &:hover{
-        color:$aqua-color;
-        text-decoration:none;
+        color:$aqua-color !important;
+        text-decoration:none !important;
     }
 }
 #notice{
@@ -18,7 +18,7 @@ a {
         min-height:$min-height;
         max-height:$max-height;
         &:focus{
-            box-shadow: none |important;
+            box-shadow: none !important;
         }
     }
 }

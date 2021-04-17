@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <%= render 'layouts/share/header_content'%>
+    <body>
+        <%= yield%>
+    </body>
+    
+    <%if content_for?(:js_page)%>
+        <%= yield(:js_page)%>
+    <%end%>
+</html>

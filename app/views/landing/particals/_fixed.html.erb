@@ -1,0 +1,36 @@
+<header>
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+     
+    </li>
+    <li class="nav-item">
+      
+    </li>
+    
+  </ul>
+</nav>
+<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+</div>
+</header>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-6" id="fixed-col-left">
+            <div class="btn btn-primary">
+                <%= link_to I18n.t('title.login'), new_user_session_path , class:'nav-link'%> 
+            </div>
+
+        </div>
+    
+        <div class="col-sm-6">
+            <div class="btn btn-primary">
+                <%= link_to I18n.t('title.sign_up'), new_user_registration_path , class:'nav-link'%> 
+            </div>
+        </div>
+
+    </div>
+
+</div>
