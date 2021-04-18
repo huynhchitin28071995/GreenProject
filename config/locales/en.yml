@@ -16,6 +16,9 @@ en:
     password: Password
     confirm_password: Confirm Your Password
     remember: Remember Me
+    no_account?: Have an account?
+    had_account?: Had an account already.
+    account_purpose: Log-in/Sign-up to view carts, manage stores and profile.
   placeholders:
     email: Input Your Email 'example@example.com'
     password: Input Your Password

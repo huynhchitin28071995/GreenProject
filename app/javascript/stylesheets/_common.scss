@@ -40,6 +40,23 @@ a{
     }
 }
 #slider{
-   
+   max-height: 80vh;
+}
+#member{
+    margin: 5px auto;
+    #login-slide{
+        width: 100%;
+        background-image: url('https://picsum.photos/1200/400');
+        background-position: center;
+        background-size: cover;
+        padding: 15px;
+    } 
+    #signup-slide{
+        width: 100%;
+        background-image: url('https://picsum.photos/1200/400');
+        background-position: center;
+        background-size: cover;
+        padding: 15px;
+    }
 }
 

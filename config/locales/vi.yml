@@ -16,6 +16,9 @@ vi:
     password: Mật Khẩu
     confirm_password: Xác Nhận Mật Khẩu
     remember: Lưu Thông Tin
+    no_account?: Chưa có tài khoản?
+    had_account?: Đã có tài khoản?
+    account_purpose: Đăng nhập/Đăng ký để xem giỏ hàng, quản lý cửa hàng, thông tin cá nhân.
   placeholders:
     email: Nhập Địa Chỉ Mail 'vidu@vidu.com'
     password: Nhập Mật Khẩu
