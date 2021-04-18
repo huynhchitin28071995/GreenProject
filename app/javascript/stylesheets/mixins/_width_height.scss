@@ -1,0 +1,5 @@
+@mixin SetWidthHeight($w: 100%, $h: 100%, $p: relative) {
+    position: $w;
+    width: $h;
+    height: $p;
+}

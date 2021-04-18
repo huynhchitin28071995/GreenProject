@@ -1,62 +1,53 @@
-*{
+* {
     box-sizing: border-box;
 }
 body {
     background-color: white;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
-a{
+a {
     color: $white-color;
-    &:hover{
+    &:hover {
         color: chocolate;
         text-decoration: none;
     }
 }
-#notice{
+#notice {
     min-height: $notice-height;
     max-height: $notice-height;
-    #open-navbar{
+    #open-navbar {
         min-height: $notice-height;
         max-height: $notice-height;
-        &:focus{
+        &:focus {
             box-shadow: none !important;
         }
     }
 }
-.screen-darken{
-    height: 100%; width:0%;
+.screen-darken {
+    height: 100%;
+    width: 0%;
     z-index: 30;
-    position: fixed; top: 0; right: 0; 
-    opacity:0; visibility:hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
     background-color: rgba(34, 34, 34, 0.6);
-    transition:opacity .2s linear, visibility 0.2s, width 2s ease-in;
-    &.active{
-        z-index:10; 
-        transition:opacity .3s ease, width 0s;
-        opacity:1;
-        width:100%;
-        visibility:visible;
+    transition: opacity 0.2s linear, visibility 0.2s, width 2s ease-in;
+    &.active {
+        z-index: 10;
+        transition: opacity 0.3s ease, width 0s;
+        opacity: 1;
+        width: 100%;
+        visibility: visible;
     }
 }
-#slider{
-   max-height: 80vh;
-}
-#member{
-    margin: 5px auto;
-    #login-slide{
+section{
+    &[name='slide']{
+        height: 700px;
         width: 100%;
-        background-image: url('https://picsum.photos/1200/400');
-        background-position: center;
-        background-size: cover;
-        padding: 15px;
-    } 
-    #signup-slide{
-        width: 100%;
-        background-image: url('https://picsum.photos/1200/400');
-        background-position: center;
-        background-size: cover;
-        padding: 15px;
+        padding: 0;
     }
 }
 

@@ -22,8 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-- placeholder.com
+- placeholder.com, placeimg.com : tao hinh
 - tao tai khoan AWS
+- windows terminal preview : multiple command line.
+- stimulus yarn
+
 - Controller: ROR
     + Chat, noti, subscribe.
 - Front-end: javascript, view.
@@ -36,5 +39,12 @@ Things you may want to cover:
 - lam` landing page: 
     dong contact.
     slider. //Max-height: 80vh
-    slider: dang ky, dang nhap. //TODO.
-    san pham. //TODO. different slider.
+    slider: dang ky, dang nhap.
+    san pham: 
+        hinh, 
+        ten, 
+        gia, 
+        khuyen mai: y/n, 
+        nha sx, 
+        nha pp.
+//TODO slider products: khung san pham, co hoac khong co khuyen mai.

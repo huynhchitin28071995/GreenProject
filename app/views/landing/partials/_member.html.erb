@@ -1,50 +1,25 @@
-<section class='container' id="member">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div id="login-slide">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h1>
-                                <%=I18n.t('label.had_account?')%>
-                            </h1>
-
-                        </div>
-                        <div class="col-sm-6">
-                            <h2>
-                                <%=I18n.t('label.account_purpose')%>
-                            </h2>
-                            <%= link_to I18n.t('btn.login'), new_user_session_path, class: 'btn btn-primary' %>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div id="signup-slide" class="">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h1>
-                                <%=I18n.t('label.no_account?')%>
-                            </h1>
-
-                        </div>
-                        <div class="col-sm-6">
-                            <h2>
-                                <%=I18n.t('label.account_purpose')%>
-                            </h2>
-                            <%= link_to I18n.t('btn.signup'), new_user_registration_path , class: 'btn btn-primary' %>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+<section class='container' id="member" name='member'>
+  <div id="member-banner">
+    <div class="row text-white">
+      <div class="col-sm-6">
+        <h1 class='text-uppercase text-align-justify'>
+          <%=I18n.t('label.had_account?')%>
+        </h1>
+        <h3 class='text-align-justify'>
+          <%=I18n.t('label.account_purpose')%>
+        </h3>
+        <%= link_to I18n.t('btn.login'), new_user_session_path, class: 'btn btn-primary' %>
+      </div>
+      <div class="col-sm-6">
+        <h1 class='text-uppercase text-align-justify'>
+          <%=I18n.t('label.no_account?')%>
+        </h1>
+        <h3 class='text-align-justify'>
+          <%=I18n.t('label.account_purpose')%>
+        </h3>
+        <%= link_to I18n.t('btn.signup'), new_user_session_path , class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
