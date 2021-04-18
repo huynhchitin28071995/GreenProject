@@ -44,3 +44,63 @@ a{
         visibility:visible;
     }
 }
+
+.carousel {
+    @include DefaultWidthHeight();
+    .carousel-inner {
+        @include DefaultWidthHeight();
+    }
+    .carousel-item{
+        @include DefaultWidthHeight();
+    }
+    .image-slider{
+        @include DefaultWidthHeight();
+        background-color: gray;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &[tags='1'] {
+            background-image: url('~images/banners/banner-01.jpg');
+        }
+        &[tags='2'] {
+            background-image: url('~images/banners/banner-02.jpg');
+        }
+        &[tags='3'] {
+            background-image: url('~images/banners/banner-03.jpg');
+        }
+        &[tags='4'] {
+            background-image: url('~images/banners/banner-04.png');
+        }
+        &[tags='5'] {
+            background-image: url('~images/banners/banner-05.jpg');
+        }
+    }
+}
+
+section {
+    &[name='slide'] {
+        height: 800px;
+        width: 100%;
+        padding: 0;
+    }
+    position: relative;
+    background-color: #fff;
+    height: 800px;
+    padding: 30px;
+    &[name='member']{
+
+    }
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+}
+
+.product{
+    border: 1px solid gray;
+}
+.product-name{
+    background-color: burlywood;
+}

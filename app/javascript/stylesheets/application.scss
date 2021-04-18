@@ -2,5 +2,7 @@
 @import './vendors/bootstrap';
 @import './vendors/font/fontawesome';
 @import './vendors/auth';
+@import './mixins/minxins';
 @import './common';
-@import './vendors/header/header'
+@import './vendors/header/header';
+@import './landing/header';

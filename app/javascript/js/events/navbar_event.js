@@ -34,9 +34,12 @@ const NavBarTrigger = () => {
         });
     });
 
-    document.querySelector('.screen-darken').addEventListener('click', function (event) {
-        close_offcanvas();
-    });
+    let element = document.querySelector('.screen-darken')
+    if (element) {
+        element.addEventListener('click', function (event) {
+            close_offcanvas();
+        });
+    }
 }
 
 export default NavBarTrigger
