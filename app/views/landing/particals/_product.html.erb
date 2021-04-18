@@ -1,0 +1,24 @@
+<section name="product">
+    <div class="p-4" style="border-bottom:solid gray 3px">
+        <div class="title">sản phẩm bán chạy</div>
+    </div>
+    <div id="hot-products" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item1">
+                <% @product.each do |product|%>
+                    <div class="product">
+                        <div class="product-name">
+                            <%= product[:name] %>
+                        </div>
+                        <div class="product-image" style="background-image: url( <%= product[:image] %>)">
+                            
+                        </div>
+                        <div class="product-discount rounded-circle">
+                            -<%= product[:discount]%>
+                        </div>
+                    </div>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</section>
