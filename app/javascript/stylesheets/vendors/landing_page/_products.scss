@@ -6,7 +6,17 @@
                 width: 15%;
                 margin-right: 0;
                 display: block;
+                position: relative;
                 padding: 15px;
+                .discount{
+                    position: absolute;
+                    border: solid 1px;
+                    background-color: red;
+                    color: white;
+                    border-radius: 50%;
+                    left: 70%;
+                    top: 15%;
+                }
                 .product-img{
                     width: 100%;
                 }

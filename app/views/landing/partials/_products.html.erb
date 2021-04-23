@@ -1,22 +1,24 @@
 <section id='products' class='container' name='product'>
     <div id="products-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class='carousel-item active'>
-               <img src="http://placeimg.com/300/480/arch/grayscale" alt="">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Image 1</h5>
-                        <p>Image 1</p>
-                    </div>
-            </div>
+
             <% @products.each do |product|%>
-                <div class='carousel-item' tags='<%=product.id%>'>
-                    <%= image_tag product.image , class: 'product-img'%>
+                <div class='carousel-item <%=product.index == 1? 'active' : '' %>' tags='<%=product.id%>'>
+                    <%= image_tag product.image , class: 'product-img' %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5><%=product.name%></h5>
-                            <p><%=product.price%></p>
+                            <h5>
+                                <%=product.name%>
+                            </h5>
+                            <p>
+                                <%=product.price%>
+                            </p>
+                        </div>
+                        <div class='discount'>
+                            <%=product.discount * 100 %>
+
                         </div>
                 </div>
-            <% end %>
+                <% end %>
 
         </div>
         <a class="carousel-control-prev" href="#products-carousel" role="button" data-slide="prev">
