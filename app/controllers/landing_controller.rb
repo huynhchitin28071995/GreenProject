@@ -10,13 +10,14 @@ class LandingController < ApplicationController
    {
      id: 1,
      name: 'thuoc troi noi',
-     image: 'https://via.placeholder.com/600x400',
+     image: 'https://via.placeholder.com/640x640',
      nsx: 'Pharmacity',
      npp: 'Green Academy',
-     hot: true,
-     km: false,
      price: 200,
-     discount: 0
+     event: {
+       hot: true,
+       gift: true,
+     }
    },
    {
      id: 2,
@@ -24,10 +25,11 @@ class LandingController < ApplicationController
      image: 'https://via.placeholder.com/150x100',
      nsx: 'Pharmacity',
      npp: 'Green Academy',
-     hot: true,
-     km: true,
      price: 200,
-     discount: '10%'
+     event: {
+       hot: true,
+       discount: '10%',
+     }
    },
    {
      id: 3,
@@ -35,10 +37,11 @@ class LandingController < ApplicationController
      image: 'https://via.placeholder.com/150x100',
      nsx: 'Pharmacity',
      npp: 'Green Academy',
-     hot: true,
-     km: false,
      price: 200,
-     discount: 0
+     event: {
+      hot: true,
+      km: true,
+     }
    },
    {
      id: 4,
@@ -46,65 +49,39 @@ class LandingController < ApplicationController
      image: 'https://via.placeholder.com/150x100',
      nsx: 'Pharmacity',
      npp: 'Green Academy',
-     hot: true,
-     km: false,
-     price: 200,
-     discount: 0
+     price: 200,  
+     event: {
+      hot: true,
+      km: true,
+      discount: '10%',
+     }
    },
    {
-     id: 5,
-     name: 'thuoc troi noi',
-     image: 'https://via.placeholder.com/150x100',
-     nsx: 'Pharmacity',
-     npp: 'Green Academy',
+    id: 5,
+    name: 'thuoc troi noi',
+    image: 'https://via.placeholder.com/150x100',
+    nsx: 'Pharmacity',
+    npp: 'Green Academy',
+    price: 200,  
+    event: {
      hot: true,
      km: true,
-     price: 200,
-     discount: '10%'
-   },
-   {
-     id: 6,
-     name: 'thuoc troi noi',
-     image: 'https://via.placeholder.com/150x100',
-     nsx: 'Pharmacity',
-     npp: 'Green Academy',
-     hot: true,
-     km: false,
-     price: 200,
-     discount: 0
-   },
-   {
-     id: 7,
-     name: 'thuoc troi noi',
-     image: 'https://via.placeholder.com/150x100',
-     nsx: 'Pharmacity',
-     npp: 'Green Academy',
-     hot: true,
-     km: false,
-     price: 200,
-     discount: 0
-   },
-   {
-     id: 8,
-     name: 'thuoc troi noi',
-     image: 'https://via.placeholder.com/150x100',
-     nsx: 'Pharmacity',
-     npp: 'Green Academy',
+     discount: '10%',
+    }
+  },{
+    id: 6,
+    name: 'thuoc troi noi',
+    image: 'https://via.placeholder.com/150x100',
+    nsx: 'Pharmacity',
+    npp: 'Green Academy',
+    price: 200,  
+    event: {
      hot: true,
      km: true,
-     price: 150,
-     discount: '10%'
-   },
-   {
-     id: 9,
-     name: 'thuoc troi noi',
-     image: 'https://via.placeholder.com/150x100',
-     nsx: 'Pharmacity',
-     npp: 'Green Academy',
-     hot: true,
-     km: false,
-     price: 200,
-     discount: 0
-   }
+     discount: '10%',
+    }
+  }
+   
+   @products = @products.map{|item| OpenStruct.new(item) }
   end
 end

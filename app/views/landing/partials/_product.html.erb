@@ -3,16 +3,6 @@
         <div class='title'>SẢN PHẨM BÁN CHẠY</div>
     </div>
     <% @products.each do |product| %>
-        <div class='product'>
-            <div class='product-name'>
-                <%= product[:name] %>
-                    <% if product[:km] %>
-                        <div class='product-km rounded-circle bg-danger'>
-                            <%= product[:discount] %>
-                        </div>
-                        <% end %>
-            </div>
-            <div class="product-image" style="background-image: url(<%= product[:image] %>);"></div>
-        </div>
+       <%= render partial: 'shared/product/item', locals: { product: product } %>
         <%end%>
 </section>
