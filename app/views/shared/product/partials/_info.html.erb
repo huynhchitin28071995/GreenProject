@@ -1,0 +1,24 @@
+<div class='product-info'>
+
+    <div class='name p-1 text-center text-wrap text-capitalize font-weight-bolder text-monospace'>
+        <%= product.name%>
+    </div>
+
+    <div class='nxs p-1 text-left text-wrap text-capitalize text-primary'>
+        <%= product.nxs%>
+    </div>
+    
+    <div class='price ml-2 text-primary'>
+        <div class="price-origin d-inline-block <% product.events[:discount] ? 'discount': '' %>" style='font-size:0.5em'>
+            <%= product.price%>
+        </div>
+        <div class='price-discount d-inline-block text-danger'>
+            <%= discount(product)%>
+        </div>
+    </div>
+
+    <div class='npp p-1 border-top text-left text-wrap text-capitalize text-info'>
+        <%= product.npp%>
+    </div>
+
+</div>

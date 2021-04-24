@@ -1,0 +1,12 @@
+<div class="product">
+<div class="product-name">
+
+        <div class='events'>
+            <%= render partials: 'shared/product/partials/discount', locals: {discount: product.events[:discount]} %>
+            <%= render partials: 'shared/product/partials/gift', locals: {gift: product.events[:gift]} %>
+            <%= render partials: 'shared/product/partials/hot', locals: {hot: product.events[:hot]} %>
+        </div>
+            <%= render partials: 'shared/product/partials/info',locals: {info: product.info}%>
+            <%= render partials: 'shared/product/partials/image', locals: {image: product.image} %>
+
+</div>   

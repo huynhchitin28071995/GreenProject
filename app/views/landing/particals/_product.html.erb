@@ -6,19 +6,8 @@
         <div class="carousel-inner">
             <div class="carousel-item1">
                 <% @product.each do |product|%>
-                    <div class="product">
-                        <div class="product-name">
-                            <%= product[:name] %>
-                        </div>
-                        <div class="product-image" style="background-image: url( <%= product[:image] %>)">
-                            
-                        </div>
-                        <div class="product-discount rounded-circle">
-                            -<%= product[:discount]%>
-                        </div>
-                    </div>
-                <%end%>
-            </div>
+                    <%= render  'shared/product/item', locals: {product: product} %>
+                <%end%> 
         </div>
     </div>
 </section>

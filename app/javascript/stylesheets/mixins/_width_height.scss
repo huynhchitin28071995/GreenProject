@@ -1,5 +1,5 @@
 @mixin  DefaultWidthHeight ($w:100%, $h:300%, $p:relative){
-    position: relative;
+    position: $p;
     width: 100%;
     height: 100%;
 }
