@@ -47,4 +47,5 @@ Things you may want to cover:
         khuyen mai: y/n, 
         nha sx, 
         nha pp.
-//TODO slider products: khung san pham, co hoac khong co khuyen mai.
+
+//TODO: solution trong action dua hang hoa vao gio
