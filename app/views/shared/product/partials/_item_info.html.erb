@@ -1,0 +1,24 @@
+<div class='product-info'>
+  <div class='name border-bottom p-3 text-left text-wrap font-weight-bolder text-capitalize text-secondary'>
+    <%= product.name %>
+    <div class='prices'>
+     
+      <% if discount?(product) %>
+       <span class='old-price'>
+        <%= product.price.to_i%>
+      </span>
+        <span class='new-price'>
+          <%= discount(product)%>
+        </span>
+        <% else %>
+         <span class='new-price'>
+        <%= product.price.to_i%>
+      </span>
+      <% end %>
+
+    </div>
+    <%= product.nsx %>
+
+  </div>
+
+</div>
