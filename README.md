@@ -47,5 +47,5 @@ Things you may want to cover:
         khuyen mai: y/n, 
         nha sx, 
         nha pp.
-
+https://splidejs.com/
 //TODO: solution trong action dua hang hoa vao gio
