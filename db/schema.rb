@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_25_082614) do
+ActiveRecord::Schema.define(version: 2021_04_25_084354) do
+
+  create_table "manufacturers", force: :cascade do |t|
+    t.string "name"
+    t.string "alias"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -21,6 +28,8 @@ ActiveRecord::Schema.define(version: 2021_04_25_082614) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "unit"
     t.string "package"
+    t.integer "manufacturer_id", null: false
+    t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -35,4 +44,5 @@ ActiveRecord::Schema.define(version: 2021_04_25_082614) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "products", "manufacturers"
 end
