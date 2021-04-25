@@ -1,24 +1,24 @@
 <div class='product-info'>
 
     <div class='name p-1 text-center text-wrap text-capitalize font-weight-bolder text-monospace'>
-        <%= product.name%>
+        <%= info.name%>
     </div>
 
     <div class='nxs p-1 text-left text-wrap text-capitalize text-primary'>
-        <%= product.nxs%>
+        <%= info.nxs%>
     </div>
     
     <div class='price ml-2 text-primary'>
-        <div class="price-origin d-inline-block <% product.events[:discount] ? 'discount': '' %>" style='font-size:0.5em'>
-            <%= product.price%>
+        <div class="price-origin d-inline-block <% info.events[:discount] ? 'discount': '' %>" style='font-size:0.5em'>
+            <%= info.price%>
         </div>
         <div class='price-discount d-inline-block text-danger'>
-            <%= discount(product)%>
+            <%= discount(info)%>
         </div>
     </div>
 
     <div class='npp p-1 border-top text-left text-wrap text-capitalize text-info'>
-        <%= product.npp%>
+        <%= info.npp%>
     </div>
 
 </div>

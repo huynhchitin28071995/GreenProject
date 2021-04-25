@@ -6,8 +6,9 @@
         <div class="carousel-inner">
             <div class="carousel-item1">
                 <% @product.each do |product|%>
-                    <%= render  'shared/product/item', locals: {product: product} %>
+                    <%= render partial:'shared/product/item', locals: {product: product} %>
                 <%end%> 
+            </div>
         </div>
     </div>
 </section>
