@@ -53,3 +53,4 @@ https://splidejs.com/
 rails g model Product name:string sku:string price:integer description:text
 rails g migration add_package_to_product package:string
 rails db:rollback
+rails g migration remove_package_out_product
