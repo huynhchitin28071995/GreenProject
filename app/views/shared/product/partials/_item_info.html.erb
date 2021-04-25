@@ -1,19 +1,23 @@
 <div class="product-info">
-<div class = 'name text-center'>
-    <%= product.name %>
-</div>
-<div class = ' nsx text-center'>
-<%= product.nsx %>
-</div>
-<div class = ' price text-center'>
-<%= product.price %><sup>đ</sup>
-</div>
-<% if product.event[:discount] %>
-<div class = ' price-discount text-center'>
-<%= discount(product) %>
-</div>
-<% end %>
-<div class = ' npp text-center'>
-<%= product.npp %>
-</div>
+    <div class='name text-uppercase font-weight-bold text-left'>
+        <%= product.name %>
+    </div>
+    <hr>
+    <div class=' nsx text-left'>
+        <%= product.nsx %>
+    </div>
+    <div class=' price text-left text-primary h3 float-left  '>
+        <div class="price-origin <%= product.event[:discount] ? 'discount' : '' %>">
+            <%= product.price %><sup>đ</sup>
+        </div>
+    </div>
+    <% if product.event[:discount] %>
+        <div class=' price-discount text-left text-danger h3 float-left '>
+            <%= discount(product) %><sup>đ</sup>
+        </div>
+    <% end %>
+    <div class="clear" style="clear:both"></div>
+            <div class=' npp text-left'>
+                <%= product.npp %>
+            </div>
 </div>

@@ -10,10 +10,6 @@ body {
 
 a{
     color: $white-color;
-    &:hover{
-        color: red;
-        text-decoration: none;
-    }
 }
 
 #notice{
@@ -26,6 +22,20 @@ a{
             box-shadow: none !important;
         }
     
+    }
+}
+ul.menu{
+    li{
+        font-size: 20px;
+        padding: 20px;
+    }
+    li:hover{
+        background-color: #9bdfeb;
+        cursor: pointer;
+    }
+    li:hover a{
+        color: red;
+        text-decoration: none;
     }
 }
 
@@ -87,7 +97,6 @@ section {
     position: relative;
     background-color: #fff;
     height: 800px;
-    padding: 30px;
     &[name='member']{
 
     }
@@ -110,7 +119,6 @@ section {
     position: relative;
 }
 .product-image{
-    background-image: url(https://via.placeholder.com/150x150);
     background-repeat: no-repeat;
     background-size: cover;
     height: 250px;
@@ -132,4 +140,37 @@ section {
     float: left;
     margin-top: -15px;
     margin-right: 5px;
+}
+.price-origin {
+    &.discount{
+        text-decoration: line-through;
+        font-size: 30px;
+        color: gray;
+    }
+}
+.product-info{
+    .name{
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .nsx{
+        padding-top: 10px;
+        padding-left: 10px;
+        color: green;
+    }
+    .npp{
+        padding-top: 10px;
+        padding-left: 10px;
+        color: skyblue;
+    }
+    .price-discount{
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 40px;
+    }
+    .price{
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 40px;
+    }
 }
