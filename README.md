@@ -49,3 +49,7 @@ Things you may want to cover:
         nha pp.
 https://splidejs.com/
 //TODO: solution trong action dua hang hoa vao gio
+
+rails g model Product name:string sku:string price:integer description:text
+rails g migration add_package_to_product package:string
+rails db:rollback
