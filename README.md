@@ -54,3 +54,7 @@ rails g model Product name:string sku:string price:integer description:text
 rails g migration add_package_to_product package:string
 rails db:rollback
 rails g migration remove_package_out_product
+rails g model Manufacturer name:string alias:string
+rails g migration add_manufacturer_to_product manufacturer:references
+Product.pluck(:name)
+Product.select(:name)
