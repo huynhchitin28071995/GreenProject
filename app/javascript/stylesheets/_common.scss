@@ -42,5 +42,29 @@ a{
     }
 }
 
+section {
+    &[name='splide']{
+        width: 100%;
+        padding: 0;
+        height:  calc(100vh*0.9);
+        #splide{
+            height:  calc(100vh*0.9);
+            background-color: red;
+            .splide__slide-content {
+                height:  calc(100vh*0.9);
+                position: relative;
+                .splide__slide-description {
+                    position: absolute;
+                    width: 50%;
+                    background-color: #ffff;
+                    opacity: 0.5;
+                    padding: 10px;
+                }
+            }
+            
+        }    
+    }
+}
+
 
 

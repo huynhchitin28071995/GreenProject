@@ -1,8 +1,12 @@
 <section name'product'>
-    <div class='p-4'>
-        <div class='title'><h1>SẢN PHẨM BÁN CHẠY</h1></div>
+    <div class="container">
+        <div class='p-4'>
+            <div class='title'>
+                <h1>SẢN PHẨM BÁN CHẠY</h1>
+            </div>
+        </div>
+        <% @products.each do |product| %>
+            <%= render partial: 'shared/product/item' , locals: { product: product } %>
+                <%end%>
     </div>
-    <% @products.each do |product| %>
-       <%= render partial: 'shared/product/item', locals: { product: product } %>
-        <%end%>
 </section>

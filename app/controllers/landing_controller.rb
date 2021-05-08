@@ -9,8 +9,8 @@ class LandingController < ApplicationController
    @products =
    {
      id: 1,
-     name: 'thuoc troi noi',
-     image: 'https://image.pharmacity.vn/live/uploads/2019/05/P02182_1-600x600.jpg',
+     name: 'THUỐC KHÁNG VIÊM',
+     image: 'https://image.pharmacity.vn/live/uploads/2020/01/P15323_2_l.jpg',
      nsx: 'Pharmacity',
      npp: 'Green Academy',
      price: 200.000,
@@ -21,8 +21,8 @@ class LandingController < ApplicationController
    },
    {
      id: 2,
-     name: 'thuoc troi noi',
-     image: 'https://cdn.thegioididong.com/Products/Images/5792/199026/thuoc-giam-ho-pms-dexipharm-15mg-vi-200.000-vien-2-700x467.jpg',
+     name: 'THUỐC KHÁNG VIÊM',
+     image: 'https://image.pharmacity.vn/live/uploads/2019/05/P13194_2_l.jpg',
      nsx: 'Pharmacity',
      npp: 'Green Academy',
      price: 200.000,

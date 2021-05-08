@@ -1,3 +1,5 @@
+import { start } from "@rails/activestorage";
+
 function darken_screen(yesno) {
     if (yesno == true) {
         document.querySelector('.screen-darken').classList.add('active');
@@ -41,6 +43,7 @@ const NavBarTrigger = () => {
         });
     }
 }
+
 
 export default NavBarTrigger
   // DOMContentLoaded  end

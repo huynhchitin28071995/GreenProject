@@ -18,5 +18,5 @@ const images = require.context('../images',true)
 
 document.addEventListener("DOMContentLoaded", function(){
     NavBarTrigger()
- 
 })
+import "controllers"
