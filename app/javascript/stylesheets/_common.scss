@@ -49,5 +49,39 @@ section{
         width: 100%;
         padding: 0;
     }
+    &[name='splide']{
+        height: calc(100vh*0.8);
+        width: 100%;
+        padding: 0;
+        #splide{
+            position: relative;
+            height: calc(100vh*0.8);
+            // background-color: red;
+            .splide__splide-content{
+                height: calc(100vh*0.8);
+                .splide__splide-content-shade{                    
+                    background-color: whitesmoke;
+                    opacity: 0.7;
+                    z-index: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }  
+                .splide__splide-description{
+                    padding: 5px;                    
+                    position: absolute;
+                    top: 60%;
+                    left: 15%;
+                    width: 50%;
+                    color: black;
+                    font-weight: bold;
+                    z-index: 2;
+                }
+               
+            }  
+        }
+    }
 }
 

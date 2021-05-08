@@ -58,3 +58,18 @@ rails g model Manufacturer name:string alias:string
 rails g migration add_manufacturer_to_product manufacturer:references
 Product.pluck(:name)
 Product.select(:name)
+
+// 8/5/2021
+- splidejs.com
+    + lazy loading.
+    yarn add @splidejs/splide
+    rails webpacker:install:stimulus
+    rails g generator stimulus/controller
+    rails g stimulus:controller --help
+    rails g stimulus:controller splide
+
+    picsum.photos
+    yarn add wowjs
+    animate.css
+    stimulus.hotwire.dev
+    //TODO: lua chon vi tri noi dung trong slider.

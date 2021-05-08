@@ -13,9 +13,12 @@ Turbolinks.start()
 ActiveStorage.start()
 import '../stylesheets/application'
 import NavBarTrigger from "../js/events/navbar_events"
+import Splide from "@splidejs/splide"
 const images = require.context('../images', true)
 
 document.addEventListener("DOMContentLoaded", function () {
-    NavBarTrigger()
-   
+    NavBarTrigger();
+   //new Splide(`#splide`,{}).mount();
 })
+
+import "controllers"
