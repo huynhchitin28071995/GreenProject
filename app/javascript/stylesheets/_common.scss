@@ -101,6 +101,26 @@ section{
             font-size: 3em;
         }
     }
+    &[name='splide']{
+        height: calc(100vh*0.9);
+        width: 100%;
+        padding: 0;
+        background-color: wheat;
+        .splide__slide{
+            .splide__slide-content{
+                 .splide__slide-descriptions{
+                     color: white;
+                     opacity: 0.7;
+                     width: 30%;
+                     height: 16%;
+                     position:absolute;
+                     top: 4%;
+                     left: 2%;
+                     border-radius: 6px;
+                 }
+            }
+         }
+        }
     &[name='contact']{
         height: 600px;
         background-color: gray;

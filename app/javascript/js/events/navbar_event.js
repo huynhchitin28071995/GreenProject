@@ -1,3 +1,5 @@
+import { start } from "turbolinks";
+
 function darken_screen(yesno){
     if( yesno == true ){
       document.querySelector('.screen-darken').classList.add('active');
@@ -20,12 +22,15 @@ function darken_screen(yesno){
   }
   
   const NavbarTrigger = () =>{
+    start()
     document.querySelectorAll('[data-trigger="navbar_main"]').forEach(function(everyelement){
         let offcanvas_id = everyelement.getAttribute('data-trigger');
         everyelement.addEventListener('click', function (e) {
           e.preventDefault();
               show_offcanvas(offcanvas_id);
+
         });
+
       });
     
       document.querySelectorAll('.btn-close').forEach(function(everybutton){
@@ -40,5 +45,6 @@ function darken_screen(yesno){
       });
     }
   }
+
 
   export default NavbarTrigger
