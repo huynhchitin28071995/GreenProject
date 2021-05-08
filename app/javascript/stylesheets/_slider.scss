@@ -1,0 +1,37 @@
+#slider{
+    height: 400px;
+}
+// section slider
+.carousel {
+    @include DefaultWidthHeight();
+    .carousel-inner {
+        @include DefaultWidthHeight();
+        width: 100%;
+    }
+    .carousel-item{
+        @include DefaultWidthHeight();
+    }
+    .image-slider{
+        @include DefaultWidthHeight();
+        background-color: gray;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &[tags='1'] {
+            background-image: url('~images/banners/banner-01.png');
+        }
+        &[tags='2'] {
+            background-image: url('~images/banners/banner-02.png');
+        }
+        &[tags='3'] {
+            background-image: url('~images/banners/banner-03.png');
+        }
+        &[tags='4'] {
+            background-image: url('~images/banners/banner-04.png');
+        }
+        &[tags='5'] {
+            background-image: url('~images/banners/banner-05.png');
+        }
+    }
+}

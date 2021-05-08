@@ -1,12 +1,58 @@
-<section>
-    <div class='bg-warning w-100 h-50'>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6 text-center">
-                <button type="button" class="btn btn-primary">Primary</button>
-                </div>
-                <div class="col-6 text-center">
-                <button type="button" class="btn btn-primary">Primary</button>
+<section id="member">
+    <div class="opacity">
+        <div class="title text-uppercase">
+            <h1>đăng ký thành viên</h1>
+        </div>
+        <div class='form w-100 h-50'>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <form class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8"
+                            method="post"><input type="hidden" name="authenticity_token"
+                                value="SXBCN9AxKs9mUHWjEXyWJzdbdy2YCEw1-CWwJoxCpTa_fCU3nteasWmq3UFeEdYvqjrPfHVvsrYtuEt23E0irg">
+                            <div class="field">
+                                <input autofocus="autofocus" autocomplete="email" placeholder="Email" type="email"
+                                    value="" name="user[email]" id="user_email">
+                            </div>
+                            <div class="field">
+                                <input autocomplete="current-password" placeholder="Mật Khẩu" type="password"
+                                    name="user[password]" id="user_password">
+                            </div>
+                            <div class="field user_remember_me text-left">
+                                <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1"
+                                    name="user[remember_me]" id="user_remember_me">
+                                <label for="user_remember_me">Lưu Tài Khoản</label>
+                                <a href="/users/password/new">Forgot your password?</a><br>
+                            </div>
+                            <div class="actions">
+                                <input type="submit" name="commit" value="Đăng Nhập" class="sign_in btn btn-primary"
+                                    data-disable-with="Đăng Nhập">
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="col-6 text-center">
+                        <form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input
+                                type="hidden" name="authenticity_token"
+                                value="SXBCN9AxKs9mUHWjEXyWJzdbdy2YCEw1-CWwJoxCpTa_fCU3nteasWmq3UFeEdYvqjrPfHVvsrYtuEt23E0irg">
+                            <div class="field">
+                                <input autofocus="autofocus" autocomplete="email" placeholder="Email" type="email"
+                                    value="" name="user[email]" id="user_email">
+                            </div>
+                            <div class="field">
+                                <input autocomplete="new-password" placeholder="Mật Khẩu" type="password"
+                                    name="user[password]" id="user_password">
+                            </div>
+                            <div class="field">
+                                <input autocomplete="new-password" placeholder="Nhập Lại Mật Khẩu" type="password"
+                                    name="user[password_confirmation]" id="user_password_confirmation">
+                            </div>
+                            <div class="actions">
+                                <input type="submit" name="commit" value="Đăng Ký" class="sign_up btn btn-primary"
+                                    data-disable-with="Đăng Ký">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

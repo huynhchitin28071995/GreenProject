@@ -10,7 +10,7 @@ class LandingController < ApplicationController
    {
      id: 1,
      name: 'thuoc troi noi',
-     image: 'https://vhea.org.vn/wp-content/uploads/2020/04/thuoc-tri-ho-hieu-qua.jpg',
+     image: 'https://image.pharmacity.vn/live/uploads/2019/05/P02182_1-600x600.jpg',
      nsx: 'Pharmacity',
      npp: 'Green Academy',
      price: 200.000,

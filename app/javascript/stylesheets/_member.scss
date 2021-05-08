@@ -1,0 +1,61 @@
+section#member {
+    background-image: url('~images/member/authentication.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        text-align: center;
+        color: #fff;
+    }
+    .opacity{
+        background: rgba(12, 12, 12, 0.81);
+        height: 100%;
+    }
+    .title{
+        padding: 30px;
+    }
+    form#new_user{
+        margin: 0px auto;
+    }
+    input#user_email, input#user_password, input#user_password_confirmation{
+        width: 80%;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+    label{
+        color: #fff;
+        font-size: 20px;
+    }
+    label:hover{
+        color: #0275d8;
+    }
+    
+    a:hover{
+        color: #0275d8;
+    }
+    .sign_in{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .user_remember_me{
+        padding-left: 68px;
+    }
+    .user_remember_me a{
+        color: #fff;
+        text-decoration: none;
+        float: right;
+    padding-right: 70px;
+    }
+    .user_remember_me a:hover{
+        color: #0275d8;
+    }
+    &[name='slide'] {
+        height: 800px;
+        width: 100%;
+        padding: 0;
+    }
+    position: relative;
+    height: 400px;
+    &[name='member']{
+    }
+}
