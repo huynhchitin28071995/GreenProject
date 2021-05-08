@@ -1,0 +1,19 @@
+<div class="product-info">
+<div class = 'name text-center'>
+    <%= product.name %>
+</div>
+<div class = ' nsx text-center'>
+<%= product.nsx %>
+</div>
+<div class = ' price text-center'>
+<%= product.price %><sup>đ</sup>
+</div>
+<% if product.event[:discount] %>
+<div class = ' price-discount text-center'>
+<%= discount(product) %>
+</div>
+<% end %>
+<div class = ' npp text-center'>
+<%= product.npp %>
+</div>
+</div>

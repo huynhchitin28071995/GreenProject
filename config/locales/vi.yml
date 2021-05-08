@@ -1,0 +1,15 @@
+vi:
+  hello: Xin Chao %{name}
+  menus: 
+    home: Trang Chủ
+    about: Giới Thiệu
+    contact: Liên Hệ
+    product: Sản Phẩm
+    signout: Đăng Xuất
+  btn:
+    signin: Đăng Nhập
+    signup: Đăng Ký
+  placeholder:
+    password: Mật Khẩu
+    password_confirmation: Nhập Lại Mật Khẩu
+  remember: Lưu Tài Khoản
