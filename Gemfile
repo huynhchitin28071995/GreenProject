@@ -53,3 +53,11 @@ gem 'devise', '~> 4.7'
 gem "globalize", "~> 6.0"
 
 gem "globalize-accessors", "~> 0.3.0"
+
+gem "trestle", "~> 0.9.5"
+
+gem "rubocop", "~> 1.14"
+
+gem "htmlbeautifier", "~> 1.3"
+
+gem "trestle-active_storage", "~> 3.0"

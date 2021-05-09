@@ -80,4 +80,9 @@ Product.select(:name)
     - bundle add globalize
     - rails g migration create_slide_translation
     - bundle add globalize-accessors
+    - bundle add trestle
+    - rails g trestle:install
+    - rails g trestle:resource Slide
+    - bundle add trestle-active_storage
+    - yarn add lozad
     //TODO: lua chon vi tri noi dung trong slider.

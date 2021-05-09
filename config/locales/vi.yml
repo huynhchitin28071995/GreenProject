@@ -27,3 +27,6 @@ vi:
     login_facebook: Đăng nhập bằng tài khoản Facebook
     login_google: Đăng nhập bằng tài khoản Google
     forgot_password: Bạn quên mật khẩu?
+  admin:
+    vi: Tieng Viet
+    en: Tieng Anh
