@@ -72,4 +72,9 @@ Product.select(:name)
     yarn add wowjs
     animate.css
     stimulus.hotwire.dev
+
+    - Admin: Trestle.
+    - rails g model Slide description:text
+    - rails -T
+    - rails active_storage:install
     //TODO: lua chon vi tri noi dung trong slider.
