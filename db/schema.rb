@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_09_064232) do
+ActiveRecord::Schema.define(version: 2021_05_09_065252) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -58,6 +58,16 @@ ActiveRecord::Schema.define(version: 2021_05_09_064232) do
     t.string "package"
     t.integer "manufacturer_id", null: false
     t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id"
+  end
+
+  create_table "slide_translations", force: :cascade do |t|
+    t.integer "slide_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.index ["locale"], name: "index_slide_translations_on_locale"
+    t.index ["slide_id"], name: "index_slide_translations_on_slide_id"
   end
 
   create_table "slides", force: :cascade do |t|

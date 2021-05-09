@@ -77,4 +77,7 @@ Product.select(:name)
     - rails g model Slide description:text
     - rails -T
     - rails active_storage:install
+    - bundle add globalize
+    - rails g migration create_slide_translation
+    - bundle add globalize-accessors
     //TODO: lua chon vi tri noi dung trong slider.

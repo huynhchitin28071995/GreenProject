@@ -49,3 +49,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'annotate', '~> 3.1'
 gem 'devise', '~> 4.7'
+
+gem "globalize", "~> 6.0"
+
+gem "globalize-accessors", "~> 0.3.0"
