@@ -13,4 +13,10 @@ class Slide < ApplicationRecord
     translates :description
 
     globalize_accessors :locales => I18n.available_locales, :attributes => [:description]
+
+    def thumbnail
+        if self.image.attached?
+            return url_for(self.image)
+        end
+    end
 end

@@ -2,52 +2,16 @@
 <div class="splide" id='splide' data-splide-target='splide'>
 	<div class="splide__track">
 		<ul class="splide__list">
-
-			<li class="splide__slide">
-			<div class="splide__slide-content">
-				<img data-splide-lazy="https://picsum.photos/id/240/2048/755" alt='sample_1'>
-				<div class="splide__slide-descriptions w-40 p-2 rounded bg-secondary">
-					<p>Lorem Ipsum is simply dummy text
-					of the printing and typesetting industry. 
-					Lorem Ipsum has been the industry's standard 
-					dummy text ever since the 1500s, when an 
-					unknown printer took a galley of type and 
-					scrambled it to make a type specimen book. 
-					</p>
-				</div>
-			</div>
-			</li>
-
-			<li class="splide__slide">
-			<div class="splide__slide-content">
-				<img data-splide-lazy="https://picsum.photos/id/237/2048/755" alt='sample_2'>
-				<div class="splide__slide-descriptions w-40 p-2 rounded bg-secondary">
-					<p>Lorem Ipsum is simply dummy text
-					of the printing and typesetting industry. 
-					Lorem Ipsum has been the industry's standard 
-					dummy text ever since the 1500s, when an 
-					unknown printer took a galley of type and 
-					scrambled it to make a type specimen book. 
-					</p>
-				</div>
-			</div>
-			</li>
-
-			<li class="splide__slide">
-			<div class="splide__slide-content">
-				<img data-splide-lazy="https://picsum.photos/id/238/2048/755" alt="sample_3">
-				<div class="splide__slide-descriptions w-40 p-2 rounded bg-secondary">
-					<p>Lorem Ipsum is simply dummy text
-					of the printing and typesetting industry. 
-					Lorem Ipsum has been the industry's standard 
-					dummy text ever since the 1500s, when an 
-					unknown printer took a galley of type and 
-					scrambled it to make a type specimen book. 
-					</p>
-				</div>
-			</div>
-			</li>
-
+			<% @slides.each do |slide| %>
+				<li class="splide__slide">
+					<div class="splide__slide-content">
+						<img data-splide-lazy=<%=load_image(slide.image)%> alt='sample'>
+						<div class="splide__slide-description w-50 text-white p-2 rounded bg-secondary">
+							<%= slide.description.html_safe%>
+						</div>
+					</div>
+				</li>
+			<%end%>
 		</ul>
 	</div>
 </div>

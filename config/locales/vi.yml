@@ -21,3 +21,7 @@ vi:
   btn:
     login: Đăng Nhập
     sign_up: Đăng Kí
+
+  admin:
+    vi: tiếng việt
+    en: tiếng anh

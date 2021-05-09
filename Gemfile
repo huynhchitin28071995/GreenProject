@@ -53,3 +53,7 @@ gem "annotate", "~> 3.1"
 
 gem "globalize", "~> 6.0"
 gem "globalize-accessors", "~> 0.3.0"
+
+gem "trestle", "~> 0.9.5"
+
+gem "trestle-active_storage", "~> 3.0"
