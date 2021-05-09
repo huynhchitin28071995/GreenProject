@@ -50,3 +50,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "devise", "~> 4.7"
 
 gem "annotate", "~> 3.1"
+
+gem "globalize", "~> 6.0"
+gem "globalize-accessors", "~> 0.3.0"
