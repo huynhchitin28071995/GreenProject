@@ -61,3 +61,5 @@ gem "rubocop", "~> 1.14"
 gem "htmlbeautifier", "~> 1.3"
 
 gem "trestle-active_storage", "~> 3.0"
+
+gem "bundler", "~> 2.2"
