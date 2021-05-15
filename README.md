@@ -86,3 +86,6 @@ Product.select(:name)
     - bundle add trestle-active_storage
     - yarn add lozad
     //TODO: lua chon vi tri noi dung trong slider.
+
+
+productSplide chua connect().
