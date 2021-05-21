@@ -1,4 +1,8 @@
-@import '@splidejs/splide/dist/css/splide.min.css';
-#products-splide-container{
-    height: 200px;
+@import "@splidejs/splide/dist/css/splide.min.css";
+#products-splide {
+    #products-splide-container {
+        height: 200px;
+        position: relative;
+    }
+    position: relative;
 }

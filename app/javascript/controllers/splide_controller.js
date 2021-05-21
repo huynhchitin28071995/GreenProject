@@ -2,7 +2,7 @@ import { Controller } from "stimulus"
 import Splide from '@splidejs/splide'
 
 export default class extends Controller {
-    static targets = ['splide','productSplide'];
+    static targets = ['splide', 'product-plide'];
     options = {
         autoplay: true,
         type: 'loop',
@@ -10,15 +10,16 @@ export default class extends Controller {
         cover: true
     }
     productsOption = {
-        type:'loop',
-        perPage: '5',
+        type: 'loop',
+        perPage: '1',
         focus: 'center',
         lazyload: 'nearby',
+        visible: true,
     }
     connect() {
         // write your code here
         this.initSplide();
-        console.log(`Done stimuls is connected to splide element`, this.element);
+        console.log(`Done stimulus is connected to splide element`, this.element);
     }
     initialize() {
         // write your code here
@@ -29,12 +30,12 @@ export default class extends Controller {
     initSplide() {
         let id = this.splideTarget.getAttribute('id')
         let splide = new Splide(`#${id}`, this.options);
-        // ${this.productSplideTarget.getAttribute(`id`)}
-        let splideProducts = new Splide(`#products-splide`, this.productsOption);
+        // let splideProducts = new Splide(`${this.productSplideTarget.getAttribute(`id`)}`, this.productsOption);
+        let splideProducts = new Splide(`#products-splide`, this.options);
         if (splide) {
             splide.mount();
         }
-        if(splideProducts) {
+        if (splideProducts) {
             splideProducts.mount();
             console.log(`mounted `, splideProducts);
         }

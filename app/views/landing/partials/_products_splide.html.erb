@@ -1,15 +1,13 @@
-<section name='products-splide' id='products-splide' data-controller='productSplide' >
-	<div class="splide" id='products-splide-container' data-splide-target='productSplide'>
-		<div class="splide__track">
-			<ul class="splide__list">
-				<% @products.each_with_index do |product, index|%>
+<section name='products-splide' id='products-splide' data-controller='productSplide'>
+  <div class="splide__track">
+    <ul class="splide__list">
+      <% @products.each_with_index do |product, index|%>
 
-					<li class="splide__slide">
-						<%= render partial: 'shared/product/partials/item_info' , locals: {product: product} %>
-					</li>
-					<%end%>
+        <li class="splide__slide">
+          <%= render partial: 'shared/product/partials/item_info' , locals: {product: product} %>
+        </li>
+      <%end%>
 
-			</ul>
-		</div>
-	</div>
+    </ul>
+  </div>
 </section>

@@ -5,7 +5,7 @@ export default class extends Controller {
     static targets = ['productSplide'];
     options = {
         type:'loop',
-        perPage: '5',
+        perPage: '1',
         focus: 'center',
         lazyload: 'nearby',
     };
