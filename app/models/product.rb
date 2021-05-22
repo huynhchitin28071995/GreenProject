@@ -4,6 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  description     :text
+#  description     :text
 #  discount        :decimal(, )
 #  name            :string
 #  package         :string
@@ -24,4 +25,11 @@
 #
 class Product < ApplicationRecord
   belongs_to :manufacturer
+  has_one_attached :image
+  translates :description
+  globalize_accessors locale: I18n.available_locales, attributes: [:description]
+
+  def thumbnail
+    return url_for(image) if image.attached?
+  end
 end

@@ -8,13 +8,11 @@
 #  updated_at  :datetime         not null
 #
 class Slide < ApplicationRecord
-    has_one_attached :image
-    translates :description
-    globalize_accessors :locale => I18n.available_locales, :attributes => [:description]
-    
-    def thumbnail
-        if self.image.attached?
-            return url_for(self.image)
-        end
-    end
+  has_one_attached :image
+  translates :description
+  globalize_accessors locale: I18n.available_locales, attributes: [:description]
+
+  def thumbnail
+    return url_for(image) if image.attached?
+  end
 end

@@ -65,3 +65,5 @@ gem "trestle-active_storage", "~> 3.0"
 gem "bundler", "~> 2.2"
 
 gem "solargraph", "~> 0.40.4"
+
+gem "image_processing", "~> 1.12"

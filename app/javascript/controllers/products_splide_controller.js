@@ -2,26 +2,25 @@ import Splide from "@splidejs/splide";
 import { Controller } from "@stimulus/core";
 
 export default class extends Controller {
-    static targets = ['productSplide'];
+    static targets = ['splide'];
     options = {
-        type:'loop',
-        perPage: '1',
+        type: 'loop',
+        perPage: '5',
         focus: 'center',
-        lazyload: 'nearby',
+        visible: true,
     };
     connect() {
         this.initSplide();
-        console.log(`init splide from products splide controller!`);
+        console.log(`connect splide from products splide controller!`);
     }
     initSplide() {
-        let id = this.productSplideTarget.getAttribute('id');
-        let splideProducts = new Splide(`#products-splide`, this.options);
-         // ${this.productSplideTarget.getAttribute(`id`)}
+        console.log(`init splide from products splide controller!`);
+        let id = this.splideTarget.getAttribute('id');
+        let splideProducts = new Splide(`#${id}`, this.options);
         console.log(id);
-        if(splideProducts) {
+        if (splideProducts) {
             splideProducts.mount();
-            console.log(`mounted `, splideProducts);
         }
     }
-    
+
 }
