@@ -91,8 +91,11 @@ Product.select(:name)
 <section name='products-splide' id='products-splide' data-controller='products-splide'>
     <div class="splide" id="product-splide" data-products-splide-target='splide'></div>
 </section>
-- chu y data-controller='products-splide', data-products-splide-target='splide': moi init va connect
-vao controller dc.
+- chu y data-controller='products-splide', data-products-splide-target='splide': moi init va connect vao controller dc.
+- chu y ten *_controller.js tring voi data-controller
+
 <img src=<%=load_image(product.image)%> alt="sample"> : khong de load-lazy
+product.image.nil? => always true
+product.image.value.nil? => true/false
 
 //TODO: Tao trang san pham: tat ca san pham de xem chi tiet/add vao gio hang, trang chi tiet san pham

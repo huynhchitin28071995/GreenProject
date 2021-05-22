@@ -1,16 +1,17 @@
 <section name='products-splide' id='products-splide' data-controller='products-splide'>
-    <div class="splide" id="product-splide" data-products-splide-target='splide'>
-        <div class="splide__track">
-            <ul class="splide__list">
-                <% @products.each do |product|%>
-
-                <li class="splide__slide">
-                    <img src=<%=load_image(product.image)%> alt="sample">
-                    <%= render partial: 'shared/product/partials/item_info' , locals: {product: product} %>
-                </li>
-                <%end%>
-
-            </ul>
-        </div>
+  <div class="splide" id="product-splide" data-products-splide-target='splide'>
+    <div class="splide__track">
+      <ul class="splide__list">
+        <% @products.each do |product|%>
+          <% if (product.image.attached?) %>
+            <li class="splide__slide">
+              <!--<img src=<%= ((product.image.attached?) ? load_image(product.image) : '')%> alt="sample">-->
+              <img src=<%=load_image(product.image)%> alt="sample">
+              <%= render partial: 'shared/product/partials/item_info' , locals: {product: product} %>
+            </li>
+          <% end %>
+      <%end%>
+      </ul>
     </div>
+  </div>
 </section>

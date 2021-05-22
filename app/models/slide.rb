@@ -13,6 +13,8 @@ class Slide < ApplicationRecord
   globalize_accessors locale: I18n.available_locales, attributes: [:description]
 
   def thumbnail
-    return url_for(image) if image.attached?
+    if !image.nil? && image.attached? 
+      return url_for(image)
+    end
   end
 end
