@@ -101,4 +101,20 @@ product.image.value.nil? => true/false
 - map from hash to Object
     @languages = [{ value: 'Tiếng Việt', id: 'lang_vi' }, { value: 'English', id: 'lang_en' }]
     @languages = @languages.map { |l| OpenStruct.new(l) }
+https://github.com/thoughtbot/administrate
+https://github.com/thoughtbot/administrate
+https://github.com/activeadmin/activeadmin
+https://github.com/sferik/rails_admin
+stimulus_reflex
+https://docs.stimulusreflex.com/hello-world/quickstart
+https://redis.io/
+sudo apt install redis-server 
+sudo service redis-server start
+sudo service redis-server status 
+https://api.rubyonrails.org/classes/AbstractController/Callbacks/ClassMethods.html
+https://edgeguides.rubyonrails.org/i18n.html 
+bundle add stimulus_reflex
+rails stimulus_reflex:install
+rails g stimulus_reflex lang
+switch_lang(event) { } 
 //TODO: Tao trang san pham: tat ca san pham de xem chi tiet/add vao gio hang, trang chi tiet san pham
