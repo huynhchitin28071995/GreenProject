@@ -1,8 +1,23 @@
 #products-splide {
-    #products-container {
-        height: 200px;
+    #product-splide {
+        max-height: 200px;
         position: relative;
         visibility: visible;
+        min-height: 200px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .product-info {
+            position: absolute;
+            top: 75%;
+            background: aqua;
+            width: 100%;
+            opacity: 0.5;
+        }
+        img:hover,.product-info:hover{
+            opacity: 1;
+        }
     }
     position: relative;
 }

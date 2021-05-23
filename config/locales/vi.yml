@@ -1,4 +1,5 @@
 vi:
+  language: Tiếng Việt
   hello: Xin Chào %{name}
   menus:
     home: Trang Chủ

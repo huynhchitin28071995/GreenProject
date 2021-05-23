@@ -22,5 +22,11 @@ export default class extends Controller {
             splideProducts.mount();
         }
     }
-
+    reconnect() {
+        this.initSplide()
+    }
+    initialize() {
+        // write your code here
+        document.addEventListener('cable-ready:after-morph', this.reconnect.bind(this))
+    }
 }

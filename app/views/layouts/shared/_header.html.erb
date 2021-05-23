@@ -1,9 +1,9 @@
-<header class='container'>
-    <div class="bg-warning" id='notice'>
+<header class=''>
+    <div class="bg-warning container" id='notice'>
         <button id="open-navbar" data-trigger="navbar_main" class="d-lg-none btn btn-transparent text-white" type="button"><i class="fas fa-bars"></i></button>
 
     </div>
-    <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-primary container">
         <div class="container">
             <div class="offcanvas-header">
                 <button class="btn-close float-end"></button>
@@ -11,10 +11,11 @@
             <a class="navbar-brand" href="#">Brand</a>
             <ul class="navbar-nav">
                 <% if user_signed_in? %>
-                    <%= render 'layouts/shared/header-signed-in' %>
-                        <% else %>
-                            <%= render 'layouts/shared/header-not-signed-in' %>
-                                <% end %>
+                <%= render 'layouts/shared/header-signed-in' %>
+                <% else %>
+                <%= render 'layouts/shared/header-not-signed-in' %>
+                <% end %>
+                <%= render "layouts/shared/language_btns" %>
             </ul>
         </div> <!-- container// -->
     </nav>

@@ -67,3 +67,5 @@ gem "bundler", "~> 2.2"
 gem "solargraph", "~> 0.40.4"
 
 gem "image_processing", "~> 1.12"
+
+gem "stimulus_reflex", "~> 3.4"

@@ -98,4 +98,7 @@ Product.select(:name)
 product.image.nil? => always true
 product.image.value.nil? => true/false
 
+- map from hash to Object
+    @languages = [{ value: 'Tiếng Việt', id: 'lang_vi' }, { value: 'English', id: 'lang_en' }]
+    @languages = @languages.map { |l| OpenStruct.new(l) }
 //TODO: Tao trang san pham: tat ca san pham de xem chi tiet/add vao gio hang, trang chi tiet san pham

@@ -1,0 +1,12 @@
+<li class="nav-item" data-controller='lang'>
+    <div class='nav-link'>
+        <%
+=begin%>
+        <%= radio_button_tag 'lang', 'vi', id: 'lang_vi', class: 'float-left' %>
+        <%= label_tag 'lang_vi', "Tiếng Việt", class: 'float-left mr-2' %>
+        <%
+=end%>
+        <%= select_tag "language", options_from_collection_for_select(@languages, :id, :value, locale.to_sym), {data: {action: 'change->lang#switchLang'}} %>
+        <%= label_tag 'language', "Language", class: 'float-left mr-2' %>
+    </div>
+</li>
