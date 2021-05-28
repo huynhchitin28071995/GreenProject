@@ -1,6 +1,6 @@
 import { Controller } from "stimulus"
 import Splide from "@splidejs/splide"
-import { type } from "jquery"
+// import { type } from "jquery"
 
 
 export default class extends Controller {
@@ -13,12 +13,9 @@ export default class extends Controller {
 
   connect() {
     // write your code here
-    console.log('DONE')
     this.initSplide()
-  }
+    console.log('DONE', this.element)
 
-  initialize(){
-    // write your code here
   }
 
   disconnect(){
@@ -31,6 +28,13 @@ export default class extends Controller {
     if(splide){
       splide.mount()
     }
+  }
+  reconnect() {
+    this.initSplide()
+  }
+  initialize() {
+    // write your code here
+    document.addEventListener('cable-ready:after-morph', this.reconnect.bind(this))
   }
 }
 

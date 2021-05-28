@@ -57,3 +57,5 @@ gem "globalize-accessors", "~> 0.3.0"
 gem "trestle", "~> 0.9.5"
 
 gem "trestle-active_storage", "~> 3.0"
+
+gem "stimulus_reflex", "~> 3.4"
