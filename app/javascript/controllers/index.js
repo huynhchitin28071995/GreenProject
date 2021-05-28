@@ -8,7 +8,8 @@ import consumer from '../channels/consumer'
 import controller from '../controllers/application_controller'
 
 const application = Application.start()
+StimulusReflex.initialize(application, { consumer, controller, isolate: true })
 const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
-StimulusReflex.initialize(application, { consumer, controller, isolate: true })
+
 StimulusReflex.debug = process.env.RAILS_ENV === 'development'

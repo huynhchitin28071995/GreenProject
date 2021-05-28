@@ -7,7 +7,7 @@
             <li class="splide__slide">
               <!--<img src=<%= ((product.image.attached?) ? load_image(product.image) : '')%> alt="sample">-->
               <img src=<%=load_image(product.image)%> alt="sample">
-              <%= render partial: 'shared/product/partials/item_info' , locals: {product: product} %>
+              <%= render partial: 'shared/product/item', locals: {product: product}%>
             </li>
           <% end %>
       <%end%>
