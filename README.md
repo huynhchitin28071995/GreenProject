@@ -117,4 +117,7 @@ bundle add stimulus_reflex
 rails stimulus_reflex:install
 rails g stimulus_reflex lang
 switch_lang(event) { } 
+
+
+https://testautomationu.applitools.com/
 //TODO: Tao trang san pham: tat ca san pham de xem chi tiet/add vao gio hang, trang chi tiet san pham
