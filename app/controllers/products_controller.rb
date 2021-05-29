@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   def index
 
-    controller/products: before_action :authenticate_user!
+    controller/products: before_action :fetch_product
+    
 
   end
 end
