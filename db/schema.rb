@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_29_004200) do
+ActiveRecord::Schema.define(version: 2021_05_29_023424) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -58,6 +58,17 @@ ActiveRecord::Schema.define(version: 2021_05_29_004200) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "product_id_id"
     t.index ["product_id_id"], name: "index_gifts_on_product_id_id"
+  end
+
+  create_table "gifts_and_events", force: :cascade do |t|
+    t.integer "quantity"
+    t.datetime "promotion_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "event_id"
+    t.integer "gift_id"
+    t.index ["event_id"], name: "index_gifts_and_events_on_event_id"
+    t.index ["gift_id"], name: "index_gifts_and_events_on_gift_id"
   end
 
   create_table "manufacturers", force: :cascade do |t|
@@ -122,5 +133,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_004200) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "events", "products"
+  add_foreign_key "gifts_and_events", "events"
+  add_foreign_key "gifts_and_events", "gifts"
   add_foreign_key "products", "manufacturers"
 end
