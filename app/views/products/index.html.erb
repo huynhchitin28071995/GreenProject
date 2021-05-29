@@ -1,6 +1,13 @@
-<section class='container'>
-  <%@products.each do |p|%>
-    <%= render partial: 'shared/product/item', locals: {product: p}%>  
-  <% end %>
-  
+<section id="products" class='container-fluid '>
+    <div class='row' id='product-container'>
+        <%@products.each do |product|%>
+        <div class='col-3' id='product-item'>
+            <img src=<%=load_product_image(product)%> alt="sample" class='w-100'>
+            <div class='events align-item-center'>
+                <%= render partial: 'shared/product/item', locals: {product: product}%>
+            </div>
+        </div>
+        <% end %>
+
+    </div>
 </section>

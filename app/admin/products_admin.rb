@@ -18,7 +18,6 @@ Trestle.resource(:products, model: Product) do
       end.html_safe
     end
     column :price
-    column :discount
     column :manufacturer
     column :created_at, align: :center
     actions

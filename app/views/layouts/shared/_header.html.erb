@@ -1,14 +1,14 @@
-<header class=''>
-    <div class="bg-warning container" id='notice'>
+<header>
+    <div class="bg-warning container-fluid" id='notice'>
         <button id="open-navbar" data-trigger="navbar_main" class="d-lg-none btn btn-transparent text-white" type="button"><i class="fas fa-bars"></i></button>
 
     </div>
-    <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-primary container">
-        <div class="container">
+    <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-primary ">
+        <div class="container-fluid ">
             <div class="offcanvas-header">
                 <button class="btn-close float-end"></button>
             </div>
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="//localhost:3000">Brand</a>
             <ul class="navbar-nav">
                 <% if user_signed_in? %>
                 <%= render 'layouts/shared/header-signed-in' %>

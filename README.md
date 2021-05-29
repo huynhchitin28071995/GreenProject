@@ -120,4 +120,8 @@ switch_lang(event) { }
 
 
 https://testautomationu.applitools.com/
+https://tinypng.com/
+https://imagecompressor.com/
+https://tinyjpg.com/
+https://compressor.io/
 //TODO: Tao trang san pham: tat ca san pham de xem chi tiet/add vao gio hang, trang chi tiet san pham

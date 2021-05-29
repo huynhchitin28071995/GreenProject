@@ -4,7 +4,6 @@
 #
 #  id              :integer          not null, primary key
 #  description     :text
-#  discount        :decimal(, )
 #  name            :string
 #  package         :string
 #  price           :integer          default(0)

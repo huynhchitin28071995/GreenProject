@@ -15,5 +15,5 @@
 #  index_gifts_on_product_id_id  (product_id_id)
 #
 class Gift < ApplicationRecord
-    belongs_to :gifts_and_events, class_name: "gifts_and_event", foreign_key: "id"
+    # belongs_to :gifts_and_events, class_name: "gifts_and_event", foreign_key: "id"
 end

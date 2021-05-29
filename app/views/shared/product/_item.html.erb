@@ -1,3 +1,5 @@
-<%= render partial: 'shared/product/partials/discount', locals: {discount: product.event.discount} %>
-<%= render partial: 'shared/product/partials/km', locals: {km: product.event.gift} %>
-<%= render partial: 'shared/product/partials/hot', locals: {hot: product.event.hot_sale} %>
+<% if !product.event.nil?%>
+<%= render partial: "shared/product/partials/discount",locals: {discount: product.event.discount} %>
+<%= render partial: "shared/product/partials/hot",locals: {hot: product.event.hot_sale} %>
+<%= render partial: "shared/product/partials/km",locals: {km: product.event.gift} %>
+<% end %>
