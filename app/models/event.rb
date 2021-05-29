@@ -20,5 +20,5 @@
 #
 class Event < ApplicationRecord
     belongs_to :product
-    has_many :gifts_and_events, class_name: "gifts_and_event", foreign_key: "event_id"
+    belongs_to :gifts_and_events, class_name: "gifts_and_event", foreign_key: "id"
 end

@@ -21,6 +21,6 @@
 #  gift_id   (gift_id => gifts.id)
 #
 class GiftsAndEvent < ApplicationRecord
-    belongs_to :events
-    belongs_to :gifts
+    has_many :events
+    has_many :gifts
 end

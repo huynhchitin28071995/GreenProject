@@ -6,5 +6,9 @@ class ProductsController < ApplicationController
   def fetch_product
     @products = Product.all
   end
-
+  def fetch_event
+    @products.each do |product|
+      
+    end
+  end
 end
