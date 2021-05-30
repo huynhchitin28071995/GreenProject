@@ -3,11 +3,11 @@
         <div class="splide__track container">
             <ul class="splide__list">
                 <% @products.each do |product|%>
-
+                <%if product.event.hot_sale?%>
                 <li class="splide__slide">
-                    <img src=<%=load_product_image(product)%> alt="sample">
                     <%= render partial: 'shared/product/item', locals: {product: product}%>
                 </li>
+                <%end%>
                 <%end%>
             </ul>
         </div>

@@ -2,10 +2,8 @@
     <div class='row' id='product-container'>
         <%@products.each do |product|%>
         <div class='col-3' id='product-item'>
-            <img src=<%=load_product_image(product)%> alt="sample" class='w-100'>
-            <div class='events align-item-center'>
-                <%= render partial: 'shared/product/item', locals: {product: product}%>
-            </div>
+
+            <%= render partial: 'shared/product/item', locals: {product: product}%>
         </div>
         <% end %>
 

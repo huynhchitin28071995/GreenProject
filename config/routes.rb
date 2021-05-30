@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'landing/index'
   get 'products/index'
+  get 'product-detail/index'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',

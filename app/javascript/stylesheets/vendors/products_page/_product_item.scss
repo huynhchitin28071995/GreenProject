@@ -38,6 +38,11 @@
                 }
             }
             .product-info {
+                position: absolute;
+                top: 75%;
+                background: aqua;
+                width: 100%;
+                opacity: 1;
                 .name {
                     .prices {
                         .old-price {
@@ -53,13 +58,6 @@
                     }
                 }
             }
-            // .product-info {
-            //     position: absolute;
-            //     top: 75%;
-            //     background: aqua;
-            //     width: 100%;
-            //     opacity: 0.5;
-            // }
         }
     }
 }
