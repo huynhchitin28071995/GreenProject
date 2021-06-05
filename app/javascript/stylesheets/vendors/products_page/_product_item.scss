@@ -2,6 +2,7 @@
     #product-container {
         #product-item {
             position: relative;
+            padding-bottom: 5%;
             img{
                 width: 100%;
                 min-height: 300px;
@@ -39,7 +40,7 @@
             }
             .product-info {
                 position: absolute;
-                top: 75%;
+                top: 65%;
                 background: aqua;
                 width: 100%;
                 opacity: 1;

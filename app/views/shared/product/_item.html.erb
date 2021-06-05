@@ -7,7 +7,5 @@
         <%= render partial: "shared/product/partials/km",locals: {km: product.event.gift} %>
     </div>
     <% end %>
-    <div class='product-info'>
-        <%= render partial: "shared/product/partials/item_info", locals: {product: product} %>
-    </div>
+    <%= render partial: "shared/product/partials/item_info", locals: {product: product} %>
 </a>
