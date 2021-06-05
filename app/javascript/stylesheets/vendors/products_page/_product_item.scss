@@ -1,9 +1,27 @@
 #products {
     #product-container {
+        .card {
+            .card-body {
+                ul {
+                    li {
+                        .old-price {
+                            font-style: oblique;
+                            font-size: 1em;
+                            color: gray;
+                            text-decoration: line-through;
+                        }
+                        .new-price {
+                            font-size: 1.2em;
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
         #product-item {
             position: relative;
             padding-bottom: 5%;
-            img{
+            img {
                 width: 100%;
                 min-height: 300px;
                 max-height: 300px;

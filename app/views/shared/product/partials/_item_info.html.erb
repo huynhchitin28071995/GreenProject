@@ -1,24 +1,31 @@
-<div class='product-info'>
-  <div class='name border-bottom p-3 text-left text-wrap font-weight-bolder text-capitalize text-secondary'>
-    <%= product.name %>
-    <div class='prices'>
-     
-      <% if discount? (product) %>
-       <span class='old-price'>
-        <%= product.price.to_i%>
-      </span>
-        <span class='new-price'>
-          <%= discount(product)%>
-        </span>
-        <% else %>
-         <span class='new-price'>
-        <%= product.price.to_i%>
-      </span>
-      <% end %>
+<div class="card-body">
+    <ul class="list-unstyled d-flex justify-content-between row">
+        <li class='col-sm-8'>
+            <i class="text-warning fa fa-star"></i>
+            <i class="text-warning fa fa-star"></i>
+            <i class="text-warning fa fa-star"></i>
+            <i class="text-muted fa fa-star"></i>
+            <i class="text-muted fa fa-star"></i>
+        </li>
+        <li class="text-muted text-right col-sm-4">
 
-    </div>
-    <%= product.manufacturer.name %>
-
-  </div>
-
+            <% if discount? (product) %>
+            <div class='old-price'>
+                <%= product.price.to_i%> VND
+            </div>
+            <div class='new-price'>
+                <%= discount(product).to_i%> VND
+            </div>
+            <% else %>
+            <div class='new-price'>
+                <%= product.price.to_i%> VND
+            </div>
+            <% end %>
+        </li>
+    </ul>
+    <a href="shop-single.html" class="h2 text-decoration-none text-dark"><%=product.name%></a>
+    <p class="card-text">
+        <%=product.description%></a>
+    </p>
+    <p class="text-muted">Reviews (48)</p>
 </div>

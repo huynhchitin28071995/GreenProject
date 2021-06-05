@@ -92,7 +92,7 @@ Product.select(:name)
     <div class="splide" id="product-splide" data-products-splide-target='splide'></div>
 </section>
 - chu y data-controller='products-splide', data-products-splide-target='splide': moi init va connect vao controller dc.
-- chu y ten *_controller.js tring voi data-controller
+- chu y ten *_controller.js trung voi data-controller
 
 <img src=<%=load_image(product.image)%> alt="sample"> : khong de load-lazy
 product.image.nil? => always true
@@ -124,4 +124,7 @@ https://tinypng.com/
 https://imagecompressor.com/
 https://tinyjpg.com/
 https://compressor.io/
+
+
+products controller controls product detail (all CRUD)
 //TODO: Tao trang san pham: tat ca san pham de xem chi tiet/add vao gio hang, trang chi tiet san pham
