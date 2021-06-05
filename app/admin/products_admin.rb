@@ -14,7 +14,8 @@ Trestle.resource(:products, model: Product) do
     column :description
     column :image do |product_img|
       content_tag :div, class: 'admin-table-image' do
-        content_tag(:div, nil, class: 'thumbnail lozad', 'data-background-image': product_img.thumbnail, src: preload_image)
+        content_tag(:div, nil, class: 'thumbnail lozad', 'data-background-image': product_img.thumbnail,
+                               src: preload_image)
       end.html_safe
     end
     column :price
@@ -25,11 +26,13 @@ Trestle.resource(:products, model: Product) do
 
   # Customize the form fields shown on the new/edit views.
   #
-  form do |product|
+  form do |_product|
     text_field :name
     active_storage_field :image
+    text_field :price
+    text_field :description
     # select  :manufacturer, Manufacturer.all.map{|item| [item.name.humanize, item.id]}
-    select :manufacturer_id, Manufacturer.all.map{|item| [item.name.humanize, item.id]}
+    select :manufacturer_id, Manufacturer.all.map { |item| [item.name.humanize, item.id] }
   end
 
   # By default, all parameters passed to the update and create actions will be

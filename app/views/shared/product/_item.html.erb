@@ -1,13 +1,13 @@
-<% if !product.event.nil?%>
 <a href="/product-detail/index">
-<img src=<%=load_product_image(product)%> alt="sample">
-<div class='events align-item-center'>
-    <%= render partial: "shared/product/partials/discount",locals: {discount: product.event.discount} %>
-    <%= render partial: "shared/product/partials/hot",locals: {hot: product.event.hot_sale} %>
-    <%= render partial: "shared/product/partials/km",locals: {km: product.event.gift} %>
-</div>
-<div class='product-info'>
-    <%= render partial: "shared/product/partials/item_info", locals: {product: product} %>
-</div>
+    <img src=<%=load_product_image(product)%> alt="sample">
+    <% if !product.event.nil?%>
+    <div class='events align-item-center'>
+        <%= render partial: "shared/product/partials/discount",locals: {discount: product.event.discount} %>
+        <%= render partial: "shared/product/partials/hot",locals: {hot: product.event.hot_sale} %>
+        <%= render partial: "shared/product/partials/km",locals: {km: product.event.gift} %>
+    </div>
+    <% end %>
+    <div class='product-info'>
+        <%= render partial: "shared/product/partials/item_info", locals: {product: product} %>
+    </div>
 </a>
-<% end %>
