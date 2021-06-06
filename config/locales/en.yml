@@ -31,3 +31,6 @@ en:
   admin:
     vi: Vietnamese
     en: English
+  product:
+    manufacturer: Manufacturer
+    description: Description

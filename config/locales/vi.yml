@@ -31,3 +31,6 @@ vi:
   admin:
     vi: Tieng Viet
     en: Tieng Anh
+  product:
+    manufacturer: Nhà sản xuất
+    description: Mô tả sản phẩm

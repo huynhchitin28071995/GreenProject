@@ -1,6 +1,6 @@
 import { Controller } from 'stimulus'
 import StimulusReflex from 'stimulus_reflex'
-
+import lozad from 'lozad'
 /* This is your ApplicationController.
  * All StimulusReflex controllers should inherit from this class.
  *
@@ -15,6 +15,8 @@ import StimulusReflex from 'stimulus_reflex'
 export default class extends Controller {
   connect () {
     StimulusReflex.register(this)
+    const observer = lozad();
+    observer.observe();
   }
 
   /* Application-wide lifecycle methods

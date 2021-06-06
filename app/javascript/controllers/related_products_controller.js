@@ -1,13 +1,18 @@
 import Splide from "@splidejs/splide";
 import { Controller } from "@stimulus/core";
 
+
 export default class extends Controller {
     static targets = ['splide'];
     options = {
         type: 'loop',
-        perPage: '5',
+        perPage: '3',
         focus: 'center',
         visible: true,
+        arrows: false,
+        pagination: {
+            size: '1em',
+        }
     };
     connect() {
         this.initSplide();
