@@ -1,15 +1,3 @@
-<section name="product">
-    <div class="p-4" style="border-bottom:solid gray 3px">
-        <div class="title">sản phẩm bán chạy</div>
-    </div>
-    <div id="hot-products" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item1">
-                <% @product.each do |product|%>
-                    <%= render partial:'shared/product/item', locals: {product: product} %>
-                <%end%> 
-            </div>
-        </div>
-    </div>
-    <div class="btn btn-warning"><p>Khám phá tiếp</p></div>
-</section>
+<%=render 'landing/particals/products/hot'%>
+<%=render 'landing/particals/products/recommended'%>
+<%=render 'landing/particals/products/new'%>

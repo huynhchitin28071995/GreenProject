@@ -15,15 +15,21 @@
             <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
             <li class="nav-item"><a class="nav-link" href="#"> Services </a></li>
             <li class="nav-item" data-controller='lang'>
-               <div class="dropdown" >
-                  <button class="dropbtn">Languages</button>
-                  <div class="dropdown-content">
-                  <%= link_to I18n.t('admin.en'), 'javascript:void(0)', class:'nav-link', data: {value: 'en' ,action: 'click->lang#switch_lang'}%> 
-                  <%= link_to I18n.t('admin.vi'), 'javascript:void(0)', class:'nav-link', data: {value: 'vi' ,action: 'click->lang#switch_lang'}%>
-               </div>
+            <div class="dropdown">
+               <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Languages
+               </a>
+          
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+               <li><%= link_to I18n.t('admin.en'), 'javascript:void(0)', class:'nav-link', data: {value: 'en' ,action: 'click->lang#switch_lang'}%></li>
+               <li><%= link_to I18n.t('admin.vi'), 'javascript:void(0)', class:'nav-link', data: {value: 'vi' ,action: 'click->lang#switch_lang'}%></li>
+               </ul>
+          </div>
           </div>
             </li>
          </ul>
       </div> <!-- container-fluid.// -->
       </nav>
 </header>
+

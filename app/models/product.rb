@@ -4,6 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  description     :text
+#  description     :text
 #  name            :string
 #  pakage          :string
 #  price           :integer          default(0)
@@ -22,5 +23,15 @@
 #  manufacturer_id  (manufacturer_id => manufacturers.id)
 #
 class Product < ApplicationRecord
-    belongs_to :manufacturer
+    belongs_to :manufacturer, optional:true
+    has_one_attached :image
+    translates :description
+
+    globalize_accessors :locales => I18n.available_locales, :attributes => [:description]
+
+    def thumbnail
+        if self.image.attached?
+            return url_for(self.image)
+        end
+    end
 end

@@ -2,7 +2,8 @@
 #
 
 Rails.application.routes.draw do
-  get 'products/index'
+  # get '/products', controller: :products, action: :index;
+  resources :products, only: [:index, :show]
   devise_for :users, controllers: {
     sessions: 'users/sessions', 
     passwords: 'users/passwords',
