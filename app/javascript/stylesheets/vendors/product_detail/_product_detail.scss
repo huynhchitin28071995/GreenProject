@@ -36,6 +36,9 @@
             #product-detail-left-col {
             }
             #product-detail-right-col {
+                .card-body{
+                    height: 692px;
+                }
                 .old-price {
                     font-style: oblique;
                     font-size: 1em;
@@ -45,6 +48,11 @@
                 .new-price {
                     font-size: 1.2em;
                     color: red;
+                }
+                #cart-form {
+                    position: absolute;
+                    width: 93%;
+                    top: 80%;
                 }
             }
         }
