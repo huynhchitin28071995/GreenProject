@@ -4,19 +4,49 @@ import Splide from "@splidejs/splide"
 
 
 export default class extends Controller {
-  static targets = [ 'splide' ]
+  static targets = ['products']
     options ={
-    autoplay: true,
-    type: 'loop',
-    lazyLoad: 'nearby',
-    cover:true,
-  }
 
-  connect() {
+      main:{
+        autoplay: true,
+        type: 'loop',
+        lazyLoad: 'nearby',
+        cover:true,
+      },
+      primary:{
+        type       : 'fade',
+        heightRatio: 0.5,
+        pagination : false,
+        arrows     : false,
+        cover      : true,
+        type       : 'loop',
+        autoplay: true,
+        lazyLoad: 'nearby',
+      },
+      secondary:{
+        autoplay: true,
+        type: 'loop',
+        lazyLoad: 'nearby',
+        fixedWidth  : 100,
+        height      : 100,
+        gap         : 10,
+        cover       : true,
+        isNavigation: true,
+        focus       : 'center',
+        breakpoints : {
+          '600': {
+            fixedWidth: 66,
+            height    : 40,
+          }
+        },
+      }
+      
+    }
+
+
+  connect(){
     // write your code here
     this.initSplide()
-    console.log('DONE', this.element)
-
   }
 
   disconnect(){
@@ -24,8 +54,12 @@ export default class extends Controller {
   }
 
   initSplide(){
-    let id = this.splideTarget.getAttribute('id')
-    let splide = new Splide(`#${id}`,this.options)
+    let id = this.productsTarget.getAttribute('id')
+    let option = this.productsTarget.getAttribute('data-option')
+    console.log(option)
+    console.log(this.options[option])
+
+    let splide = new Splide(`#${id}`,this.options[option])
     if(splide){
       splide.mount()
     }

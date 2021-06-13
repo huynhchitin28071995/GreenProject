@@ -1,1 +1,2 @@
-console.log('Done from landing')
+import "bootstrap"
+console.log('hehe')

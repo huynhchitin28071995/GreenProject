@@ -1,24 +1,25 @@
-<section name="product">
+<section name="product" data-controller="product">
 <div class="p-4" style="border-bottom:solid gray 3px">
 <div class="title">sản phẩm bán chạy</div>
 </div>
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    
-  <div class="carousel-item">
-  <% @product.each do |product|%>
-      <%= render partial:'shared/product/item', locals: {product: product} %>
-  <%end%> 
+
+<div class="splide" id='product_hot_splide' data-product-target='products' data-option='primary'>
+
+	<div class="splide__track">
+		<ul class="splide__list">
+			<% @product.each do |product| %>
+				<li class="splide__slide">
+					<div class="splide__slide-content">
+						<img data-splide-lazy=<%=load_image(product)%> alt='sample'>
+            
+						<div class="splide__slide-description w-50 text-white p-2 rounded bg-secondary">
+							<%= product.name.html_safe%>
+						</div>
+					</div>
+				</li>
+			<%end%>
+		</ul>
+	</div>
 </div>
 
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 </section>

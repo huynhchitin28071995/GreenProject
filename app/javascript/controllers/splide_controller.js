@@ -12,10 +12,11 @@ export default class extends Controller {
     cover:true,
   }
 
+
   connect() {
     // write your code here
     this.initSplide()
-    console.log('DONE', this.element)
+    
 
   }
 
