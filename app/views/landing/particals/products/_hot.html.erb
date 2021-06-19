@@ -1,25 +1,28 @@
-<section name="product" data-controller="product">
-<div class="p-4" style="border-bottom:solid gray 3px">
-<div class="title">sản phẩm bán chạy</div>
-</div>
+<section name="product"
+data-controller="product">
+  <div id="hot">
 
-<div class="splide" id='product_hot_splide' data-product-target='products' data-option='primary'>
+      <div class="title">sản phẩm bán chạy</div>
 
-	<div class="splide__track">
-		<ul class="splide__list">
-			<% @product.each do |product| %>
-				<li class="splide__slide">
-					<div class="splide__slide-content">
-						<img data-splide-lazy=<%=load_image(product)%> alt='sample'>
-            
-						<div class="splide__slide-description w-50 text-white p-2 rounded bg-secondary">
-							<%= product.name.html_safe%>
-						</div>
-					</div>
-				</li>
-			<%end%>
-		</ul>
-	</div>
-</div>
+    <div class="splide" id='product_hot_primary' data-product-target='primary' data-option='primary'>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <% @product.each do |product| %>
+            <li class="splide__slide">
+              <div class="splide__slide-content">
+                <img data-splide-lazy=<%=load_image(product)%> alt='sample'>
+              
+                <div class="splide__slide-description w-50 text-white p-2 rounded bg-secondary">
+                  <%= product.name.html_safe%>
+                </div>
+              </div>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
 
+    <%=render 'landing/particals/products/second'%>
+
+  </div>
 </section>

@@ -1,10 +1,8 @@
 import { Controller } from "stimulus"
 import Splide from "@splidejs/splide"
 // import { type } from "jquery"
-
-
 export default class extends Controller {
-  static targets = ['products']
+  static targets = ['products','primary', 'secondary']
     options ={
 
       main:{
@@ -25,7 +23,6 @@ export default class extends Controller {
       },
       secondary:{
         autoplay: true,
-        type: 'loop',
         lazyLoad: 'nearby',
         fixedWidth  : 100,
         height      : 100,
@@ -43,7 +40,6 @@ export default class extends Controller {
       
     }
 
-
   connect(){
     // write your code here
     this.initSplide()
@@ -54,14 +50,24 @@ export default class extends Controller {
   }
 
   initSplide(){
-    let id = this.productsTarget.getAttribute('id')
-    let option = this.productsTarget.getAttribute('data-option')
-    console.log(option)
-    console.log(this.options[option])
+    let primary = this.primaryTarget.getAttribute('id')
+    let secondary = this.secondaryTarget.getAttribute('id')
+    // let id = this.productsTarget.getAttribute('id')
+    // let option = this.productsTarget.getAttribute('data-option')
+    // console.log(option)
+    // console.log(this.options[option])
 
-    let splide = new Splide(`#${id}`,this.options[option])
-    if(splide){
-      splide.mount()
+    // let splide = new Splide(`#${id}`,this.options[option])
+
+    // if(splide){
+    //   splide.mount()
+
+    // }
+    let splidePrimary = new Splide(`#${primary}`,this.options["primary"])
+    let splideSecondary = new Splide(`#${secondary}`,this.options["secondary"])
+    if(splidePrimary && splideSecondary){
+      splideSecondary.mount()
+      splidePrimary.sync(splideSecondary).mount()
     }
   }
   reconnect() {

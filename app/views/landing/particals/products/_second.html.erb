@@ -1,0 +1,17 @@
+<section name="product">
+  <div id="splide_hot_secondary" class="splide"   data-product-target='secondary' data-option="secondary">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <% @product.each do |product| %>
+          <li class="splide__slide">
+            <div class="splide__slide-content">
+              <div class='thumbnail'>
+                <img data-splide-lazy=<%=load_image(product)%> alt='sample'>
+              </div>
+            </div>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</section>
