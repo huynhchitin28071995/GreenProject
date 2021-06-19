@@ -24,8 +24,8 @@ export default class extends Controller {
       secondary:{
         autoplay: true,
         lazyLoad: 'nearby',
-        fixedWidth  : 100,
-        height      : 100,
+        fixedWidth  : 150,
+        height      : 150,
         gap         : 10,
         cover       : true,
         isNavigation: true,
@@ -57,8 +57,10 @@ export default class extends Controller {
       let primary=item.getAttribute('id')
       let secondary=this.secondaryTargets[index].getAttribute('id')
       console.log(primary, secondary)
+
       let splidePrimary = new Splide(`#${primary}`,this.options["primary"])
       let splideSecondary = new Splide(`#${secondary}`,this.options["secondary"])
+
       if(splidePrimary && splideSecondary){
       splideSecondary.mount()
       splidePrimary.sync(splideSecondary).mount()
