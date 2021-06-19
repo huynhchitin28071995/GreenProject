@@ -1,9 +1,9 @@
-<section name="product" data-controller="product">
-  <div id="hot">
 
-    <div class="title">sản phẩm bán chạy</div>
+  <div id="<%= id %>">
 
-    <div class="splide" id='product_hot_primary' data-product-target='primary' data-option='primary'>
+    <div class="title"><%=title %></div>
+
+    <div class="splide" id="<%= primary_id %>" data-product-target='primary' data-option='primary'>
       <div class="splide__track">
         <ul class="splide__list">
           <% @product.each do |product| %>
@@ -21,7 +21,6 @@
       </div>
     </div>
 
-    <%=render 'landing/particals/products/second'%>
+    <%=render partial: 'landing/particals/products/second_slide',locals:{second_id:second_id} %>
 
   </div>
-</section>

@@ -91,24 +91,21 @@ section {
     background: linear-gradient(102.04deg, #00b46e, #9ac100);
   }
   &[name="product"] {
-    height: calc(100vh * 0.5);
+    height: 80%;
     width: 100%;
     padding: 2;
     margin-bottom: 2px;
     #hot {
       height: 29%;
       width: 99%;
-      margin-bottom: 1%;
     }
     #recommended {
       height: 29%;
       width: 99%;
-      margin-bottom: 1%;
     }
     #new {
       height: 29%;
       width: 99%;
-      margin-bottom: 1%;
     }
     .title {
       text-align: center;

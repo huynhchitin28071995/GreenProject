@@ -50,25 +50,27 @@ export default class extends Controller {
   }
 
   initSplide(){
-    let primary = this.primaryTarget.getAttribute('id')
-    let secondary = this.secondaryTarget.getAttribute('id')
-    // let id = this.productsTarget.getAttribute('id')
-    // let option = this.productsTarget.getAttribute('data-option')
-    // console.log(option)
-    // console.log(this.options[option])
-
-    // let splide = new Splide(`#${id}`,this.options[option])
-
-    // if(splide){
-    //   splide.mount()
-
-    // }
-    let splidePrimary = new Splide(`#${primary}`,this.options["primary"])
-    let splideSecondary = new Splide(`#${secondary}`,this.options["secondary"])
-    if(splidePrimary && splideSecondary){
+    // let primary = this.primaryTarget.getAttribute('id')
+    console.log(this.primaryTargets)
+    this.primaryTargets.forEach((item, index)=>{
+      console.log(item, index)
+      let primary=item.getAttribute('id')
+      let secondary=this.secondaryTargets[index].getAttribute('id')
+      console.log(primary, secondary)
+      let splidePrimary = new Splide(`#${primary}`,this.options["primary"])
+      let splideSecondary = new Splide(`#${secondary}`,this.options["secondary"])
+      if(splidePrimary && splideSecondary){
       splideSecondary.mount()
       splidePrimary.sync(splideSecondary).mount()
     }
+    })
+    // let secondary = this.secondaryTarget.getAttribute('id')
+    // let splidePrimary = new Splide(`#${primary}`,this.options["primary"])
+    // let splideSecondary = new Splide(`#${secondary}`,this.options["secondary"])
+    // if(splidePrimary && splideSecondary){
+    //   splideSecondary.mount()
+    //   splidePrimary.sync(splideSecondary).mount()
+    // }
   }
   reconnect() {
     this.initSplide()
