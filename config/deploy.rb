@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.16.0'
-
+set :rbenv_ruby, '3.0.0'
 set :repo_url, 'git@github.com:huynhchitin28071995/cho_thuoc.git'
 
 # Default branch is :master
@@ -21,10 +21,10 @@ set :deploy_to, "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
 set :pty, false
 
 # Default value for :linked_files is []
-append :linked_files, %w{config/database.yml config/credentials.yml config/maskey.key config/sidekiq .env}
+set :linked_files, %w{config/database.yml config/credentials.yml.enc config/sidekiq.yml .env}
 
 # Default value for linked_dirs is []
-append :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/system public/packs node_modules tmp/sidekiq}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/system public/packs node_modules tmp/sidekiq}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -57,4 +57,4 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :format, :pretty
 set :log_level, :debug
-set sitemap_roles, :web
+# set sitemap_roles, :web

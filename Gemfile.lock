@@ -68,6 +68,7 @@ GEM
     ast (2.4.2)
     backport (1.1.2)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     benchmark (0.1.1)
     bindex (0.8.1)
     bootsnap (1.7.5)
@@ -108,6 +109,7 @@ GEM
       responders
       warden (~> 1.2.3)
     e2mmap (0.1.0)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     ffi (1.15.0)
     globalid (0.4.2)
@@ -320,6 +322,7 @@ PLATFORMS
 DEPENDENCIES
   actioncable (~> 6.1)
   annotate (~> 3.1)
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap (>= 1.4.4)
   bundler (~> 2.2)
   byebug
@@ -331,6 +334,7 @@ DEPENDENCIES
   capistrano-yarn (~> 2.0)
   capistrano3-puma (~> 5.0)
   devise (~> 4.7)
+  ed25519 (>= 1.2, < 2.0)
   globalize (~> 6.0)
   globalize-accessors (~> 0.3.0)
   htmlbeautifier (~> 1.3)

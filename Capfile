@@ -5,8 +5,8 @@ require 'capistrano/bundler'
 require 'capistrano/rbenv'
 require 'capistrano/puma'
 require 'capistrano/scm/git'
-require 'capistrano/sitemap_generator'
-require 'whenever/capistrano'
+# require 'capistrano/sitemap_generator'
+# require 'whenever/capistrano'
 # require 'capistrano/yarn'
 
 install_plugin Capistrano::SCM::Git
