@@ -60,4 +60,20 @@ gem "trestle-active_storage", "~> 3.0"
 
 gem "stimulus_reflex", "~> 3.4"
 
-gem "capistrano", "~> 3.16", :group => :developement
+group :development do
+  gem "capistrano", "~> 3.16", :group => :developement, require: false
+
+  gem "capistrano-rbenv", "~> 2.2", :group => :development, require: false
+
+  gem "capistrano-rails", "~> 1.6", :group => :development, require: false
+
+  gem "capistrano-bundler", "~> 2.0", :group => :development, require: false
+
+  gem "capistrano3-puma", "~> 5.0", :group => :development, require: false
+
+  gem "capistrano-webpacker-precompile", "~> 0.2", :group => :development, require: false
+
+  gem "capistrano-yarn", "~> 2.0", :group => :development, require: false
+end
+
+gem "sidekiq", "~> 6.2"
