@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_29_063725) do
+ActiveRecord::Schema.define(version: 2021_06_13_081215) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -78,6 +78,17 @@ ActiveRecord::Schema.define(version: 2021_05_29_063725) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "description"
+    t.string "destination"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "products_id"
+    t.integer "user_id"
+    t.index ["products_id"], name: "index_orders_on_products_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "product_translations", force: :cascade do |t|
     t.integer "product_id", null: false
     t.string "locale", null: false
@@ -98,7 +109,9 @@ ActiveRecord::Schema.define(version: 2021_05_29_063725) do
     t.string "unit"
     t.string "package"
     t.integer "manufacturer_id", null: false
+    t.integer "order_id"
     t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id"
+    t.index ["order_id"], name: "index_products_on_order_id"
   end
 
   create_table "slide_translations", force: :cascade do |t|
@@ -125,7 +138,9 @@ ActiveRecord::Schema.define(version: 2021_05_29_063725) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "orders_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["orders_id"], name: "index_users_on_orders_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -134,5 +149,6 @@ ActiveRecord::Schema.define(version: 2021_05_29_063725) do
   add_foreign_key "events", "products"
   add_foreign_key "gifts_and_events", "events"
   add_foreign_key "gifts_and_events", "gifts"
+  add_foreign_key "orders", "users"
   add_foreign_key "products", "manufacturers"
 end
