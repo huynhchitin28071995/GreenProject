@@ -72,4 +72,20 @@ gem "stimulus_reflex", "~> 3.4"
 
 gem "actioncable", "~> 6.1"
 
-gem "capistrano", "~> 3.16", :group => :development
+group :development do
+  gem "capistrano", "~> 3.16", require: false
+
+  gem "capistrano-rbenv", "~> 2.2", require: false
+
+  gem "capistrano-rails", "~> 1.6", require: false
+
+  gem "capistrano-bundler", "~> 2.0", require: false
+
+  gem "capistrano3-puma", "~> 5.0", require: false
+
+  gem "capistrano-webpacker-precompile", "~> 0.2", require: false
+
+  gem "capistrano-yarn", "~> 2.0", require: false
+
+end
+gem "sidekiq", "~> 6.2"
