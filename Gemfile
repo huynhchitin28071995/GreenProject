@@ -71,3 +71,5 @@ gem "image_processing", "~> 1.12"
 gem "stimulus_reflex", "~> 3.4"
 
 gem "actioncable", "~> 6.1"
+
+gem "capistrano", "~> 3.16", :group => :development
