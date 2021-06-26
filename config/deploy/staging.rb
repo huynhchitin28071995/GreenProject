@@ -1,4 +1,4 @@
-server '3.17.147.177', user: 'ubuntu', port: 22, roles: %i[web app db main], primary: true
+server '3.17.28.165', user: 'ubuntu', port: 22, roles: %i[web app db main], primary: true
 set :branch, 'thanh'
 set :application, 'cho-thuoc'
 namespace :sidekiq do

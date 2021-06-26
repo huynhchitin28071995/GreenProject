@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
-set :rbenv_ruby, '3.0.0'
+set :rbenv_ruby, '2.7.2'
 set :repo_url, "git@github.com:huynhchitin28071995/cho_thuoc.git"
 
 # Default branch is :master
@@ -22,7 +22,7 @@ set :pty, false
 
 # Default value for :linked_files is []
 set :linked_files, 
-%w{config/database.yml config/credentials.yml.enc config/sidekiq.yml .env}
+%w{config/database.yml}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/system public/packs node_modules tmp/sidekiq}
