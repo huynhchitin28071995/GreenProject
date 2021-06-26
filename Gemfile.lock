@@ -66,6 +66,7 @@ GEM
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 14.0)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.7.3)
       msgpack (~> 1.0)
@@ -104,6 +105,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     ffi (1.15.0)
     globalid (0.4.2)
@@ -267,6 +269,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 3.1)
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap (>= 1.4.4)
   byebug
   capistrano (~> 3.16)
@@ -277,6 +280,7 @@ DEPENDENCIES
   capistrano-yarn (~> 2.0)
   capistrano3-puma (~> 5.0)
   devise (~> 4.7)
+  ed25519 (>= 1.2, < 2.0)
   globalize (~> 6.0)
   globalize-accessors (~> 0.3.0)
   jbuilder (~> 2.7)
