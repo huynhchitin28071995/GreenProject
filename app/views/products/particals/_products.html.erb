@@ -1,11 +1,11 @@
 <section name="product_page">
-<div class='row'>
+  <div class='row'>
 
-<% @products.each do |product| %>
-    <div class="col-4">
-    <%= render partial: 'products/particals/item', locals: {product: product} %>
-    </div>
-<% end %>
+    <% @products.each do |product| %>
+      <div class="col-4">
+        <%= render partial: 'products/particals/item', locals: {product: product} %>
+      </div>
+    <% end %>
 
-</div>
+  </div>
 </section>

@@ -6,7 +6,7 @@ body {
   height: 100%;
 }
 a {
-  color: $white-color !important;
+  color: $black-color !important;
   &:hover {
     color: $aqua-color !important;
     text-decoration: none !important;
@@ -160,6 +160,13 @@ section {
   &[name="contact"] {
     height: 600px;
     background-color: gray;
+  }
+  &[name="product_page"] {
+    .product_item {
+      .card-body {
+        color: black;
+      }
+    }
   }
 }
 

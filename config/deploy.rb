@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
-set :rbenv_ruby, '2.7.2'
+set :rbenv_ruby, '3.0.0'
 set :repo_url, "git@github.com:huynhchitin28071995/cho_thuoc.git"
 
 # Default branch is :master
