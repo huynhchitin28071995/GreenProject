@@ -2,7 +2,7 @@
 #
 # Table name: products
 #
-#  id              :integer          not null, primary key
+#  id              :bigint           not null, primary key
 #  description     :text
 #  description     :text
 #  name            :string
@@ -12,7 +12,7 @@
 #  unit            :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  manufacturer_id :integer          not null
+#  manufacturer_id :bigint           not null
 #
 # Indexes
 #
@@ -20,7 +20,7 @@
 #
 # Foreign Keys
 #
-#  manufacturer_id  (manufacturer_id => manufacturers.id)
+#  fk_rails_...  (manufacturer_id => manufacturers.id)
 #
 class Product < ApplicationRecord
     belongs_to :manufacturer, optional:true

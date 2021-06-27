@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2021_05_29_081108) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -35,7 +38,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_081108) do
   end
 
   create_table "active_storage_variant_records", force: :cascade do |t|
-    t.integer "blob_id", null: false
+    t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
@@ -48,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_081108) do
   end
 
   create_table "product_translations", force: :cascade do |t|
-    t.integer "product_id", null: false
+    t.bigint "product_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -66,12 +69,12 @@ ActiveRecord::Schema.define(version: 2021_05_29_081108) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "unit"
     t.string "pakage"
-    t.integer "manufacturer_id", null: false
+    t.bigint "manufacturer_id", null: false
     t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id"
   end
 
   create_table "slide_translations", force: :cascade do |t|
-    t.integer "slide_id", null: false
+    t.bigint "slide_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
