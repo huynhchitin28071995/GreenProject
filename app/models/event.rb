@@ -2,7 +2,7 @@
 #
 # Table name: events
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  discount   :decimal(, )
 #  gift       :string
 #  hot_sale   :boolean
@@ -16,7 +16,7 @@
 #
 # Foreign Keys
 #
-#  product_id  (product_id => products.id)
+#  fk_rails_...  (product_id => products.id)
 #
 class Event < ApplicationRecord
     belongs_to :product

@@ -2,7 +2,7 @@
 #
 # Table name: gifts_and_events
 #
-#  id             :integer          not null, primary key
+#  id             :bigint           not null, primary key
 #  promotion_date :datetime
 #  quantity       :integer
 #  created_at     :datetime         not null
@@ -17,8 +17,8 @@
 #
 # Foreign Keys
 #
-#  event_id  (event_id => events.id)
-#  gift_id   (gift_id => gifts.id)
+#  fk_rails_...  (event_id => events.id)
+#  fk_rails_...  (gift_id => gifts.id)
 #
 class GiftsAndEvent < ApplicationRecord
     # has_many :events

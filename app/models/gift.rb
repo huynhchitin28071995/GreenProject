@@ -2,7 +2,7 @@
 #
 # Table name: gifts
 #
-#  id            :integer          not null, primary key
+#  id            :bigint           not null, primary key
 #  name          :string
 #  quantity      :integer
 #  type          :string
