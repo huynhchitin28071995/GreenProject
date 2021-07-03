@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <%= render 'layouts/shared/header_content' %>
-
 <body>
     <%= render 'layouts/shared/header' %>
+    <%= render 'layouts/shared/cart' %>
     <%= yield %>
 </body>
 <% if content_for?(:js_page) %>

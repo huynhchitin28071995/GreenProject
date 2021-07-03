@@ -1,29 +1,36 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     background-color: white;
     margin: 0;
     padding: 0;
 }
+
 a {
     color: $white-color;
+
     &:hover {
         color: chocolate;
         text-decoration: none;
     }
 }
+
 #notice {
     min-height: $notice-height;
     max-height: $notice-height;
+
     #open-navbar {
         min-height: $notice-height;
         max-height: $notice-height;
+
         &:focus {
             box-shadow: none !important;
         }
     }
 }
+
 .screen-darken {
     height: 100%;
     width: 0%;
@@ -35,6 +42,7 @@ a {
     visibility: hidden;
     background-color: rgba(34, 34, 34, 0.6);
     transition: opacity 0.2s linear, visibility 0.2s, width 2s ease-in;
+
     &.active {
         z-index: 10;
         transition: opacity 0.3s ease, width 0s;
@@ -43,23 +51,28 @@ a {
         visibility: visible;
     }
 }
-section{
-    &[name='slide']{
+
+section {
+    &[name='slide'] {
         height: 700px;
         width: 100%;
         padding: 0;
     }
-    &[name='splide']{
+
+    &[name='splide'] {
         height: calc(100vh*0.8);
         width: 100%;
         padding: 0;
-        #splide{
+
+        #splide {
             position: relative;
             height: calc(100vh*0.8);
+
             // background-color: red;
-            .splide__splide-content{
+            .splide__splide-content {
                 height: calc(100vh*0.8);
-                .splide__splide-content-shade{                    
+
+                .splide__splide-content-shade {
                     background-color: whitesmoke;
                     opacity: 0.7;
                     z-index: 1;
@@ -68,9 +81,10 @@ section{
                     left: 0;
                     width: 100%;
                     height: 100%;
-                }  
-                .splide__splide-description{
-                    padding: 5px;                    
+                }
+
+                .splide__splide-description {
+                    padding: 5px;
                     position: absolute;
                     top: 60%;
                     left: 15%;
@@ -79,9 +93,16 @@ section{
                     font-weight: bold;
                     z-index: 2;
                 }
-               
-            }  
+
+            }
         }
     }
 }
 
+#cart {
+    position: fixed;
+    right: 40px;
+    padding: 5px;
+    top: 150px;
+    font-size: 60px;
+}
