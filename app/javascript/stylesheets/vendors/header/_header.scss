@@ -34,4 +34,20 @@ header{
     }	
     /* ============ mobile view .end// ============ */
 }
-
+.fixed-navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    animation: gotoTop 1s;
+    top: 0;
+  }
+  
+  @keyframes gotoTop {
+    0% {
+      top: -120px;
+    }
+  
+    100% {
+      top: 0;
+    } 
+  }
