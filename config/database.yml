@@ -23,7 +23,7 @@ test:
   database: medical_test
 
 production:
-  <<: *default
-  database: medical_pro
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  host: ec2-34-193-113-223.compute-1.amazonaws.com
+  database: dbj822u4ngp8c3
+  username: ebowcslxgldogd
+  password: 03233d8bcdc3ffd81185abead1111aa969f3b38f83b0f4120a1babc9683d5930
