@@ -20,15 +20,27 @@ export default class extends Controller {
   }
   init() {
     let self = this;
-    self.navbarWillFixed(window.scrollY);
+    self.showNavbar();
     window.addEventListener("scroll", function () {
-      self.navbarWillFixed(window.scrollY);
+        self.showNavbar();
     });
   }
 
   showNavbar() {
     let scrollY = window.scrollY;
+    if (scrollY >= 800) {
+      document.getElementById("go-top").classList.remove("d-none");
+    }
+
+    if (scrollY == 0) {
+      document.getElementById("go-top").classList.add("d-none");
+    }
     this.navbarWillFixed(scrollY);
+  }
+
+  gotoTop(event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   navbarWillFixed(scrollY) {
