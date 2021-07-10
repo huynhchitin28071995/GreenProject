@@ -17,6 +17,7 @@ Trestle.resource(:products) do
         content_tag(:div, nil, class: 'thumbnail lozad', 'data-background-image': slide.thumbnail, src: preload_image)
       end.html_safe
     end
+    column :price
     column :description
     column :created_at, align: :center
     column :updated_at
@@ -27,6 +28,7 @@ Trestle.resource(:products) do
   #
   form dialog:true do |slide|
     text_field :name
+    number_field :price
     active_storage_field :image
     I18n.available_locales.each do |locale|
       tab t("admin.#{locale}") do

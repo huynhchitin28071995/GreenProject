@@ -13,6 +13,7 @@ class LandingController < ApplicationController
 
     def fetch_product
         @product = Product.all
+        # p @product
     end
 
 
