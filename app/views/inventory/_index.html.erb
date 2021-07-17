@@ -17,7 +17,7 @@
     </div> <!--end shopping-cart-header -->
 
     <ul class="shopping-cart-items">
-        <% @product.each do |product| %>
+        <% @cart_products.each do |product| %>
           <li class="clearfix">
             <div class="card_thumb">
               <img src=<%=load_image(product) %> alt='sample'>
@@ -25,7 +25,7 @@
             <span class="item-name">
               <%= product.name.html_safe%>
             </span>
-            <span class="item-price">$                  <%= product.price%>.00</span>
+            <span class="item-price">$<%= product.price%>.00</span>
             <span class="item-quantity">Quantity: 01</span>
           </li>
         <%end%>

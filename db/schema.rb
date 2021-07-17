@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_29_081108) do
+ActiveRecord::Schema.define(version: 2021_07_11_092953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,32 @@ ActiveRecord::Schema.define(version: 2021_05_29_081108) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "testing_2s", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.integer "number"
+    t.text "description"
+  end
+
+  create_table "testing_translations", force: :cascade do |t|
+    t.bigint "testing_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.index ["locale"], name: "index_testing_translations_on_locale"
+    t.index ["testing_id"], name: "index_testing_translations_on_testing_id"
+  end
+
+  create_table "testings", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.text "description"
+    t.integer "number"
   end
 
   create_table "users", force: :cascade do |t|
