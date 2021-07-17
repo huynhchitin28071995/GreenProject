@@ -76,6 +76,10 @@ a {
 }
 
 section {
+  position: relative;
+  height: 800px;
+  padding: 30px;
+
   &[name="inventory"] {
     margin-top: 1%;
     position: absolute;
@@ -155,9 +159,6 @@ section {
         .item-price {
           margin-right: 8px;
         }
-
-        .item-quantity {
-        }
       }
     }
 
@@ -216,10 +217,6 @@ section {
     width: 100%;
     padding: 0;
   }
-
-  position: relative;
-  height: 800px;
-  padding: 30px;
   &[name="member"] {
     height: 150px;
     padding: 0;
@@ -290,7 +287,6 @@ section {
       }
     }
   }
-
   &[name="splide"] {
     height: calc(100vh * 0.9); //vertical height * 90%
     width: 100%;
@@ -318,6 +314,18 @@ section {
       .card-body {
         color: black;
       }
+    }
+  }
+  &[name="profile"] {
+    .form-group {
+      margin: 10px 0;
+    }
+    #avatar {
+      border-radius: 50%;
+      border: white 5px solid;
+    }
+    .tab {
+      margin: 0 5px;
     }
   }
 }
@@ -414,12 +422,22 @@ section {
     height: 100%;
   }
 }
-.fixed-navbar {
-  position: fixed !important;
-  width: 100%;
-  z-index: 999;
-  animation: gotoTop 1s;
-  top: 0;
+.fixed_navbar {
+  #go-top {
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 1.5em;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    &:hover {
+      width: 52px;
+      height: 52px;
+    }
+  }
 }
 
 @keyframes gotoTop {
@@ -431,22 +449,11 @@ section {
     top: 0;
   }
 }
-#go-top {
-  position: fixed;
-  bottom: 150px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  line-height: 40px;
-  font-size: 1.5em;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  &:hover {
-    width: 52px;
-    height: 52px;
-  }
-}
+
 #cart {
   font-size: 24px;
   text-decoration: none;
+}
+#shop_cart {
+  z-index: 999;
 }
