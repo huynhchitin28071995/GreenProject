@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_13_081215) do
+ActiveRecord::Schema.define(version: 2021_07_17_065946) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -78,6 +81,17 @@ ActiveRecord::Schema.define(version: 2021_06_13_081215) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "order_items", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.bigint "product_id", null: false
+    t.integer "price", default: 0
+    t.integer "quantity", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string "description"
     t.string "destination"
@@ -85,6 +99,7 @@ ActiveRecord::Schema.define(version: 2021_06_13_081215) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "products_id"
     t.integer "user_id"
+    t.integer "status", default: 0
     t.index ["products_id"], name: "index_orders_on_products_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -109,9 +124,7 @@ ActiveRecord::Schema.define(version: 2021_06_13_081215) do
     t.string "unit"
     t.string "package"
     t.integer "manufacturer_id", null: false
-    t.integer "order_id"
     t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id"
-    t.index ["order_id"], name: "index_products_on_order_id"
   end
 
   create_table "slide_translations", force: :cascade do |t|
@@ -149,6 +162,8 @@ ActiveRecord::Schema.define(version: 2021_06_13_081215) do
   add_foreign_key "events", "products"
   add_foreign_key "gifts_and_events", "events"
   add_foreign_key "gifts_and_events", "gifts"
+  add_foreign_key "order_items", "orders"
+  add_foreign_key "order_items", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "manufacturers"
 end
