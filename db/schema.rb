@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_17_065946) do
+ActiveRecord::Schema.define(version: 2021_07_17_074653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -125,6 +125,19 @@ ActiveRecord::Schema.define(version: 2021_07_17_065946) do
     t.string "package"
     t.integer "manufacturer_id", null: false
     t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "sex", default: 0
+    t.string "address"
+    t.string "phone"
+    t.string "first_name"
+    t.string "last_name"
+    t.date "dob"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "slide_translations", force: :cascade do |t|

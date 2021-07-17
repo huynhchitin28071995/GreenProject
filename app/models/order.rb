@@ -5,7 +5,7 @@
 #  id          :bigint           not null, primary key
 #  description :string
 #  destination :string
-#  status      :integer          default(0)
+#  status      :integer          default("in_cart")
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  products_id :integer
@@ -23,5 +23,5 @@
 class Order < ApplicationRecord
   belongs_to :user
   has_many :order_items
-  enum status: [:in_cart, :to_confirm, :confirmed, :to_ship, :shipping, :shipped, :completed, :canceled, :refunded]
+  enum status: %i[in_cart to_confirm confirmed to_ship shipping shipped completed canceled refunded]
 end

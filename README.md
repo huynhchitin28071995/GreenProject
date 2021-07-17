@@ -129,3 +129,8 @@ sudo service postgresql start
 
 products controller controls product detail (all CRUD)
 //TODO: Tao trang san pham: tat ca san pham de xem chi tiet/add vao gio hang, trang chi tiet san pham
+
+- trong config/routes 
+  resources :users, only: [] do
+    resource :profile, controller: :profile
+ end
