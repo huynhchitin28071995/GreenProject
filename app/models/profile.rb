@@ -19,6 +19,7 @@
 #
 class Profile < ApplicationRecord
   belongs_to :user
+  enum sex: %i[unknown male female]
 
   def name
     "#{first_name}  #{last_name}"

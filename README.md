@@ -134,3 +134,6 @@ products controller controls product detail (all CRUD)
   resources :users, only: [] do
     resource :profile, controller: :profile
  end
+
+bundle add simple_form
+rails g simple_form:install

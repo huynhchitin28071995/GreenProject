@@ -250,6 +250,9 @@ GEM
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     solargraph (0.40.4)
       backport (~> 1.1)
       benchmark
@@ -348,6 +351,7 @@ DEPENDENCIES
   rubocop (~> 1.14)
   sass-rails (>= 6)
   sidekiq (~> 6.2)
+  simple_form (~> 5.1)
   solargraph (~> 0.40.4)
   spring
   stimulus_reflex (~> 3.4)
