@@ -1,0 +1,37 @@
+<div class="col-sm-9">  
+<ul class="nav nav-tabs">
+    <li class="active tab"><a data-toggle="tab" href="#home">Home</a></li>
+</ul>
+  
+<div class="tab-contents" style="margin-top:5px">
+  <div class="tab-pane active" id="home">
+    <ul class="details">
+      <li id="name">
+        <p>Họ và tên: <%=@profile.full_name%></p>
+      </li>
+
+      <li id="phone">
+        <p>Số điện thoại: <%=@profile.phone%></p>
+      </li>
+
+      <li id="email">
+        <p>Email: <%=@profile.email%></p>
+      </li>
+
+      <li>
+        <%=link_to "Update Profile", edit_user_profile_path, class:"btn btn-warning"%>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-pane" id="messages">
+        
+  </div>
+
+  <div class="tab-pane" id="settings">
+        
+  </div>
+
+</div>
+
+</div><!--/col-9-->

@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   }
   root to: 'landing#index'
   get '/inventory', controller: :inventory, action: :index
-  get '/profile', controller: :profile, action: :index
+  
   resources :users, only: [] do
-    resources :profiles
+    resource :profile, controller: :profile
  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -328,6 +328,16 @@ section {
       margin: 0 5px;
     }
   }
+  &[name="profile"] {
+    .tab-contents {
+      .details {
+        list-style: none;
+      }
+    }
+    .img-btn {
+      border-radius: 5px;
+    }
+  }
 }
 
 .product {

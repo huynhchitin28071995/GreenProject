@@ -5,10 +5,11 @@
 #  id         :bigint           not null, primary key
 #  address    :string
 #  dob        :date
+#  email      :string 
 #  first_name :string
 #  last_name  :string
 #  phone      :string
-#  sex        :integer          default(0)
+#  sex        :integer          default("unknown")
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :bigint
@@ -19,4 +20,11 @@
 #
 class Profile < ApplicationRecord
   belongs_to :user
+  enum sex: [:unknown, :male, :female]
+
+  def full_name
+    "#{self.first_name} #{self.last_name}" 
+  end
+
+
 end

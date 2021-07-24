@@ -19,13 +19,21 @@
                 </a>
                 <%=render 'inventory/index'%>
               </li>
-              <li class="nav-link">
-                <%=link_to "Profile",profile_path%>
-              </li>
+              <%if user_signed_in? %>
+                <li class="nav-item">
+                  <%=link_to "Profile",user_profile_path(current_user), class:"nav-link"%>
+                </li>
+              <%end%>
 
               <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
               <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
               <li class="nav-item"><a class="nav-link" href="#"> Services </a></li>
+              <%if user_signed_in? %>
+                <li class="nav-item">
+              <%= link_to I18n.t('title.logout'), destroy_user_session_path , data: {confirm: "Are you sure?", method:"delete"}, class:'nav-link'%> 
+            </li>
+              <%end%>
+
               <li class="nav-item" data-controller='lang'>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="true">

@@ -41,6 +41,7 @@ en:
   title:
     login: login
     sign_up: sign up
+    logout: log out
 
   label:
     email: Email
