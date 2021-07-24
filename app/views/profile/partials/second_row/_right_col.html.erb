@@ -14,16 +14,54 @@
           <p><%=current_user&.email%></p>
         </div>
       </div>
-      <% @profile.attributes.each do |name, value|%>
-        <div class="row">
-          <div class="col-md-6">
-            <label><%=name%></label>
-          </div>
-          <div class="col-md-6">
-            <p><%=value%></p>
-          </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label>First Name</label>
         </div>
-      <% end %>
+        <div class="col-md-6">
+          <p><%=@profile.first_name%></p>
+        </div>
+      </div>
+            <div class="row">
+        <div class="col-md-6">
+          <label>Last Name</label>
+        </div>
+        <div class="col-md-6">
+          <p><%=@profile.last_name%></p>
+        </div>
+      </div>
+            <div class="row">
+        <div class="col-md-6">
+          <label>Day Of Birth</label>
+        </div>
+        <div class="col-md-6">
+          <p><%=@profile.dob%></p>
+        </div>
+      </div>
+            <div class="row">
+        <div class="col-md-6">
+          <label>Sex</label>
+        </div>
+        <div class="col-md-6">
+          <p><%=@profile.sex%></p>
+        </div>
+      </div>
+            <div class="row">
+        <div class="col-md-6">
+          <label>Address</label>
+        </div>
+        <div class="col-md-6">
+          <p><%=@profile.address%></p>
+        </div>
+      </div>
+            <div class="row">
+        <div class="col-md-6">
+          <label>Phone</label>
+        </div>
+        <div class="col-md-6">
+          <p><%=@profile.phone%></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

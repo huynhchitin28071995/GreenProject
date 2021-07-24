@@ -25,4 +25,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :orders, dependent: :destroy
   has_one :profile
+  
+  def update_profile(params)
+    params[:sex] = params[:sex].to_i
+    self.profile.update(params)
+  end
+  
 end

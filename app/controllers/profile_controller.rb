@@ -11,13 +11,21 @@ class ProfileController < ApplicationController
   end
 
   def update
+    puts '------------------------------------------------------------'
     puts 'UPDATE METHOD FROM PROFILE CONTROLLER'
+    p profile_params
     p params
-    show if current_user.profile.update(params[:profile].permit!)
+    if current_user.update_profile(profile_params)
+      @profile = current_user.profile || current_user.creat_profile
+      render :show
+    end
   end
 
-#   def profile_params
-      
-#   end
+  private
+  def profile_params
+      params.require(:profile).permit(
+        :first_name, :last_name, :sex, :address, :phone, :dob
+      )
+  end
   
 end
