@@ -1,2 +1,1 @@
-import "bootstrap"
-console.log('hehe')
+import "bootstrap";

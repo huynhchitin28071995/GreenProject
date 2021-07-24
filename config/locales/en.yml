@@ -50,7 +50,7 @@ en:
     pass_confirm: password confirmation
 
   btn:
-    login: login
+    login: LOGIN
     sign_up: sign up
 
   admin:

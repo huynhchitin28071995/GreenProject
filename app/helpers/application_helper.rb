@@ -16,4 +16,8 @@ module ApplicationHelper
     def fecth_product
         @products=Product.all
     end
+    def sexes
+      Profile::sexes.map {|v,k| [k, v]}
+    end
+
 end

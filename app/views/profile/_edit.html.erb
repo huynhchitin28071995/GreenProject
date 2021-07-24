@@ -1,0 +1,11 @@
+  <%= simple_form_for(@profile, method: :put, url: user_profile_path) do |profile|%>
+  <%= profile.input :first_name%>
+  <%= profile.input :last_name%>
+  <%= profile.input :phone%>
+  <%= profile. input :sex, as: :radio_buttons, collection: sexes, label_method: :second, value_method: :second %>
+  <%= profile.input :address%>  
+  <%= profile.input :dob, as: :date %>
+  <%= profile.submit 'Update profile'%>
+<%end%>
+
+
