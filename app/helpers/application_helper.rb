@@ -20,4 +20,9 @@ module ApplicationHelper
   def get_discount(product)
     product.event.discount
   end
+
+  def sexes
+    Profile::sexes.map {|v,k| [k, v]}
+  end
+  
 end

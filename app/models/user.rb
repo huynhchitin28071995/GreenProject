@@ -27,7 +27,7 @@ class User < ApplicationRecord
   has_one :profile
   
   def update_profile(params)
-    params[:sex] = params[:sex].to_i
+    params[:sex] = params[:sex].to_sym
     self.profile.update(params)
   end
   

@@ -1,5 +1,5 @@
 <div class='container'>
-<%= simple_form_for(@profile, method: :put, url: user_profile_path, wrapper: :horizontal_form, wrapper_mappings: {
+  <%= simple_form_for(@profile, method: :put, url: user_profile_path, wrapper: :horizontal_form, wrapper_mappings: {
     boolean:       :horizontal_boolean,
     check_boxes:   :horizontal_collection,
     date:          :horizontal_multi_select,
@@ -12,10 +12,10 @@
   }) do |profile|%>
     <%= profile.input :first_name, label_html: { class: 'text-white text-capitalize' }%>
     <%= profile.input :last_name, label_html: { class: 'text-white text-capitalize' }%>
-    <%= profile.input :sex, label_html: { class: 'text-white text-capitalize' }, as: :radio_buttons, collection: Profile::sexes, wrapper: :horizontal_collection_inline%>
+    <%= profile.input :sex, label_html: { class: 'text-white text-capitalize' }, as: :radio_buttons, collection: sexes, label_method: :second, value_method: :second, wrapper: :horizontal_collection_inline%>
     <%= profile.input :address, label_html: { class: 'text-white text-capitalize' }%>
     <%= profile.input :phone, label_html: { class: 'text-white text-capitalize' }%>
     <%= profile.input :dob, as: :date , start_year: Date.today.year - 90,label: 'Date Of Birth', label_html: { class: 'text-white text-capitalize' }%>
     <%= profile.button :submit, class: "btn-primary" %>
-<% end %>
+  <% end %>
 </div>
