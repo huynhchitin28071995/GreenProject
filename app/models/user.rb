@@ -28,4 +28,5 @@ class User < ApplicationRecord
     params[:sex]=params[:sex].to_sym
     self.profile.update(params)
   end
+  AVATAR = Mime::LOOKUP.keys.keep_if{ |v| v =~ /image/ }
 end

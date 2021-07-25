@@ -16,7 +16,23 @@
       <%= profile.input :last_name%>
       <%= profile.input :email, input_html: { autocomplete: 'email' } %>
       <%= profile.input :phone%>
-      <%= profile.input :sex, as: :radio_buttons, collection: sexes, wrapper: :vertical_collection_inline, label_method: :second, value_method: :second %>
+      <div class="row">
+        <div class="col-3">
+          <% if current_user.profile&.avatar&.attached? %>
+            <%= image_tag current_user.profile.avatar, class:"avatar rounded-circle", id:"avatar"  %>
+            <% else %>
+              <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar" alt="avatar"id="avatar">
+          <% end %>
+        </div>
+        <div class="col-9">
+          <div class="simple-form-avatar">
+            <%= profile.input :avatar, as: :file, input_html: { accept: User::AVATAR } %>
+          </div>
+        </div>
+      </div>
+      <div class="simple-form-sexes fw-bolder">
+        <%= profile.input :sex, as: :radio_buttons, collection: sexes, wrapper: :vertical_collection_inline, label_method: :second, value_method: :second %>
+      </div>
       <%= profile.input :address%>  
       <%= profile.input :dob, as: :date %>
       <%= profile.button :submit, 'Update profile', class: "btn-primary" %>

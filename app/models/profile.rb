@@ -20,6 +20,7 @@
 #
 class Profile < ApplicationRecord
   belongs_to :user
+  has_one_attached :avatar
   enum sex: [:unknown, :male, :female]
 
   def full_name

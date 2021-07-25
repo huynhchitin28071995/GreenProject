@@ -1,9 +1,11 @@
 <div class="col-sm-3"><!--left col-->
 
     <div class="text-center" >
-      <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar" alt="avatar"id="avatar">
-      <h6>Upload a different photo...</h6>
-      <input type="file" class="text-center center-block file-upload img-btn">
+      <% if current_user.profile&.avatar&.attached? %>
+        <%= image_tag current_user.profile.avatar, class:"avatar", id:"avatar"  %>
+      <% else %>
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar" alt="avatar"id="avatar">
+      <% end %>
     </div><br> 
                     
     <ul class="list-group">
