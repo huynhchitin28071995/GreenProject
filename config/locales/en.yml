@@ -51,7 +51,7 @@ en:
 
   btn:
     login: LOGIN
-    sign_up: sign up
+    sign_up: SIGN UP
 
   admin:
     vi: Vietnamese

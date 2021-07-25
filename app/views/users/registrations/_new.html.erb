@@ -1,27 +1,50 @@
-
-  <h2 class="regis r_title"><%= I18n.t('title.sign_up') %></h2>
+	<section class="ftco-section">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "users/shared/error_messages", resource: resource %>
+		<div class="container">
+			  <div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+          <h2 class="regis r_title"><%= I18n.t('title.sign_up') %></h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-7 col-lg-5" style="width: 350px;">
+					<div class="login-wrap">
+						<div class="signup-form">
 
-    <div class="field">
-      <%= f.label :email, I18n.t('label.email') %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
+		      		<div class="form-group mb-3">
+                <%= f.label :email, I18n.t('label.email') %><br/>
+                <div class="field-login ">
+                  <i class="fas fa-user"></i>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "John Doe" %>
+                </div>
+		      		</div>
 
-    <div class="field">
-      <%= f.label :password, I18n.t('label.pass') %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
-    </div>
+	            <div class="form-group mb-3">
+                <%= f.label :password, I18n.t('label.pass') %>
 
-    <div class="field">
-      <%= f.label :password_confirmation, I18n.t('label.pass_confirm') %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <i class="fas fa-lock"></i>
+                <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "John Doe" %>
 
-    <div class="actions" style="margin-top: 10px" >
-      <%= f.submit I18n.t('btn.sign_up'),class:'btn btn-primary' %>
-    </div>
-  <% end %>
+	            </div>
+
+	            <div class="form-group mb-3">
+                <%= f.label :password_confirmation, I18n.t('label.pass_confirm') %><br />
+                <i class="fas fa-lock"></i> 
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "John Doe"  %>
+	            </div>
+
+	            <div class="form-group">
+                <%= f.submit I18n.t('btn.sign_up'),class:'btn btn-primary' %>
+	            </div>
+	          </div>
+	          <p>I'm already a member! <%= link_to I18n.t('title.login'), new_user_session_path , class:'nav-link'%> </p>
+	        </div>
+				</div>
+			</div>
+		</div>
+    <% end %>
+	</section>
