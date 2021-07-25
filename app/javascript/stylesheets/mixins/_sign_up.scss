@@ -67,6 +67,40 @@ section {
 }
 
 body {
+  .forgot-password {
+    margin-bottom: 10px !important;
+  }
+  label {
+    float: left;
+    padding-left: 10px;
+  }
+  .field-login-email {
+    margin-bottom: 15px !important;
+  }
+  .field-login {
+    text-align: center;
+    width: 100%;
+    padding: 0px !important;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    i {
+      display: inline-block;
+      width: 32px;
+    }
+    input {
+      background: transparent;
+      display: inline-block;
+      width: 200px;
+      border-width: 0 !important;
+      &:focus {
+        background: transparent !important;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+  }
   background-image: url("~images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2084,7 +2118,6 @@ pre code {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;

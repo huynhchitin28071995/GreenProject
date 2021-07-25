@@ -1,25 +1,29 @@
 <div class="col-sm-9">  
 <ul class="nav nav-tabs">
-    <li class="active tab"><a data-toggle="tab" href="#home">Home</a></li>
+
 </ul>
   
 <div class="tab-contents" style="margin-top:5px">
   <div class="tab-pane active" id="home">
     <ul class="details">
       <li id="name">
-        <p>Họ và tên: <%=@profile.full_name%></p>
+        <p><span style="color:green; font-size: 24px">Họ và tên:</span> <%=@profile.full_name%></p>
       </li>
 
-      <li id="name">
-        <p>Email: <%=@profile.email%></p>
+      <li id="email">
+        <p><span style="color:green; font-size: 24px">Email:</span> <%=@profile.email%></p>
       </li>
 
       <li id="phone">
-        <p>Số điện thoại: <%=@profile.phone%></p>
+        <p><span style="color:green; font-size: 24px">Số điện thoại:</span> <%=@profile.phone%></p>
       </li>
 
-      <li id="name">
-        <p>Giới tính: <%=@profile.sex%></p>
+      <li id="gender">
+        <p><span style="color:green; font-size: 24px">Giới tính:</span> <%=@profile.sex%></p>
+      </li>
+
+      <li id="address">
+        <p><span style="color:green; font-size: 24px">Địa chỉ:</span> <%=@profile.address%></p>
       </li>
 
       <li>
