@@ -20,10 +20,13 @@
 class Profile < ApplicationRecord
   belongs_to :user
   enum sex: %i[unknown male female]
+  has_one_attached :avatar
 
   def name
     "#{first_name}  #{last_name}"
   end
 
-  
+  def thumbnail
+    return url_for(avatar) if !avatar.nil? && avatar.attached?
+  end
 end

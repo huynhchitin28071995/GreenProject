@@ -2,7 +2,7 @@ class ProfileController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @profile = current_user.profile || current_user.creat_profile
+    @profile = current_user.profile || current_user.create_profile
     p @profile
   end
 
@@ -16,7 +16,7 @@ class ProfileController < ApplicationController
     p profile_params
     p params
     if current_user.update_profile(profile_params)
-      @profile = current_user.profile || current_user.creat_profile
+      @profile = current_user.profile || current_user.create_profile
       render :show
     end
   end
@@ -24,7 +24,7 @@ class ProfileController < ApplicationController
   private
   def profile_params
       params.require(:profile).permit(
-        :first_name, :last_name, :sex, :address, :phone, :dob
+        :first_name, :last_name, :sex, :address, :phone, :dob, :avatar
       )
   end
   

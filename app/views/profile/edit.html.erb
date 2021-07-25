@@ -1,4 +1,4 @@
-<div class='container'>
+<div class='container mt-3'>
   <%= simple_form_for(@profile, method: :put, url: user_profile_path, wrapper: :horizontal_form, wrapper_mappings: {
     boolean:       :horizontal_boolean,
     check_boxes:   :horizontal_collection,
@@ -12,6 +12,7 @@
   }) do |profile|%>
     <%= profile.input :first_name, label_html: { class: 'text-white text-capitalize' }%>
     <%= profile.input :last_name, label_html: { class: 'text-white text-capitalize' }%>
+    <%= profile.input :avatar, as: :file, input_html: { accept: :avatar, class: 'h-100' }, label_html: { class: 'text-white text-capitalize' }, place_holder: 'test'%>
     <%= profile.input :sex, label_html: { class: 'text-white text-capitalize' }, as: :radio_buttons, collection: sexes, label_method: :second, value_method: :second, wrapper: :horizontal_collection_inline%>
     <%= profile.input :address, label_html: { class: 'text-white text-capitalize' }%>
     <%= profile.input :phone, label_html: { class: 'text-white text-capitalize' }%>
