@@ -11,7 +11,7 @@
 class Order < ApplicationRecord
   belongs_to :user
 
-  has_many :create_order_items
+  # has_many :order_items
 
   enum status: [:in_cart, :to_confirm, :confirmed, :to_ship, :shipping, :shipped, :conpleted, :cancled, :refunded]
 end

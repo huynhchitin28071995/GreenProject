@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_18_095413) do
+ActiveRecord::Schema.define(version: 2021_07_25_090048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,22 +43,22 @@ ActiveRecord::Schema.define(version: 2021_07_18_095413) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "create_order_items", force: :cascade do |t|
-    t.bigint "orders_id", null: false
-    t.bigint "products_id", null: false
-    t.integer "price", default: 0
-    t.integer "quantity", default: 0
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["orders_id"], name: "index_create_order_items_on_orders_id"
-    t.index ["products_id"], name: "index_create_order_items_on_products_id"
-  end
-
   create_table "manufacturers", force: :cascade do |t|
     t.string "name"
     t.string "alias"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.bigint "product_id", null: false
+    t.integer "price", default: 0
+    t.integer "quantity", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -121,24 +121,6 @@ ActiveRecord::Schema.define(version: 2021_07_18_095413) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "testing_2s", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
-    t.integer "number"
-    t.text "description"
-  end
-
-  create_table "testing_translations", force: :cascade do |t|
-    t.bigint "testing_id", null: false
-    t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.text "description"
-    t.index ["locale"], name: "index_testing_translations_on_locale"
-    t.index ["testing_id"], name: "index_testing_translations_on_testing_id"
-  end
-
   create_table "testings", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -161,7 +143,7 @@ ActiveRecord::Schema.define(version: 2021_07_18_095413) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "create_order_items", "orders", column: "orders_id"
-  add_foreign_key "create_order_items", "products", column: "products_id"
+  add_foreign_key "order_items", "orders"
+  add_foreign_key "order_items", "products"
   add_foreign_key "products", "manufacturers"
 end

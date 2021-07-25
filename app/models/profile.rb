@@ -5,7 +5,7 @@
 #  id         :bigint           not null, primary key
 #  address    :string
 #  dob        :date
-#  email      :string 
+#  email      :string
 #  first_name :string
 #  last_name  :string
 #  phone      :string
