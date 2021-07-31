@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 body {
-  padding-top: 60px;
   height: 100%;
   padding-bottom: 60px;
 }
@@ -1184,22 +1183,12 @@ section {
     height: 100%;
   }
 }
-.fixed_navbar {
-  #go-top {
-    position: fixed;
-    bottom: 150px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    line-height: 40px;
-    font-size: 1.5em;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    &:hover {
-      width: 52px;
-      height: 52px;
-    }
-  }
+.fixed-navbar {
+  position: fixed !important;
+  animation: gotoTop 1s;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 .simple-form-avatar {
   padding: 75px 20px;
@@ -1225,4 +1214,19 @@ section {
 }
 #shop_cart {
   z-index: 999;
+}
+#go-top {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  font-size: 1.5em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  &:hover {
+    width: 52px;
+    height: 52px;
+  }
 }
