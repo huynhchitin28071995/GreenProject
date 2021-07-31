@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'order/index'
   get 'landing/index'
   resources :products, only: [:show, :index]
   devise_for :users, controllers: {
@@ -12,5 +11,6 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
   resources :users, only: [] do
     resource :profile, controller: :profile
+    resources :orders
  end
 end

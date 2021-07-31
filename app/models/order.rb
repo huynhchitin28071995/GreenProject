@@ -24,7 +24,7 @@
 #
 class Order < ApplicationRecord
   belongs_to :user
-  has_many :order_items, denpendent: :destroy
+  has_many :order_items, dependent: :destroy
   enum status: %i[in_cart to_confirm confirmed to_ship shipping shipped completed canceled refunded]
 
   def counter_item

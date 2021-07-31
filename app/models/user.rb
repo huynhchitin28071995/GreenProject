@@ -31,4 +31,8 @@ class User < ApplicationRecord
     self.profile.update(params)
   end
   
+  def in_cart
+    self.orders.in_cart.first  
+  end
+  
 end

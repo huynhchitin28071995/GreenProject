@@ -1,0 +1,29 @@
+<div class="wrapper bg-white">
+  <div class="table-responsive">
+    <table class="table table-borderless">
+      <thead>
+        <tr class="text-uppercase text-muted">
+          <th scope="col">product</th>
+          <th scope="col" class="text-right">total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Babyblends: 1meal/day</th>
+          <td class="text-right"><b>$69.86</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <% @cart.order_items.each do |item|%>
+    <%= render partial: 'orders/partials/item', locals: {item: item} %>
+  <% end %>
+
+  <div class="pl-3 font-weight-bold">Related Subsriptions</div>
+  <div class="d-sm-flex justify-content-between rounded my-3 subscriptions">
+    <div> <b>#9632</b> </div>
+    <div>December 08, 2020</div>
+    <div>Status: Processing</div>
+    <div> Total: <b> $68.8 for 10 items</b> </div>
+  </div>
+</div>
