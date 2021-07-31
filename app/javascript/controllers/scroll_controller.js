@@ -28,7 +28,7 @@ export default class extends Controller {
 
   showNavbar() {
     let scrollY = window.scrollY;
-    if (scrollY >= 800) {
+    if (scrollY >= 600) {
       document.getElementById("go-top").classList.remove("d-none");
     }
 
