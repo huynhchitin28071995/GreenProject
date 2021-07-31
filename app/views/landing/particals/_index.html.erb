@@ -4,10 +4,11 @@
     
     <div class="col-10">
     <%=render 'landing/particals/splide'%>
+  <% if !user_signed_in? %>
     <%=render 'landing/particals/member'%>
+  <% end %>
     <%=render 'landing/particals/product'%>
     </div>
-
     <div class="col" style="">col_3</div>
   </div>
 </div>

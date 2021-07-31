@@ -34,7 +34,7 @@
         <%= profile.input :sex, as: :radio_buttons, collection: sexes, wrapper: :vertical_collection_inline, label_method: :second, value_method: :second %>
       </div>
       <%= profile.input :address%>  
-      <%= profile.input :dob, as: :date %>
+      <%= profile.input :dob, as: :date, start_year: Date.today.year - 60, end_year:Date.today.year - 10, order: [:day, :month, :year] %>
       <%= profile.button :submit, 'Update profile', class: "btn-primary" %>
   <% end %>
 </section>

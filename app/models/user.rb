@@ -24,9 +24,15 @@ class User < ApplicationRecord
          
   has_many :orders, dependent: :destroy
   has_one :profile
+  after_commit :create_default_profile, on: :create 
   def update_profile(params)
     params[:sex]=params[:sex].to_sym
     self.profile.update(params)
   end
   AVATAR = Mime::LOOKUP.keys.keep_if{ |v| v =~ /image/ }
+  private
+    def create_default_profile
+      self.create_profile
+    end
+
 end

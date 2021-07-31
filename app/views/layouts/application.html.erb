@@ -5,7 +5,9 @@
 
 <body>
     <span class='screen-darken'></span>
+  <% if user_signed_in? %>
     <%= render 'layouts/share/header' %>
+  <% end %>
     <%= yield %>
 </body>
     
