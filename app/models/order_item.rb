@@ -23,8 +23,22 @@
 class OrderItem < ApplicationRecord 
   belongs_to :order
   belongs_to :product
+  
+  after_commit :update_total
+  after_commit :update_counter, on: [:create, :destroy]
 
   def total
     self.price * self.quantity 
   end
+
+  private
+
+  def update_total
+    self.order.update_subtotal
+  end
+
+  def update_counter
+    self.order.update_counter
+  end
+
 end

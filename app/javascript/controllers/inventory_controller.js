@@ -19,4 +19,5 @@ export default class extends ApplicationController {
     let classes = document.querySelector(`#${id}`).classList;
     classes.remove("show");
   }
+  addItem(event) {}
 }
