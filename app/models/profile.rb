@@ -8,7 +8,7 @@
 #  first_name :string
 #  last_name  :string
 #  phone      :string
-#  sex        :integer          default(0)
+#  sex        :integer          default("unknown")
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :bigint
