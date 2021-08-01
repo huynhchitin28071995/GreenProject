@@ -3,11 +3,11 @@
   <div id="shop_cart" class="shopping-cart" data-inventory-target="cart" >
     <div class="shopping-cart-header">
 
-      <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">0</span>
+      <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"><%= @cart.counter %></span>
       <div class="shopping-cart-total">
       <div class="total">
         <span class="lighter-text">Total:</span>
-        <span class="main-color-text">$0</span>
+        <span class="main-color-text"><%= @cart.subtotal%> <%= I18n.t('money') %></span>
       </div>
         <a href="javascript:void(0)" id="close_cart" data-action="click->inventory#closecart">
           <i class="fas fa-times"></i>
@@ -17,7 +17,7 @@
     </div> <!--end shopping-cart-header -->
 
     <ul class="shopping-cart-items">
-      
+      <%= render 'orders/partials/show'%>
     </ul>
 
     <a href="#" class="button">

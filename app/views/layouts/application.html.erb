@@ -4,11 +4,11 @@
 <%=render 'layouts/share/header_content'%>
 
 <body>
-    <span class='screen-darken'></span>
+<%= render 'layouts/share/screen' %>
   <% if user_signed_in? %>
     <%= render 'layouts/share/header' %>
   <% end %>
-    <%= yield %>
+    <%= yield %>  
 </body>
     
 </html>

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  # layout 'auth'
+  # layout ''
   def index
     # render layout: 'auth'
     p user_signed_in?

@@ -1,4 +1,5 @@
-<div class="product_item">
+<div class="product_item" data-controller="cart
+">
 
   <div class="card mb-4 product-wap rounded-0">
           <div class="card rounded-0">
@@ -46,11 +47,9 @@
               <div class="rounded-0 product-overlay d-flex align-items-center justify-content-center">
                   <ul class="list-unstyled">
                       <li>
-                        <%= do  %>
-                          <button class="btn btn-success text-white mt-2">
+                          <button class="btn btn-success text-white mt-2" data-id="<%= product.id%>" data-action= "click->cart#add2Cart">
                             <i class="btn-success text-white mt-2 fas fa-cart-plus"></i>
                           </button>
-                        <%end%>
                       </li>
                       <li>
                         <%=link_to product_path(product) do  %>

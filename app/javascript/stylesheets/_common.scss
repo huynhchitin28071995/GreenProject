@@ -1,6 +1,7 @@
 @import "./mixins/util";
 @import "./mixins/sign_up";
 @import "./variables";
+@import "order/item";
 * {
   box-sizing: border-box;
 }
@@ -28,8 +29,8 @@ a {
 }
 .screen-darken {
   height: 100%;
-  width: 0%;
-  z-index: 30;
+  width: 100%;
+  z-index: 900;
   position: fixed;
   top: 0;
   right: 0;
@@ -82,13 +83,21 @@ section {
   position: relative;
   padding: 30px;
 
+  &[name="order"] {
+    padding: 0px !important;
+  }
   &[name="inventory"] {
+    display: none !important;
     margin-top: 1%;
     position: absolute;
     right: 200px;
-    width: 350px;
+    width: 500px;
     padding: 0;
     height: 400px;
+    z-index: 999;
+    &.show {
+      display: block !important;
+    }
 
     *:before,
     *:after {
@@ -117,10 +126,6 @@ section {
       background: #afafaf;
       position: relative;
       border-radius: 3px;
-      display: none !important;
-      &.show {
-        display: block !important;
-      }
 
       .shopping-cart-header {
         border-bottom: 1px solid #e8e8e8;
@@ -133,6 +138,7 @@ section {
 
       .shopping-cart-items {
         padding-top: 20px;
+        padding-left: 0px !important;
         list-style: none;
 
         li {
@@ -166,7 +172,7 @@ section {
 
     .shopping-cart:after {
       bottom: 100%;
-      left: 47%;
+      left: 34%;
       border: solid transparent;
       content: " ";
       height: 0;
@@ -205,7 +211,8 @@ section {
       clear: bth;
     }
     .total {
-      width: 120px;
+      width: 126px;
+      margin-right: 50px;
     }
     #close_cart {
       font-size: 28px;

@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
         yield
     end
     def get_cart
-      @cart_products= Product.all
+      return unless user_signed_in?
+      p current_user
+      @cart = current_user.cart || current_user.orders.create
+
     end
+
 
 end

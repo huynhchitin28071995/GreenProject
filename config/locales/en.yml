@@ -32,6 +32,8 @@
 en:
   hello: "Hello world"
 
+  money: $
+
   menus:
     home: Home
     about: About Us

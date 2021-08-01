@@ -4,7 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  counter    :integer          default(0)
-#  status     :integer
+#  status     :integer          default("in_cart")
 #  subtotal   :float            default(0.0)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -16,8 +16,9 @@ class Order < ApplicationRecord
 
   enum status: [:in_cart, :to_confirm, :confirmed, :to_ship, :shipping, :shipped, :conpleted, :cancled, :refunded]
 
-  def counter_item
-    update(counter: self.order_items.count)
+  def update_counter
+    # update(counter: self.order_items.count)
+    update(counter: self.order_items.sum(:quantity))
   end
 
   def update_subtotal

@@ -1,6 +1,8 @@
 vi:
   hello: Xin Chào %{name}
 
+  money: VND
+
   menus:
     home: Trang Chủ
     about: Giới thiệu

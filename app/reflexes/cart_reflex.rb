@@ -36,9 +36,9 @@ class CartReflex < ApplicationReflex
 
   def add_to_cart(product_id)
     product = Product.find_by(id: product_id)
-    cart = current_user.in_cart
+    cart = current_user.cart
     item = cart.order_items.find_by(product_id: product_id)
-    item.nil? add_item_to_cart(cart, product) : update_cart(item)
+    item.nil? ? add_item_to_cart(cart, product) : update_cart(item)
   end
 
   private
