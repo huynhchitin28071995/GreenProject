@@ -12,7 +12,7 @@
 #
 class Order < ApplicationRecord
   belongs_to :user
-  has_many :order_items; dependent :destroy
+  has_many :order_items, dependent: :destroy
 
   enum status: [:in_cart, :to_confirm, :confirmed, :to_ship, :shipping, :shipped, :conpleted, :cancled, :refunded]
 

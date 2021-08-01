@@ -35,4 +35,9 @@ class User < ApplicationRecord
       self.create_profile
     end
 
+    def in_cart
+      self.orders.in_cart.first
+    end
+
+
 end
