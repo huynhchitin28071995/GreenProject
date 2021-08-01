@@ -1,0 +1,19 @@
+.money{
+    position: relative;
+    &:after{
+        content: "đ";
+        position: absolute;
+        margin-left: 3px;
+        margin-top: -3px;
+    }
+    &.usd{
+        &:after{
+            content: '';
+        }
+        &:before{
+            content: '$';
+            position: absolute;
+            margin-top: -3px;
+        }
+    }
+}

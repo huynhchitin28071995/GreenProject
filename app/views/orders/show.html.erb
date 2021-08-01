@@ -1,4 +1,37 @@
-<section class='container' id='order-detail'>
-<%= render "orders/partials/header" %>
-<%= render "orders/partials/detail"%>
+<section class='container mt-2' id='order-detail'>
+  <%= render "orders/partials/header" %>
+  <div class="container mb-4">
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive">
+          <table class="table table-striped text-white">
+            <thead>
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Product</th>
+                <th scope="col" class="text-center">Quantity</th>
+                <th scope="col" class="text-right">Price</th>
+                <th scope="col" class="text-right">Subtotal</th>
+                <th> </th>
+              </tr>
+            </thead>
+            <%= render "orders/partials/detail"%>
+          </table>
+        </div>
+      </div>
+      <div class="col mb-2">
+        <div class="row">
+          <div class="col-sm-12  col-md-6">
+            <button class="btn btn-block btn-light">Continue Shopping</button>
+          </div>
+          <div class="col-sm-12 col-md-6 text-right">
+            <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% if @cart.in_cart? %>
+    <div class='text-center d-block'>Prices could change</div>
+  <% end %>
 </section>

@@ -74,4 +74,5 @@ export default class extends ApplicationController {
     let id = event.currentTarget.getAttribute('data-id');
     this.stimulate('CartReflex#add_to_cart', id);
   }
+
 }
