@@ -1,8 +1,7 @@
 <section name="order">
   <div class="container">
-    <div class="box">
-      <div class="ribbon"><span>POPULAR</span></div>
-    </div>
-    <%= render 'orders/partials/content'%>
+    <% if user_signed_in? %>
+      <%= render 'orders/partials/content'%>
+    <% end %>
   </div>
 </section>

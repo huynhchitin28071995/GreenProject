@@ -14,14 +14,14 @@ class Order < ApplicationRecord
   belongs_to :user
   has_many :order_items, dependent: :destroy
 
-  enum status: [:in_cart, :to_confirm, :confirmed, :to_ship, :shipping, :shipped, :conpleted, :cancled, :refunded]
+  enum status: [:in_cart, :to_confirm, :confirmed, :to_ship, :shipping, :shipped, :completed, :cancled, :refunded]
 
   def update_counter
-    # update(counter: self.order_items.count)
     update(counter: self.order_items.sum(:quantity))
   end
 
   def update_subtotal
     update(subtotal: self.order_items.sum('price * quantity'))
   end
+
 end

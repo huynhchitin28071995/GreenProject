@@ -25,5 +25,9 @@ export default class extends ApplicationController {
     classes.remove("show");
     screen.remove("active");
   }
+  on_keypress(event) {
+    console.log(on_keypress);
+  }
+
   addItem(event) {}
 }
