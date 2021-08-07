@@ -47,6 +47,18 @@ class CartReflex < ApplicationReflex
     item.destroy
   end
 
+  def rem_item(product_id)
+    cart = current_user.cart
+    item = cart.order_items.find_by(id: product_id)
+    item.update(quantity: item.quantity - 1 ) if item.quantity - 1 >= 0 
+  end
+
+  def add_item(product_id)
+    cart = current_user.cart
+    item = cart.order_items.find_by(id: product_id)
+    item.update(quantity: item.quantity + 1 )
+  end
+
   private
   def add_item_to_cart(cart, product)
     cart.order_items.create(product_id: product.id, price: product.price, quantity: 1)

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   root to: 'landing#index'
   get '/inventory', controller: :inventory, action: :index
   get '/orders', controller: :orders, action: :index
+  get '/checkout', controller: :checkout, action: :index
   
   resources :users, only: [] do
     resource :profile, controller: :profile

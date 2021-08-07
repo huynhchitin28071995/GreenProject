@@ -33,5 +33,12 @@ export default class extends ApplicationController {
     this.stimulate("CartReflex#destroy_item", id);
   }
 
-  addItem(event) {}
+  addItem(event) {
+    let id = event.currentTarget.getAttribute("data-id");
+    this.stimulate("CartReflex#add_item", id);
+  }
+  remItem(event) {
+    let id = event.currentTarget.getAttribute("data-id");
+    this.stimulate("CartReflex#rem_item", id);
+  }
 }
