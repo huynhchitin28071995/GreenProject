@@ -1,1 +1,23 @@
-hehe
+<section name="checkout">
+<% if user_signed_in? %>
+  <div class="container">
+    <div class="row">
+
+      <div class="col">
+      </div>
+
+      <div class="col-6 item">
+        <%= render 'checkout/partials/content'%>
+      </div>
+
+      <div class="col-4 bill">
+        <%= render 'checkout/partials/bill'%>
+      </div>
+
+      <div class="col">
+      </div>
+
+    </div>
+  </div>
+<% end %>
+</section>

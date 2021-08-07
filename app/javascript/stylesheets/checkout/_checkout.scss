@@ -1,0 +1,38 @@
+section {
+  &[name="checkout"] {
+    #check_img {
+      max-height: 118px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    #check_price {
+    }
+    #check_quantity {
+    }
+
+    .bill {
+      background-color: grey;
+      .discount {
+        .discount_1 {
+          height: 30%;
+          background-color: aqua;
+        }
+        .discount_2 {
+          height: 30%;
+          background-color: pink;
+        }
+        .service_fee {
+          height: 30%;
+          background-color: green;
+        }
+      }
+      .pay {
+        margin-top: 10px;
+        height: 50px;
+        background-color: blue;
+      }
+    }
+  }
+}
