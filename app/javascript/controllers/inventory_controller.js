@@ -2,7 +2,9 @@ import ApplicationController from "./application_controller";
 
 export default class extends ApplicationController {
   static targets = ["cart"];
-  connect() {}
+  connect() {
+    super.connect();
+  }
   opencart(event) {
     event.preventDefault();
 
@@ -25,8 +27,10 @@ export default class extends ApplicationController {
     classes.remove("show");
     screen.remove("active");
   }
-  on_keypress(event) {
-    console.log(on_keypress);
+  on_keypress(event) {}
+  remove_product(event) {
+    let id = event.currentTarget.getAttribute("data-id");
+    this.stimulate("CartReflex#destroy_item", id);
   }
 
   addItem(event) {}

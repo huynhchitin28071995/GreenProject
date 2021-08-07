@@ -41,6 +41,12 @@ class CartReflex < ApplicationReflex
     item.nil? ? add_item_to_cart(cart, product) : update_cart(item)
   end
 
+  def destroy_item(product_id)
+    cart = current_user.cart
+    item = cart.order_items.find_by(id: product_id)
+    item.destroy
+  end
+
   private
   def add_item_to_cart(cart, product)
     cart.order_items.create(product_id: product.id, price: product.price, quantity: 1)

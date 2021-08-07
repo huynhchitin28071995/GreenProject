@@ -1,4 +1,4 @@
-import ApplicationController from './application_controller'
+import ApplicationController from "./application_controller";
 
 /* This is the custom StimulusReflex controller for the Lang Reflex.
  * Learn more at: https://docs.stimulusreflex.com
@@ -14,10 +14,10 @@ export default class extends ApplicationController {
    * Important:
    * By default, StimulusReflex overrides the -connect- method so make sure you
    * call super if you intend to do anything else when this controller connects.
-  */
+   */
 
-  connect () {
-    super.connect()
+  connect() {
+    super.connect();
     // add your code here, if applicable
   }
 
@@ -70,13 +70,13 @@ export default class extends ApplicationController {
   // finalizeDance(element, reflex, noop, reflexId) {
   //   element.innerText = '\nNow, the cleanup can begin!'
   // }
-  switch_lang(event) {   
-    console.log(event);
-    console.log(event, event.currentTarget)
+  switch_lang(event) {
     // let el = event.currentTarget
     // let option = el.options[el.selectedIndex]
-    // console.log(option)
-    // console.log(option.getAttribute('value'))
-    this.stimulate('langReflex#switch_lang',event.currentTarget.getAttribute('data-value'));
+
+    this.stimulate(
+      "langReflex#switch_lang",
+      event.currentTarget.getAttribute("data-value")
+    );
   }
 }
