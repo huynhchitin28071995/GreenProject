@@ -75,4 +75,18 @@ export default class extends ApplicationController {
     this.stimulate('CartReflex#add_to_cart', id);
   }
 
+  onEnter(event) {
+    if (event.key === 'Enter') {
+      let value = parseInt(event.currentTarget.value);
+      if (value < 0) {
+        value = 0;
+      }
+      this.stimulate('CartReflex#update_quantity', value, event.currentTarget.dataset.item);
+      event.currentTarget.value = value;
+    }
+  }
+
+  onDeleteItem(event) {
+    this.stimulate('CartReflex#delete_item', event.currentTarget.dataset.item);
+  }
 }

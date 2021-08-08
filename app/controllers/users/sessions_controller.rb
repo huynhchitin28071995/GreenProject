@@ -6,9 +6,11 @@ module Users
     # before_action :configure_sign_in_params, only: [:create]
 
     # GET /resource/sign_in
-    # def new
-    #   super
-    # end
+    def new
+      puts '__________________________________________________________'
+      puts params
+      super
+    end
 
     # POST /resource/sign_in
     # def create

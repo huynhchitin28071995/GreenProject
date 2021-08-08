@@ -46,7 +46,6 @@ export default class extends Controller {
   navbarWillFixed(scrollY) {
     let id = this.navbarTarget.getAttribute("id");
     let classes = document.querySelector(`#${id}`).classList;
-    console.log(scrollY);
     if (scrollY >= 120) {
       classes.add("fixed-navbar");
     } else {

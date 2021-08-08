@@ -5,12 +5,12 @@
 
   <div class="field">
     <%= f.label :email , I18n.t('label.email')%><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: I18n.t('placeholders.email') %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: I18n.t('placeholders.email'), focus: true %>
   </div>
   <div class="field">
     <%= f.label :password, I18n.t('label.password') %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>

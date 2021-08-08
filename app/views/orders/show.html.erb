@@ -7,11 +7,11 @@
           <table class="table table-striped text-white">
             <thead>
               <tr>
-                <th scope="col"> </th>
-                <th scope="col">Product</th>
-                <th scope="col" class="text-center">Quantity</th>
-                <th scope="col" class="text-right">Price</th>
-                <th scope="col" class="text-right">Subtotal</th>
+                <th scope="col" id='thumbnail-col'> </th>
+                <th scope="col" id='product-col' class='text-left'>Product</th>
+                <th scope="col" id='qty-col' class="text-center">Quantity</th>
+                <th scope="col" id='price-col' class="text-right">Price</th>
+                <th scope="col" id='subtotal-col' class="text-right">Subtotal</th>
                 <th> </th>
               </tr>
             </thead>
@@ -22,10 +22,10 @@
       <div class="col mb-2">
         <div class="row">
           <div class="col-sm-12  col-md-6">
-            <button class="btn btn-block btn-light">Continue Shopping</button>
+            <%= link_to 'Continue Shopping', products_path, class: "btn btn-block btn-light" %>
           </div>
           <div class="col-sm-12 col-md-6 text-right">
-            <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+            <%= link_to 'Check Out', checkout_path(@cart.id), class: "btn btn-block btn-light" %>
           </div>
         </div>
       </div>

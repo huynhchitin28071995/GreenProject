@@ -1,0 +1,28 @@
+<div class="container bootstrap snippets bootdeys bg-light">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default invoice" id="invoice">
+        <div class="panel-body">
+          <%= render './orders/partials/checkout/header' %>
+          <%= render './orders/partials/checkout/delivery_detail' %>
+          <div class="row table-row">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="text-center" style="width:5%">#</th>
+                  <th style="width:45%">Item</th>
+                  <th class="text-right" style="width:10%">Quantity</th>
+                  <th class="text-right" style="width:10%">Unit Price</th>
+                  <th class="text-right" style="width:10%">Fee</th>
+                  <th class="text-right" style="width:10%">Discount</th>
+                </tr>
+              </thead>
+              <%= render './orders/partials/checkout/detail' %>
+            </table>
+          </div>
+          <%= render './orders/partials/checkout/total' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

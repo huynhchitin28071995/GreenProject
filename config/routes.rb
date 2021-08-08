@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resource :profile, controller: :profile
     resources :orders
  end
+ get 'checkout/:id', controller: :orders, action: :checkout, as: :checkout
 end

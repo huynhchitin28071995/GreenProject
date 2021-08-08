@@ -25,14 +25,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :orders, dependent: :destroy
   has_one :profile
-  
+
   def update_profile(params)
     params[:sex] = params[:sex].to_sym
-    self.profile.update(params)
+    profile.update(params)
   end
-  
+
   def in_cart
-    self.orders.in_cart.first  
+    orders.in_cart.first
   end
-  
 end

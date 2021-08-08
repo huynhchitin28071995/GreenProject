@@ -34,3 +34,5 @@ en:
   product:
     manufacturer: Manufacturer
     description: Description
+  order:
+    in_cart: Confirming

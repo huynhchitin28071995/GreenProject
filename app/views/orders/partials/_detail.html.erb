@@ -1,4 +1,4 @@
-<tbody>
+<tbody data-controller='cart'>
   <% @cart.order_items.each do |item|%>
     <%= render partial: 'orders/partials/item', locals: {item: item} %>
   <% end %>

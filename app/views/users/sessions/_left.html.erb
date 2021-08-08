@@ -3,7 +3,7 @@
   <div class="fields">
     <div class="field">
       <%= f.label :email, I18n.t('label.email')%><br>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: I18n.t('placeholders.email')%>
+      <%= f.email_field :email, autofocus: params[:type] == 'signin', autocomplete: "email" , placeholder: I18n.t('placeholders.email')%>
     </div>
     <div class="field">
       <%= f.label :password, I18n.t('label.password') %><br>
