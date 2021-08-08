@@ -7,28 +7,35 @@ section {
         height: 100%;
       }
     }
-    #check_price {
-    }
-    #check_quantity {
-    }
 
     .bill {
+      border-radius: 10px;
+      padding: 5px;
       background-color: grey;
       .discount {
         .discount_1 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding: 5px;
           height: 30%;
-          background-color: aqua;
+          background-color: wheat;
         }
         .discount_2 {
           height: 30%;
+          padding: 5px;
+          margin-bottom: 10px;
           background-color: pink;
         }
         .service_fee {
           height: 30%;
+          padding: 5px;
+          margin-bottom: 10px;
           background-color: green;
         }
       }
       .pay {
+        border-top: 3px black dashed;
+        padding: 5px;
         margin-top: 10px;
         height: 50px;
         background-color: blue;
