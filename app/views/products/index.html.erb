@@ -1,9 +1,0 @@
-<section id="products" class='container-fluid' data-controller='product'>
-    <div class='row' id='product-container' data-controller='cart'>
-        <%@products.each do |product|%>
-        <div class="col-12 col-md-4 mb-4">
-            <%= render partial: 'shared/product/item', locals: {product: product}%>
-        </div>
-        <% end %>
-    </div>
-</section>

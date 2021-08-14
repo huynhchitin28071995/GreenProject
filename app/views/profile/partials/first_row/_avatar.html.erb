@@ -1,9 +1,0 @@
-<div class="profile-img">
-  <img
-    src="<%=@profile.thumbnail || default_image()%>"
-    alt="No avatar"
-  />
-  <div class="file btn btn-lg btn-primary">
-    <%= link_to'Change Photo', edit_user_profile_path, class: 'profile-edit-btn' %>
-  </div>
-</div>

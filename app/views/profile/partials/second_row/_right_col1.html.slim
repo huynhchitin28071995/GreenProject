@@ -1,0 +1,74 @@
+.col-md-8
+  #myTabContent.tab-content.profile-tab
+    #home.tab-pane.fade.show.active[role="tabpanel" aria-labelledby="home-tab"]
+      .row
+        .col-md-6
+          label
+            | User Id/Email
+        .col-md-6
+          p
+            =current_user&.email
+      .row
+        .col-md-6
+          label
+            | Name
+        .col-md-6
+          p
+            =current_user&.profile&.name
+      .row
+        .col-md-6
+          label
+            | Phone
+        .col-md-6
+          p
+            =current_user&.profile&.phone
+      .row
+        .col-md-6
+          label
+            | Profession
+        .col-md-6
+          p
+            | Web Developer and Designer
+    #profile.tab-pane.fade[role="tabpanel" aria-labelledby="profile-tab"]
+      .row
+        .col-md-6
+          label
+            | Experience
+        .col-md-6
+          p
+            | Expert
+      .row
+        .col-md-6
+          label
+            | Hourly Rate
+        .col-md-6
+          p
+            | 10$/hr
+      .row
+        .col-md-6
+          label
+            | Total Projects
+        .col-md-6
+          p
+            | 230
+      .row
+        .col-md-6
+          label
+            | English Level
+        .col-md-6
+          p
+            | Expert
+      .row
+        .col-md-6
+          label
+            | Availability
+        .col-md-6
+          p
+            | 6 months
+      .row
+        .col-md-12
+          label
+            | Your Bio
+          br
+          p
+            | Your detail description

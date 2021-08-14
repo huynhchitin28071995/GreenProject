@@ -1,0 +1,7 @@
+section.container[name="related-products-splide" data-controller="related-products"]
+  #related-products.splide[data-related-products-target="splide"]
+    .splide__track
+      ul.splide__list
+        - @related_products&.each do |product|
+          li.splide__slide
+            = render partial: 'shared/product/item', locals: {product: product}

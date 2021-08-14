@@ -1,0 +1,18 @@
+h2.title
+  =I18n.t('btn.login')
+= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .fields
+    .field
+      = f.label :email, I18n.t('label.email')
+  br
+  = f.email_field :email, autofocus: params[:type] == 'signin', autocomplete: "email" , placeholder: I18n.t('placeholders.email')
+  .field
+    = f.label :password, I18n.t('label.password')
+  br
+  = f.password_field :password, autocomplete: "current-password"
+  - if devise_mapping.rememberable?
+    .field
+      = f.check_box :remember_me
+      = f.label :remember_me,I18n.t('label.remember')
+  .actions
+    = f.submit I18n.t('btn.login'), class: "btn btn-primary", style: "border-radius: 5%"

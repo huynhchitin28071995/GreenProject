@@ -1,0 +1,23 @@
+h2
+  =I18n.t('btn.signup')
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = render "users/shared/error_messages", resource: resource
+  .field
+    = f.label :email , I18n.t('label.email')
+  br
+  = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: I18n.t('placeholders.email'), focus: true
+  .field
+    = f.label :password, I18n.t('label.password')
+    - if @minimum_password_length
+      em
+        | (
+        = @minimum_password_length
+        |  characters minimum)
+  br
+  = f.password_field :password, autocomplete: "new-password"
+  .field
+    = f.label :password_confirmation, I18n.t('label.confirm_password')
+  br
+  = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: I18n.t('placeholders.confirm_password')
+  .actions
+    = f.submit I18n.t('btn.signup') , class: "btn btn-primary"

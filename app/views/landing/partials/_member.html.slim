@@ -1,0 +1,27 @@
+- if current_user
+  section#member[name="member"]
+    #member-banner.container
+      .row.d-flex.text-white
+        h1.text-uppercase.d-block
+          | WELCOME
+    br
+    h1.text-uppercase
+      =current_user.email
+- else
+  section#member[name="member"]
+    #member-banner.container
+      .row.text-white
+        .col-sm-6
+          h1.text-uppercase.text-align-justify
+            =I18n.t('label.had_account?')
+    h3.text-align-justify
+      =I18n.t('label.account_purpose')
+    .d-flex.justify-content-center
+      = link_to I18n.t('btn.login'), new_user_session_path, class: 'btn btn-primary w-50 font-weight-bold'
+    .col-sm-6
+      h1.text-uppercase.text-align-justify
+        =I18n.t('label.no_account?')
+    h3.text-align-justify
+      =I18n.t('label.account_purpose')
+    .d-flex.justify-content-center
+      = link_to I18n.t('btn.signup'), new_user_session_path , class: 'btn btn-primary w-50 font-weight-bold'

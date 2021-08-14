@@ -1,0 +1,52 @@
+.col-md-8
+  #myTabContent.tab-content.profile-tab
+    #home.tab-pane.fade.show.active[role="tabpanel" aria-labelledby="home-tab"]
+      .row
+        .col-md-6.text-capitalize
+          label
+            | User Id/Email
+        .col-md-6
+          p
+            =current_user&.email
+      .row
+        .col-md-6.text-capitalize
+          label
+            | First Name
+        .col-md-6.text-capitalize
+          p
+            =@profile.first_name
+      .row
+        .col-md-6.text-capitalize
+          label
+            | Last Name
+        .col-md-6.text-capitalize
+          p
+            =@profile.last_name
+      .row
+        .col-md-6.text-capitalize
+          label
+            | Day Of Birth
+        .col-md-6.text-capitalize
+          p
+            =@profile.dob
+      .row
+        .col-md-6.text-capitalize
+          label
+            | Sex
+        .col-md-6.text-capitalize
+          p
+            =@profile.sex
+      .row
+        .col-md-6.text-capitalize
+          label
+            | Address
+        .col-md-6.text-capitalize
+          p
+            =@profile.address
+      .row
+        .col-md-6.text-capitalize
+          label
+            | Phone
+        .col-md-6.text-capitalize
+          p
+            =@profile.phone

@@ -1,0 +1,4 @@
+li.nav-item[data-controller="lang"]
+  .nav-link
+    = select_tag "language", options_from_collection_for_select(@languages, :id, :value, locale.to_sym), {data: {action: 'change->lang#switchLang'}}
+    = label_tag 'language', "Language", class: 'float-left mr-2'

@@ -1,0 +1,23 @@
+.container.bootstrap.snippets.bootdeys.bg-light
+  .row
+    .col-sm-12
+      #invoice.panel.panel-default.invoice
+        .panel-body
+          = render './orders/partials/checkout/header'
+          = render './orders/partials/checkout/delivery_detail'
+          .row.table-row
+            table.table.table-striped
+              thead
+                tr
+                  th.text-center[style="width:15%"]
+                    | #
+                  th[style="width:45%"]
+                    | Item
+                  th.text-right[style="width:10%"]
+                    | Quantity
+                  th.text-right[style="width:10%"]
+                    | Unit Price
+                  th.text-right[style="width:10%"]
+                    | Discount
+              = render './orders/partials/checkout/detail'
+          = render './orders/partials/checkout/total'

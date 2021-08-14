@@ -1,0 +1,32 @@
+section#order-detail.container.mt-2
+  = render "orders/partials/header"
+  .container.mb-4
+    .row
+      .col-12
+        .table-responsive
+
+  table.table.table-striped.text-white
+    thead
+      tr
+        th#thumbnail-col[scope="col"]
+
+        th#product-col.text-left[scope="col"]
+          | Product
+        th#qty-col.text-center[scope="col"]
+          | Quantity
+        th#price-col.text-right[scope="col"]
+          | Price
+        th#subtotal-col.text-right[scope="col"]
+          | Subtotal
+        th
+
+    = render "orders/partials/detail"
+  .col.mb-2
+    .row
+      .col-sm-12.col-md-6
+        = link_to 'Continue Shopping', products_path, class: "btn btn-block btn-light"
+      .col-sm-12.col-md-6.text-right
+        = link_to 'Check Out', checkout_path(@cart.id), class: "btn btn-block btn-light"
+  - if @cart.in_cart?
+    .text-center.d-block
+      | Prices could change

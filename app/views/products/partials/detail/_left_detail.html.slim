@@ -1,0 +1,69 @@
+#product-detail-left-col.col-lg-5.mt-5
+  .card.mb-3
+    |  <img class="card-img img-fluid" src="
+    =load_product_image(@product)
+    | " alt="Card image cap" id="product-detail"> 
+  .row
+    .col-1.align-self-center
+      a[href="#multi-item-example" role="button" data-bs-slide="prev"]
+        i.text-dark.fas.fa-chevron-left
+        span.sr-only
+          | Previous
+    #multi-item-example.col-10.carousel.slide.carousel-multi-item[data-bs-ride="carousel"]
+      .carousel-inner.product-links-wap[role="listbox"]
+        .carousel-item
+          .row
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 1"> 
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 2"> 
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 3"> 
+        .carousel-item.active
+          .row
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 4"> 
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 5"> 
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 6"> 
+        .carousel-item
+          .row
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 7"> 
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 8"> 
+            .col-4
+              a[href="#"]
+                |  <img class="card-img img-fluid" src="
+                =load_product_image(@product)
+                | " alt="Product Image 9"> 
+    .col-1.align-self-center
+      a[href="#multi-item-example" role="button" data-bs-slide="next"]
+        i.text-dark.fas.fa-chevron-right
+        span.sr-only
+          | Next

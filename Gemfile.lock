@@ -253,6 +253,13 @@ GEM
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
+    slim (4.1.0)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
+    slim-rails (3.3.0)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (>= 3.0, < 5.0)
     solargraph (0.40.4)
       backport (~> 1.1)
       benchmark
@@ -284,6 +291,7 @@ GEM
       rack
       rails (>= 5.2)
       redis
+    temple (0.8.2)
     thor (1.1.0)
     thread-local (1.1.0)
     tilt (2.0.10)
@@ -352,6 +360,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   sidekiq (~> 6.2)
   simple_form (~> 5.1)
+  slim-rails (~> 3.3)
   solargraph (~> 0.40.4)
   spring
   stimulus_reflex (~> 3.4)

@@ -1,9 +1,0 @@
-<div class="card h-100">
-    <a href="<%= product_path(product) %>" class='d-flex justify-content-center'>
-    <div class='lozad-container'>
-        <div class="lozad" data-background-image=<%=load_product_image(product)%>>
-        </div>
-        </div>
-    </a>
-    <%= render partial: "shared/product/partials/item_info", locals: {product: product} %>
-</div>

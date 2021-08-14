@@ -1,0 +1,5 @@
+section#products.container-fluid[data-controller="product"]
+  #product-container.row[data-controller="cart"]
+    - @products.each do |product|
+      .col-12.col-md-4.mb-4
+        = render partial: 'shared/product/item', locals: {product: product}

@@ -1,0 +1,13 @@
+- if discount? (product)
+  .new-price
+    = discount(product).to_i
+    |  VND 
+  .old-price
+    = product.price.to_i
+    |  VND 
+- else
+  .new-price
+    = product.price.to_i
+    |  VND 
+  .old-price.d-block.invisible
+    |  NONE 

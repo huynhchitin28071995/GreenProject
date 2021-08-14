@@ -1,0 +1,13 @@
+section.container[name="splide" data-controller="splide"]
+  #splide.splide[data-splide-target="splide"]
+    .splide__track
+      ul.splide__list
+        - @slides.each do |slide|
+          li.splide__slide
+            .splide__splide-content
+              |  <img data-splide-lazy=
+              = load_image(slide.image)
+              |  alt="sample"> 
+              .splide__splide-content-shade
+              .splide__splide-description
+                = slide.description

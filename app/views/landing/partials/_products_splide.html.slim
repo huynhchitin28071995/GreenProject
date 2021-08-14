@@ -1,0 +1,9 @@
+section#products-splide[name="products-splide" data-controller="products-splide"]
+  #product-splide.splide[data-products-splide-target="splide"]
+    .splide__track.container
+      ul.splide__list
+        - @products.each do |product|
+          - if product.event&.hot_sale?
+            li.splide__slide
+              #product-container.row
+                = render partial: 'shared/product/item', locals: {product: product}

@@ -1,0 +1,6 @@
+.profile-img
+  |  <img src="
+  =@profile.thumbnail || default_image()
+  | " alt="No avatar" /> 
+  .file.btn.btn-lg.btn-primary
+    = link_to'Change Photo', edit_user_profile_path, class: 'profile-edit-btn'

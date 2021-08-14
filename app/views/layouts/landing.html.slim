@@ -1,0 +1,9 @@
+doctype html
+html
+  = render 'layouts/shared/header_content'
+  body
+    = render 'layouts/shared/header'
+    = yield
+  - if content_for?(:js_page)
+    = yield (:js_page)
+  = render 'layouts/shared/footer'

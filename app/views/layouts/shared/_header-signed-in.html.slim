@@ -1,0 +1,22 @@
+ul.navbar-nav.ms-auto
+  li.nav-item
+    a.nav-link[href="#"]
+      =I18n.t('menus.about')
+  li.nav-item
+    a.nav-link[href="#"]
+      =I18n.t('menus.contact')
+  li.nav-item
+    | <a class="nav-link" href="
+    = products_path
+    | "> 
+    =I18n.t('menus.product')
+  li.nav-item
+    = link_to I18n.t('btn.signout'), destroy_user_session_path, data: {confirm: "Are u sure?", method: "delete" }, class: 'nav-link'
+  li.nav-item
+    = render 'layouts/shared/cart'
+  li.nav-item
+    = link_to "Profile", user_profile_path(current_user), class: 'nav-link'
+form.form-inline.my-2.my-lg-0
+  input.form-control.mr-sm-2[type="search" placeholder="Search" aria-label="Search"]
+  button.btn.btn-outline-success.my-2.my-sm-0[type="submit"]
+    | Search

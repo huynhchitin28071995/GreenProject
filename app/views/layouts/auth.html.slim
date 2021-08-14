@@ -1,0 +1,9 @@
+= content_for :title do
+  |  This is a log-in page! 
+doctype html
+html
+  = render 'layouts/shared/header_content'
+  body
+    = render 'layouts/shared/header'
+    = yield
+    = render 'layouts/shared/footer'

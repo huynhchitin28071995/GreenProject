@@ -1,0 +1,9 @@
+#product-detail-right-col.col-lg-7.mt-5
+  .card
+    .card-body
+      h1.h2
+        =@product.name
+      = render partial: "shared/product/partials/info/price", locals: {product: @product}
+      = render "products/partials/detail/right/stars"
+      = render "products/partials/detail/right/others"
+      = render "products/partials/detail/right/form"

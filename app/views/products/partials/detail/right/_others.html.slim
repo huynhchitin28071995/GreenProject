@@ -1,0 +1,31 @@
+ul.list-inline
+  li.list-inline-item
+    h6
+      =I18n.t('product.manufacturer')
+      | :
+  li.list-inline-item
+    p.text-muted
+      strong
+        =@product.manufacturer.name
+h6
+  =I18n.t('product.description')
+  | :
+p
+  =@product.description
+ul.list-inline
+  li.list-inline-item
+    h6
+      | Avaliable Color :
+  li.list-inline-item
+    p.text-muted
+      strong
+        | White / Black
+h6
+  | Specification:
+ul.list-unstyled.pb-3
+  li
+    | Not defined yet
+  li
+    | Not defined yet
+  li
+    | Not defined yet

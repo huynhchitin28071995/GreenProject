@@ -1,0 +1,41 @@
+form#cart-form[action="" method="GET"]
+  input[type="hidden" name="product-title" value="Activewear"]
+  .row
+    .col-auto
+      ul.list-inline.pb-3
+        li.list-inline-item
+          | Size : 
+          input#product-size[type="hidden" name="product-size" value="S"]
+        li.list-inline-item
+          span.btn.btn-success.btn-size
+            | S
+        li.list-inline-item
+          span.btn.btn-success.btn-size
+            | M
+        li.list-inline-item
+          span.btn.btn-success.btn-size
+            | L
+        li.list-inline-item
+          span.btn.btn-success.btn-size
+            | XL
+    .col-auto
+      ul.list-inline.pb-3
+        li.list-inline-item.text-right
+          |  Quantity 
+          input#product-quanity[type="hidden" name="product-quanity" value="1"]
+        li.list-inline-item
+          span#btn-minus.btn.btn-success
+            | -
+        li.list-inline-item
+          span#var-value.badge.bg-secondary
+            | 1
+        li.list-inline-item
+          span#btn-plus.btn.btn-success
+            | +
+  .row.pb-3
+    .col.d-grid.d-flex.justify-content-center
+      button.btn.btn-success.btn-lg.w-100[type="submit" name="submit" value="buy"]
+        | Buy
+    .col.d-grid.d-flex.justify-content-center
+      button.btn.btn-success.btn-lg.w-100[type="submit" name="submit" value="addtocard"]
+        | Add To Cart

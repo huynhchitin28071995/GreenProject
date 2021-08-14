@@ -1,0 +1,5 @@
+ul.navbar-nav.ms-auto
+  li.nav-item
+    = link_to I18n.t('btn.login'), new_user_session_path + '?type=signin', class: 'nav-link'
+  li.nav-item
+    = link_to I18n.t('btn.signup'), new_user_session_path + '?type=signup', class: 'nav-link'

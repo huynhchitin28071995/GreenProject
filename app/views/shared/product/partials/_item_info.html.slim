@@ -1,0 +1,13 @@
+.card-body
+  ul.list-unstyled.d-flex.justify-content-between.row
+    li.col-sm-12.col-md-8
+      = render "shared/product/partials/info/stars"
+    li.text-muted.text-right.col-sm-12.col-md-4
+      = render partial: "shared/product/partials/info/price", locals: {product: product}
+  a.h2.text-decoration-none.text-dark[href="shop-single.html"]
+    =product.name
+  p.card-text
+    =product.description
+  |  <button class="btn btn-dark" data-action='click->cart#add2Cart' data-id=
+  =product.id
+  | >ADD TO CART

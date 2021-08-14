@@ -1,0 +1,19 @@
+header[data-controller="scroll"]
+  #notice.bg-warning.container-fluid
+
+  button#open-navbar.d-lg-none.btn.btn-transparent.text-white[data-trigger="navbar_main" type="button"]
+    i.fas.fa-bars
+  span#go-top.rounded-circle.bg-warning.text-white.text-center.align-middle.d-none[data-action="click->scroll#gotoTop"]
+    i.fas.fa-angle-up
+  nav#navbar_main.mobile-offcanvas.navbar.navbar-expand-lg.navbar-dark.bg-primary[data-scroll-target="navbar"]
+    .container-fluid
+      .offcanvas-header
+
+        button.btn-close.float-end
+      = link_to  "Brand", root_path, class: 'navbar-brand'
+      ul.navbar-nav
+        - if user_signed_in?
+          = render 'layouts/shared/header-signed-in'
+        - else
+          = render 'layouts/shared/header-not-signed-in'
+        = render "layouts/shared/language_btns"

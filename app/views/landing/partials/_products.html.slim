@@ -1,0 +1,22 @@
+section#products.container[name="product"]
+  #products-carousel.carousel.slide[data-ride="carousel"]
+    .carousel-inner
+      .row
+        - @products.each_with_index do |product, index|
+          |  <div class='carousel-item col-sm-3 
+          =index == 0 ? 'active' : ''
+          | ' tags='
+          =product.id
+          | '> 
+          = image_pack_tag product.image , class: 'product-img'
+          = render partial: 'shared/product/partials/item_info', locals: {product: product}
+          .events
+            = render partial: 'shared/product/item', locals: {product: product}
+  a.carousel-control-prev[href="#products-carousel" role="button" data-slide="prev"]
+    span.carousel-control-prev-icon[aria-hidden="true"]
+    span.sr-only
+      | Previous
+  a.carousel-control-next[href="#products-carousel" role="button" data-slide="next"]
+    span.carousel-control-next-icon[aria-hidden="true"]
+    span.sr-only
+      | Next
