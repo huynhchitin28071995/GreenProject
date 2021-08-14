@@ -34,7 +34,7 @@ class OrderItem < ApplicationRecord
   def price_sell
     self.order.in_cart? ? self.product.price : self.price
   end
-  
+
 
   private
 

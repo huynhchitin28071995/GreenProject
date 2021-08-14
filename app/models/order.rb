@@ -30,8 +30,16 @@ class Order < ApplicationRecord
   def counter_item
     update(counter: self.order_items.count)
   end
-  
+
   def update_subtotal
     update(subtotal: self.order_items.sum('price * quantity'))
+  end
+
+  def total
+    sum = 0
+    order_items.each do |i|
+      sum += i.quantity * i.price * (1 - (i.product.event&.discount || 0))
+    end
+    sum.to_i
   end
 end

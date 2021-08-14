@@ -9,11 +9,14 @@
       i.fa.fa-envelope-o
       |  Mail Invoice
   .col-xs-6.text-right.pull-right.invoice-total
-    p
-      | Subtotal : $1019
-    p
-      | Fee : $1019
-    p
-      | VAT (10%) : $73 
-    p
-      | Total : $991 
+    p.money
+      | Total : 
+      = @cart.total
+    p.money
+      | Fee : 
+    p.money
+      | VAT (10%) :
+      = @cart.total * @tax_rate
+    p.money
+      | Total :
+      = @cart.total - @cart.total * @tax_rate

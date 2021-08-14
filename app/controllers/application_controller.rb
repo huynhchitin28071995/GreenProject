@@ -2,7 +2,7 @@
 
 class ApplicationController < ActionController::Base
   around_action :set_locale
-  before_action :fetch_languages
+  before_action :fetch_languages, :set_tax_rate
 
   private
   def fetch_languages
@@ -10,9 +10,14 @@ class ApplicationController < ActionController::Base
     # @locale = session[:locale] || I18n.default_locale
     # lay locale tu ApplicationController
   end
+
   def set_locale
     locale = session[:locale] || I18n.default_locale
     I18n.locale = locale
     yield
+  end
+
+  def set_tax_rate
+    @tax_rate = 0.1
   end
 end
