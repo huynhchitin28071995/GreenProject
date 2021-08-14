@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_01_073219) do
+ActiveRecord::Schema.define(version: 2021_08_08_065319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 2021_08_01_073219) do
     t.string "unit"
     t.string "pakage"
     t.bigint "manufacturer_id", null: false
+    t.boolean "hot"
     t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id"
   end
 

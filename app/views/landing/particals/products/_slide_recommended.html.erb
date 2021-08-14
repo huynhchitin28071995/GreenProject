@@ -1,0 +1,28 @@
+
+  <div id="<%= id %>">
+
+  <div class="title"><%=title %></div>
+
+  <div class="splide" id="<%= primary_id %>" data-product-target='primary' data-option='primary'>
+    <div class="splide__track">
+      <ul class="splide__list" >
+        <% @products_recommended.each do |product| %>
+          <li class="splide__slide">
+          <%=link_to product_path(product) do  %>
+            <div class="splide__slide-content" style="border-radius:10px">
+              <img data-splide-lazy=<%=load_image(product)%> alt='sample'>
+            
+              <div class="splide__slide-description w-50 text-white p-2 rounded bg-secondary">
+                <%= product.name.html_safe%>
+              </div>
+            </div>
+          <% end %>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+
+  <%=render partial: 'landing/particals/products/second_slide_recommended',locals:{second_id:second_id} %>
+
+</div>

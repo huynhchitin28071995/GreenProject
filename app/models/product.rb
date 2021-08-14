@@ -4,6 +4,7 @@
 #
 #  id              :bigint           not null, primary key
 #  description     :text
+#  hot             :boolean
 #  name            :string
 #  pakage          :string
 #  price           :integer          default(0)

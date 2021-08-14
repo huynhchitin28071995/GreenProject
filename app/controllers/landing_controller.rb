@@ -12,8 +12,9 @@ class LandingController < ApplicationController
     end
 
     def fetch_product
-      p "testing"
-        @products = Product.all
+        @products_hot = Product.where(hot: true)
+        @products_recommended = Product.all
+        @products_new = Product.all
     end
 
 

@@ -1,7 +1,7 @@
 
     <!-- Open Content -->
 
-    <section class="bg-light product_single">
+    <section class="bg-light product_single" data-controller="cart">
         <div class="container pb-5">
             <div class="row">
                 <div class="col-lg-5 mt-5">
@@ -123,15 +123,15 @@
                             </p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <h6>Brand:</h6>
+                                  <h6>Nhà sản xuất:</h6> 
                                 </li>
                                 <li class="list-inline-item">
-                                    <p class="text-muted"><strong>Easy Wear</strong></p>
+                                    <p class="text-muted"><%= product.manufacturer.name %></p>
                                 </li>
                             </ul>
 
                             <h6>Description:</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.</p>
+                            <p><%= product.description%></p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <h6>Avaliable Color :</h6>
@@ -183,7 +183,7 @@
                                         <button type="submit" class="btn btn-success btn-lg" style=" width:138px;" name="submit" value="buy">Buy</button>
                                     </div>
                                     <div class="col d-grid" style="text-align:center;" >
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Add To Cart</button>
+                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" data-id="<%= product.id%>" data-action="click->cart#add2Cart">Add To Cart</button>
                                     </div> 
                                 </div>
                             </form>

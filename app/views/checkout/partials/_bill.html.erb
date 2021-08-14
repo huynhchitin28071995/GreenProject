@@ -15,5 +15,14 @@
 </div>
 
 <div class="pay">
-this is pay
+  <div class="row">
+    <div class="col">
+      <h5>Thành tiền:</h5> 
+    </div>
+
+    <div class="col">
+      <h6><%= @cart&.subtotal%> <%= I18n.t('money') %></h6>
+    </div>
+  </div>
+
 </div>
