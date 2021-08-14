@@ -1,15 +1,15 @@
 <div class="discount">
 
   <div class="discount_1">
-  this is discount_1
+    <h5>this is discount for dample 1 </h5>
   </div>
 
   <div class="discount_2">
-  this is discount_2
+    <h5>this is discount for sample 2 </h5>
   </div>
 
   <div class="service_fee">
-  this is service_fee
+    <h5>this is service_fee</h5>
   </div>
 
 </div>
@@ -17,10 +17,12 @@
 <div class="pay">
   <div class="row">
     <div class="col">
+      <h5>Tổng sản phẩm:</h5>
       <h5>Thành tiền:</h5> 
     </div>
 
     <div class="col">
+      <h6><%= @cart&.counter%></h6>
       <h6><%= @cart&.subtotal%> <%= I18n.t('money') %></h6>
     </div>
   </div>
