@@ -1,0 +1,57 @@
+section[name="login"]
+  .limiter
+
+    .container-login100
+
+      .wrap-login100.p-l-55.p-r-55.p-t-65.p-b-54
+
+        .login100-form.validate-form
+
+          h2.r_title.p-b-50
+            = I18n.t('title.login')
+
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .wrap-input100.validate-input.m-b-23[data-validate="Username is reauired"]
+
+              .field.m-b-15[style="text-align: left"]
+              = f.label :email, I18n.t('label.email')
+                 br
+              .field-login.field-login-email
+
+                i.fas.fa-user
+                = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "input email"
+            .wrap-input100.validate-input[data-validate="Password is required"]
+
+              .field[style="text-align: left"]
+                = f.label :password, I18n.t('label.pass')
+                br
+              .field-login
+
+                i.fas.fa-lock
+                = f.password_field :password, autocomplete: "current-password",placeholder: "input password"
+            .text-right.forgot-password
+              = link_to "Forgot your password?", new_password_path(resource_name)
+              br
+            .container-login100-form-btn
+
+              .wrap-login100-form-btn
+
+                .login100-form-bgbtn
+                button.login100-form-btn
+                  = f.submit I18n.t('btn.login'),class:'btn'
+            .txt1.text-center.p-t-54.p-b-20
+              span
+                | Or Sign Up Using 
+            .flex-c-m
+
+              a.login100-social-item.bg1[href="#"]
+
+                i.fab.fa-facebook-f
+              a.login100-social-item.bg2[href="#"]
+
+                i.fab.fa-twitter
+              a.login100-social-item.bg3[href="#"]
+
+                i.fab.fa-google
+            = link_to "Sign up", new_registration_path(resource_name),class:"m-t-10"
+

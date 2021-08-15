@@ -1,0 +1,23 @@
+.discount
+  .discount_1
+    h5
+      | this is discount for dample 1 
+  .discount_2
+    h5
+      | this is discount for sample 2 
+  .service_fee
+    h5
+      | this is service_fee
+.pay
+  .row
+    .col
+      h5
+        | Tổng sản phẩm:
+      h5
+        | Thành tiền:
+    .col
+      h6
+        = @cart&.counter
+      h6
+        = @cart&.subtotal
+        = I18n.t('money')

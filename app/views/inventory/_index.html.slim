@@ -1,0 +1,24 @@
+section[name="inventory"]
+  - if user_signed_in?
+    #shop_cart.shopping-cart[data-inventory-target="cart"]
+
+      .shopping-cart-header
+
+        i.fa.fa-shopping-cart.cart-icon
+        span.badge
+          = @cart&.counter
+        .shopping-cart-total
+
+          .total
+            span.lighter-text
+              | Total:
+            span.main-color-text
+              = @cart&.subtotal
+              = I18n.t('money')
+          a#close_cart[href="javascript:void(0)" data-action="click->inventory#closecart keypress->screen#on_keypress"]
+
+            i.fas.fa-times
+      ul.shopping-cart-items
+        = render 'orders/partials/show'
+      button.btn.btn-primary.checkout_btn
+        = link_to ("Checkout"), checkout_path, id:"checkout"

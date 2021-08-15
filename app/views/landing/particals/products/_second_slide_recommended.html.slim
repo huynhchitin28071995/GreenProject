@@ -1,0 +1,13 @@
+
+ .splide[id=second_id style="background-color:wheat; height: 160px"   data-product-target='secondary' data-option="secondary"]
+  .splide__track
+
+    ul.splide__list
+      - @products_recommended.each do |product|
+        li.splide__slide
+
+          .splide__slide-content
+
+            .thumbnail
+              img[data-splide-lazy=load_image(product) alt='sample']
+              

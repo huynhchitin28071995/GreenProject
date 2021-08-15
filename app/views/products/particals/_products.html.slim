@@ -1,0 +1,5 @@
+section[name="product_page"]
+  .row
+    - @products.each do |product|
+      .col-4
+        = render partial: 'products/particals/item', locals: {product: product}

@@ -1,0 +1,34 @@
+section[name="update"]
+  = simple_form_for @profile, url: user_profile_path,
+  -     wrapper: :vertical_form,
+  -     wrapper_mappings: {
+  -       boolean:       :vertical_boolean,
+  -       check_boxes:   :vertical_collection,
+  -       date:          :vertical_multi_select,
+  -       datetime:      :vertical_multi_select,
+  -       file:          :vertical_file,
+  -       radio_buttons: :vertical_collection,
+  -       range:         :vertical_range,
+  -       time:          :vertical_multi_select,
+  -       select:        :vertical_select
+  -     } do |profile|
+  = profile.input :first_name
+  = profile.input :last_name
+  = profile.input :email, input_html: { autocomplete: 'email' }
+  = profile.input :phone
+  .row
+
+  .col-3
+    - if current_user.profile&.avatar&.attached?
+      = image_tag current_user.profile.avatar, class:"avatar rounded-circle", id:"avatar"
+    - else
+      img#avatar.avatar[src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="avatar"]
+  .col-9
+
+  .simple-form-avatar
+    = profile.input :avatar, as: :file, input_html: { accept: User::AVATAR }
+  .simple-form-sexes.fw-bolder
+    = profile.input :sex, as: :radio_buttons, collection: sexes, wrapper: :vertical_collection_inline, label_method: :second, value_method: :second
+  = profile.input :address
+  = profile.input :dob, as: :date, start_year: Date.today.year - 60, end_year:Date.today.year - 10, order: [:day, :month, :year]
+  = profile.button :submit, 'Update profile', class: "btn-primary"

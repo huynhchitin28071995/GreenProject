@@ -1,0 +1,41 @@
+section.ftco-section
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "users/shared/error_messages", resource: resource
+    .container
+      .row.justify-content-center
+        .col-md-6.text-center.mb-5
+          h2.regis.r_title
+            = I18n.t('title.sign_up')
+      .row.justify-content-center
+        .col-md-7.col-lg-5[style="width: 400px;"]
+          .login-wrap
+            .signup-form
+              .form-group.mb-3
+                = f.label :email, I18n.t('label.email')
+                br
+                  .field-login
+
+                    i.fas.fa-user
+                    = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "John Doe"
+              .form-group.mb-3
+                = f.label :password, I18n.t('label.pass')
+                - if @minimum_password_length
+                  em
+                    |(
+                    =@minimum_password_length
+                    |characters minimum)
+                br
+                .field-login
+                  i.fas.fa-lock
+                  = f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "John Doe"
+              .form-group.mb-3
+                = f.label :password_confirmation, I18n.t('label.pass_confirm')
+                br
+                .field-login
+                  i.fas.fa-lock
+                  = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "John Doe"
+              .form-group
+               = f.submit I18n.t('btn.sign_up'),class:'btn btn-primary'
+            p
+              | I'm already a member! 
+              =link_to I18n.t('title.login'),  new_user_session_path , class:'nav-link'

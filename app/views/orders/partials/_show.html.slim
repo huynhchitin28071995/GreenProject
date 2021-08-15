@@ -1,0 +1,4 @@
+section[name="order"]
+  .container
+    - if user_signed_in?
+      = render 'orders/partials/content'

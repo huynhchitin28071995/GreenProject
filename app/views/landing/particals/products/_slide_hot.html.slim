@@ -1,0 +1,13 @@
+div[id=id]
+.title=title
+.splide[id=primary_id data-product-target='primary' data-option='primary']
+  .splide__track
+    ul.splide__list
+      - @products_hot.each do |product|
+        li.splide__slide
+          =link_to product_path(product) do
+            .splide__slide-content[style="border-radius:10px"]
+              img[data-splide-lazy=load_image(product) alt='sample']
+            .splide__slide-description.w-50.text-white.p-2.rounded.bg-secondary
+              = product.name.html_safe
+  =render partial: 'landing/particals/products/second_slide_hot',locals:{second_id:second_id}

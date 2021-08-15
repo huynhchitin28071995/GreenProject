@@ -1,0 +1,30 @@
+.col-sm-3
+  .text-center
+    - if current_user.profile&.avatar&.attached?
+      = image_tag current_user.profile.avatar, class:"avatar", id:"avatar"
+    - else
+      img#avatar.avatar[src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="avatar"]
+  br
+  ul.list-group
+    li.list-group-item.text-muted
+      | Hoạt động 
+      i.fa.fa-dashboard.fa-1x
+    li.list-group-item.text-right
+      span.pull-left[style="float: left"]
+        strong
+          | Cấp bậc thân thiết: 
+      |  125
+    li.list-group-item.text-right
+      span.pull-left[style="float: left"]
+        strong
+          | Số đơn đã mua: 
+      |  13
+  .panel.panel-default
+    .panel-heading[style="margin-top:10px"]
+      | Social Media
+    .panel-body
+      i.fa.fa-facebook.fa-2x
+      i.fa.fa-github.fa-2x
+      i.fa.fa-twitter.fa-2x
+      i.fa.fa-pinterest.fa-2x
+      i.fa.fa-google-plus.fa-2x

@@ -1,0 +1,14 @@
+.product-info
+  .name.p-1.text-center.text-wrap.text-capitalize.font-weight-bolder.text-monospace
+    = info.name
+  .nxs.p-1.text-left.text-wrap.text-capitalize.text-primary
+    = info.nxs
+  .price.ml-2.text-primary
+    |  <div class="price-origin d-inline-block 
+    - info.events[:discount] ? 'discount': ''
+    | " style='font-size:0.5em'> 
+    = info.price
+  .price-discount.d-inline-block.text-danger
+    = discount(info)
+.npp.p-1.border-top.text-left.text-wrap.text-capitalize.text-info
+  = info.npp
