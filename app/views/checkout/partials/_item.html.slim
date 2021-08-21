@@ -9,11 +9,10 @@
       =I18n.t('money')
     #check_quantity.order_item.col-3
 
-  .row
-    .quantity
-      .col.grab#rem_item[data-action="click->inventory#remItem" data-id=item.id]
-        i.fas.fa-minus 
-      .col
-        =item.quantity 
-      .col.grab#add_item[data-action="click->inventory#addItem" data-id=item.id]
-        i.fas.fa-plus
+      .row.quantity
+        .col.grab#rem_item[data-action="click->inventory#remItem" data-id=item.id]
+          i.fas.fa-minus 
+        .col
+          =item.quantity 
+        .col.grab#add_item[data-action="click->inventory#addItem" data-id=item.id]
+          i.fas.fa-plus

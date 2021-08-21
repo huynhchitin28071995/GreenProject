@@ -22,8 +22,7 @@ header[data-controller="scroll"]
         li.nav-item.active
           = link_to I18n.t('menus.home'), root_path, class:"nav-link"
         li.nav-item
-          a.nav-link[href="#"]
-            |  About 
+          = link_to "Product",products_path , class:"nav-link"
         li.nav-item
           a.nav-link[href="#"]
             |  Services 

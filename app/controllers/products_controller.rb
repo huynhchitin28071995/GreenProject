@@ -5,8 +5,10 @@ class ProductsController < ApplicationController
 
   def show
     @product=Product.find_by(id:params[:id])
+    if @cart
+      @item=@cart.order_items.find_by(product_id: params[:id])
+    end
   end
-
   private
   def fetch_product
 

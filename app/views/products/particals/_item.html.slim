@@ -1,11 +1,8 @@
-.product_item[data-controller="cart
-"]
+.product_item[data-controller="cart"]
   .card.mb-4.product-wap.rounded-0
     .card.rounded-0
       .product_img
-        |  <img src=
-        =load_image(product)
-        |  alt='sample'> 
+        img[src=load_image(product) alt='sample']
     .card-body
       .left_des[style="float:left"]
         =link_to product_path(product) do
@@ -35,17 +32,13 @@
         .rounded-0.product-overlay.d-flex.align-items-center.justify-content-center
           ul.list-unstyled
             li
-              |  <button class="btn btn-success text-white mt-2" data-id="
-              = product.id
-              | " data-action= "click->cart#add2Cart"> 
-              i.btn-success.text-white.mt-2.fas.fa-cart-plus
+              button.btn.btn-success.text-white.mt-2[data-id=product.id data-action="click->cart#add2Cart"] 
+                i.btn-success.text-white.mt-2.fas.fa-cart-plus
             li
               =link_to product_path(product) do
                 button.btn.btn-success.text-white.mt-2
-
-                i.btn-success.text-white.mt-2.fas.fa-eye
+                  i.btn-success.text-white.mt-2.fas.fa-eye
             li
               =link_to product_path(product) do
                 button.btn.btn-success.text-white.mt-2
-
-                i.btn-success.text-white.mt-2.fas.fa-heart
+                  i.btn-success.text-white.mt-2.fas.fa-heart

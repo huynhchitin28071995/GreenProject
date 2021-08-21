@@ -1,188 +1,152 @@
-section.bg-light.product_single[data-controller="cart"]
+section.bg-light.product_single[data-controller="cart inventory"]
   .container.pb-5
+    .row
+      .col-lg-5
+        .row 
+          .col.mt-5
+            .card.mb-3
+              .single_title_img
+                img[src=load_image(product) alt='sample']
+        .row
+          .col-1.align-self-center
+            a[href="#multi-item-example" role="button" data-bs-slide="prev"]
+              i.text-dark.fas.fa-chevron-left
+          .col-10#multi-item-example.carousel.slide.carousel-multi-item[data-bs-ride="carousel"]
+            .carousel-inner.product-links-wap[role="listbox"]
+              .carousel-item.active
+                .row
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+              .carousel-item
+                .row
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+              .carousel-item
+                .row
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+                  .col-4
+                    .single_img 
+                      img[src=load_image(product) alt='sample']
+      
+          .col-1.align-self-center
+            a[href="#multi-item-example" role="button" data-bs-slide="next"]
+              i.text-dark.fas.fa-chevron-right
+      
+      .col-lg-7.mt-5
+        .card
+          .card-body
+            h1.h2
+              = product.name
+            p.h3.py-2
+              | $ 
+              = product.price
+              | .00 
+            p.py-2
+              i.fa.fa-star.text-warning
+              i.fa.fa-star.text-warning
+              i.fa.fa-star.text-warning
+              i.fa.fa-star.text-warning
+              i.fa.fa-star.text-secondary
+            span.list-inline-item.text-dark
+              | Rating 4.8 | 36 Comments
+            ul.list-inline
+              li.list-inline-item
+                h6
+                  | Nhà sản xuất:
+              li.list-inline-item
+                p.text-muted
+                  = product.manufacturer.name
+            ul.list-inline
+              li.list-inline-item
+                h6
+                  | Description:
+              li.list-inline-item
+                p
+                  = product.description
+            ul.list-inline
+              li.list-inline-item
+                h6
+                  | Avaliable Color :
+              li.list-inline-item 
+                p.text-muted
+                  strong
+                    | White / Black
+            h6
+              | Specification:
+            ul.list-unstyled.pb-3
+              li
+                | Lorem ipsum dolor sit
+              li
+                | Amet, consectetur
+              li
+                | Adipiscing elit,set
+              li
+                | Duis aute irure
+              li
+                | Ut enim ad minim
+              li
+                | Dolore magna aliqua
+              li
+                | Excepteur sint
+            form[action="" method="GET"]
+              input[type="hidden" name="product-title" value="Activewear"]
+                .row
+                  .col-auto
+                    ul.list-inline.pb-3
+                      li.list-inline-item
+                        | Size : 
+                      li.list-inline-item
+                        input#product-size[type="hidden" name="product-size" value="S"]
+                          li.list-inline-item
+                            span.btn.btn-success.btn-size
+                              | S
+                          li.list-inline-item
+                            span.btn.btn-success.btn-size
+                              | M
+                          li.list-inline-item
+                            span.btn.btn-success.btn-size
+                              | L
+                          li.list-inline-item
+                            span.btn.btn-success.btn-size
+                              | XL
+                  .col-auto
+                      ul.list-inline.pb-3
+                        li.list-inline-item.text-right
+                          |  Quantity 
+                        input#product-quanity[type="hidden" name="product-quanity" value="1"]
+                          li.list-inline-item
+                            button#btn-minus.btn.btn-success[data-action="click->inventory#remItem" data-id=@item&.id]
+                              | -
+                          li.list-inline-item
+                              = @item&.quantity 
+                          li.list-inline-item
+                            button#btn-plus.btn.btn-success[data-action="click->inventory#addItem" data-id=@item&.id]
+                              | +
+                .row.pb-3
+                  .col.d-grid[style="text-align:center;"]
+                    =link_to checkout_path do
+                      button.btn.btn-success.btn-lg[type="submit" style=" width:138px;" name="submit" value="buy"]
+                        | Buy
 
-  .row
-
-  .col-lg-5.mt-5
-
-  .card.mb-3
-    |  <div class:'single_title_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .row
-
-  .col-1.align-self-center
-
-  a[href="#multi-item-example" role="button" data-bs-slide="prev"]
-
-  i.text-dark.fas.fa-chevron-left
-  span.sr-only
-    | Previous
-  #multi-item-example.col-10.carousel.slide.carousel-multi-item[data-bs-ride="carousel"]
-
-  .carousel-inner.product-links-wap[role="listbox"]
-
-  .carousel-item.active
-
-  .row
-
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .carousel-item
-
-  .row
-
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .carousel-item
-
-  .row
-
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .col-4
-    |  <div class:'single_img'> <img src=
-    =load_image(product)
-    |  alt='sample'> 
-  .col-1.align-self-center
-
-  a[href="#multi-item-example" role="button" data-bs-slide="next"]
-
-  i.text-dark.fas.fa-chevron-right
-  span.sr-only
-    | Next
-  .col-lg-7.mt-5
-
-  .card
-
-  .card-body
-
-  h1.h2
-    = product.name
-  p.h3.py-2
-    | $ 
-    = product.price
-    | .00 
-  p.py-2
-
-  i.fa.fa-star.text-warning
-  i.fa.fa-star.text-warning
-  i.fa.fa-star.text-warning
-  i.fa.fa-star.text-warning
-  i.fa.fa-star.text-secondary
-  span.list-inline-item.text-dark
-    | Rating 4.8 | 36 Comments
-  ul.list-inline
-    li.list-inline-item
-
-  h6
-    | Nhà sản xuất:
-  li.list-inline-item
-
-  p.text-muted
-    = product.manufacturer.name
-  h6
-    | Description:
-  p
-    = product.description
-  ul.list-inline
-    li.list-inline-item
-
-  h6
-    | Avaliable Color :
-  li.list-inline-item
-
-  p.text-muted
-    strong
-      | White / Black
-  h6
-    | Specification:
-  ul.list-unstyled.pb-3
-    li
-      | Lorem ipsum dolor sit
-    li
-      | Amet, consectetur
-    li
-      | Adipiscing elit,set
-    li
-      | Duis aute irure
-    li
-      | Ut enim ad minim
-    li
-      | Dolore magna aliqua
-    li
-      | Excepteur sint
-  form[action="" method="GET"]
-
-  input[type="hidden" name="product-title" value="Activewear"]
-  .row
-
-  .col-auto
-
-  ul.list-inline.pb-3
-    li.list-inline-item
-      | Size : 
-  input#product-size[type="hidden" name="product-size" value="S"]
-  li.list-inline-item
-    span.btn.btn-success.btn-size
-      | S
-  li.list-inline-item
-    span.btn.btn-success.btn-size
-      | M
-  li.list-inline-item
-    span.btn.btn-success.btn-size
-      | L
-  li.list-inline-item
-    span.btn.btn-success.btn-size
-      | XL
-  .col-auto
-
-  ul.list-inline.pb-3
-    li.list-inline-item.text-right
-      |  Quantity 
-  input#product-quanity[type="hidden" name="product-quanity" value="1"]
-  li.list-inline-item
-    span#btn-minus.btn.btn-success
-      | -
-  li.list-inline-item
-    span#var-value.badge.bg-secondary
-      | 1
-  li.list-inline-item
-    span#btn-plus.btn.btn-success
-      | +
-  .row.pb-3
-
-  .col.d-grid[style="text-align:center;"]
-
-  button.btn.btn-success.btn-lg[type="submit" style=" width:138px;" name="submit" value="buy"]
-    | Buy
-  .col.d-grid[style="text-align:center;"]
-    |  <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" data-id="
-    = product.id
-    | " data-action="click->cart#add2Cart">Add To Cart
+                  .col.d-grid[style="text-align:center;"]
+                    button[type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" data-id=product.id data-action="click->cart#add2Cart"]
+                      | Add To Cart

@@ -1,41 +1,40 @@
 .col-sm-9
   ul.nav.nav-tabs
+    .tab-contents[style="margin-top:5px"]
+      #home.tab-pane.active
+        ul.details
+          li#name
+            p
+              span[style="color:green; font-size: 24px"]
+                | Họ và tên: 
+              =@profile.full_name
+          li#email
+            p
+              span[style="color:green; font-size: 24px"]
+                | Email: 
+              =@profile.email
+          li#phone
+            p
+              span[style="color:green; font-size: 24px"]
+                | Số điện thoại: 
+              =@profile.phone
+          li#gender
+            p
+              span[style="color:green; font-size: 24px"]
+                | Giới tính: 
+              =@profile.sex
+          li#address
+            p
+              span[style="color:green; font-size: 24px"]
+                | Địa chỉ: 
+              =@profile.address
+          li#dob
+            p
+              span[style="color:green; font-size: 24px"]
+                | Ngày sinh: 
+              =@profile.dob
+          li
+            =link_to "Update Profile", edit_user_profile_path, class:"btn btn-warning"
+      #messages.tab-pane
 
-  .tab-contents[style="margin-top:5px"]
-    #home.tab-pane.active
-      ul.details
-        li#name
-          p
-            span[style="color:green; font-size: 24px"]
-              | Họ và tên:
-            =@profile.full_name
-        li#email
-          p
-            span[style="color:green; font-size: 24px"]
-              | Email:
-            =@profile.email
-        li#phone
-          p
-            span[style="color:green; font-size: 24px"]
-              | Số điện thoại:
-            =@profile.phone
-        li#gender
-          p
-            span[style="color:green; font-size: 24px"]
-              | Giới tính:
-            =@profile.sex
-        li#address
-          p
-            span[style="color:green; font-size: 24px"]
-              | Địa chỉ:
-            =@profile.address
-        li#dob
-          p
-            span[style="color:green; font-size: 24px"]
-              | Ngày sinh:
-            =@profile.dob
-        li
-          =link_to "Update Profile", edit_user_profile_path, class:"btn btn-warning"
-    #messages.tab-pane
-
-    #settings.tab-pane
+      #settings.tab-pane
