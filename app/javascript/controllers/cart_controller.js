@@ -71,6 +71,7 @@ export default class extends ApplicationController {
   //   element.innerText = '\nNow, the cleanup can begin!'
   // }
   add2Cart(event) {
+    console.log(event.currentTarget);
     let id = event.currentTarget.getAttribute("data-id");
     this.stimulate("CartReflex#add_to_cart", id);
   }

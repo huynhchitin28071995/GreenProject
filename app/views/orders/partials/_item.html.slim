@@ -9,9 +9,9 @@
       = I18n.t('money')
     .order_item.col-3
       .row.quantity
-        .col.grab#rem_item[data-action="click->inventory#remItem" data-id=item.id]
+        .col-1.grab#rem_item[data-action="click->inventory#remItem" data-id=item.id]
           i.fas.fa-minus
-        .col
+        .col-1
           = item.quantity
-        .col.grab#add_item[data-action="click->inventory#addItem" data-id=item.id]
+        .col-1.grab#add_item[data-action="click->inventory#addItem" data-id=item.id]
           i.fas.fa-plus
