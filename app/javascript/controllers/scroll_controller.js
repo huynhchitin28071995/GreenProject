@@ -15,13 +15,12 @@ export default class extends Controller {
 
   init() {
     let self = this;
-    self.navbarWillFixed();
+    self.navbarWillFixed(window.scrollY);
     window.addEventListener("scroll", function () {
-      self.navbarWillFixed();
+      self.navbarWillFixed(window.scrollY);
     });
   }
-  navbarWillFixed() {
-    let scrollY = window.scrollY;
+  navbarWillFixed(scrollY) {
     let id = this.scrollTarget.getAttribute("id");
     let classes = document.querySelector(`#${id}`).classList;
     if (scrollY >= 120) {

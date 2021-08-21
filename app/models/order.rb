@@ -23,5 +23,8 @@ class Order < ApplicationRecord
   def update_subtotal
     update(subtotal: self.order_items.sum('price * quantity'))
   end
+  def items
+    self.order_items.order(created_at: :desc)
+  end
 
 end
