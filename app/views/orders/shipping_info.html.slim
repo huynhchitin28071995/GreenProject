@@ -1,0 +1,5 @@
+.container
+    = simple_form_for(@shipping_info, url: user_add_shipping_info_path, method: :post) do |si|
+        = si.input :address
+        = si.input :phone
+    

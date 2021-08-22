@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :users, only: [] do
     resource :profile, controller: :profile
     resources :orders
+    get 'shipping_info', controller: :orders
+    post 'add_shipping_info', controller: :orders
  end
  get 'checkout/:id', controller: :orders, action: :checkout, as: :checkout
 end

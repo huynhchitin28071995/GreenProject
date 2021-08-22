@@ -26,8 +26,7 @@
       | Email: 
       = @current_user.email
     button.btn.btn-primary.text-uppercase
-      | 
-      = I18n.t('order.edit')
+      = link_to I18n.t('order.edit'), user_shipping_info_path(@current_user)
   .col-4.text-right.payment-details.pr-5
     p.lead.marginbottom.payment-info
       | Payment details

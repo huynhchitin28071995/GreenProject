@@ -7,6 +7,10 @@ class OrdersController < ApplicationController
     @current_user = current_user
   end
 
+  def shipping_info
+    @shipping_info = current_user.shipping_infos.new 
+  end
+
   def show
     @cart = Order.find_by(id: params[:id])
   end
