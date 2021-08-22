@@ -16,6 +16,8 @@ Trestle.resource(:profiles) do
                                src: preload_image)
       end.html_safe
     end
+    column :user
+    column :address
     column :first_name
     column :last_name
     column :phone
@@ -29,9 +31,12 @@ Trestle.resource(:profiles) do
   form do |profile|
     text_field :first_name
     text_field :last_name
+    text_field :address
+    text_field :phone
     active_storage_field :avatar
     date_field :dob
     select :sex, Profile::sexes.keys
+    select :user_id, User.all.map { |user| [user.email.humanize, user.id]}
   end
 
   # By default, all parameters passed to the update and create actions will be

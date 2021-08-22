@@ -2,9 +2,14 @@
 
 class ApplicationController < ActionController::Base
   around_action :set_locale
-  before_action :fetch_languages, :set_tax_rate
+  before_action :fetch_languages, :set_tax_rate, :shop_info
 
   private
+
+  def shop_info
+    @shop = Shop.new
+  end
+
   def fetch_languages
     @languages = [{ value: 'Tiếng Việt', id: :vi }, { value: 'English', id: :en }].map { |l| OpenStruct.new(l) }
     # @locale = session[:locale] || I18n.default_locale

@@ -1,7 +1,10 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :fetch_user
 
-  def index
+  def index; end
+
+  def fetch_user
+    @current_user = current_user
   end
 
   def show
@@ -11,5 +14,4 @@ class OrdersController < ApplicationController
   def checkout
     @cart = Order.find_by(id: params[:id])
   end
-  
 end

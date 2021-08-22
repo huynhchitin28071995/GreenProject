@@ -6,7 +6,7 @@
 #  counter     :integer          default(0)
 #  description :string
 #  destination :string
-#  status      :integer          default(0)
+#  status      :integer          default("in_cart")
 #  subtotal    :float            default(0.0)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null

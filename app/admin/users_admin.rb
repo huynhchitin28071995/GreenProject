@@ -15,6 +15,7 @@ Trestle.resource(:users) do
   #
   form do |user|
     text_field :email
+    text_field :owner
     password_field :password
     password_field :password_confirmation
   
