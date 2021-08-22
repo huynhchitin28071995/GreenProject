@@ -1,15 +1,9 @@
 .row.d-flex.justify-content-around
-  .col-xs-6.margintop
-    p.lead.marginbottom
-      | THANK YOU!
-    button#invoice-print.btn.btn-success
-      i.fa.fa-print
-      |  Print Invoice
-    button.btn.btn-danger
-      i.fa.fa-envelope-o
-      |  Mail Invoice
-  .col-xs-6.text-right.pull-right.invoice-total
-    .row 
+  .col-8.margintop
+  .col-4.text-right.pull-right.invoice-total.pr-5
+    p.lead.marginbottom.payment-info
+      | Payment details
+    .row
       .col-6
         p
           = I18n.t('order.total') 
@@ -34,3 +28,20 @@
           |  :
       .col-6.money
         = number_with_delimiter(@cart.total + @cart.total * @tax_rate, delimiter: ',')
+hr
+.row
+  .col-4
+  .col-8
+    #buttons.d-flex.justify-content-end
+      button#invoice-print.btn.btn-success.m-1.text-uppercase
+        i#print-invoice.fa.fa-print
+      button.btn.btn-danger.m-1.text-uppercase
+        i#email-invoice.fas.fa-envelope-square
+      button#btn-confirm.btn.btn-primary.text-uppercase.m-1
+        i#confirm.far.fa-check-square.align-top
+        span.align-top
+          |  confirm
+hr
+.float-right 
+  p.text-uppercase.font-weight-bold
+    | thank you!

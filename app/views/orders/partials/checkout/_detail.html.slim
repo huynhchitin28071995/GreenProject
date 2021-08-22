@@ -11,9 +11,9 @@ tbody
       td.text-right
         =item.quantity
       td.text-right.money
-        =item.price_sell
+        =number_with_delimiter(item.price_sell, delimiter: ',')
       - if item.product.event&.discount
         td.text-right.money
-          =item.product.event&.discount&.* item.price_sell.to_i
+          =number_with_delimiter((item.product.event&.discount&.* item.price_sell.to_i), delimiter: ',')
       - else
         td.text-right
