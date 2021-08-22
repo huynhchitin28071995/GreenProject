@@ -85,3 +85,5 @@ gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 gem "simple_form", "~> 5.1"
 
 gem "slim-rails", "~> 3.3"
+
+gem "active_decorator", "~> 1.4"

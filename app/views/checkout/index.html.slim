@@ -8,3 +8,10 @@ section[name="checkout"]
         .col-4.bill
           = render 'checkout/partials/bill'
         .col
+  - else
+    h2 
+      | Bạn cần 
+      = link_to "Đăng nhập", new_user_session_path, style:"text-decoration:none"
+    h2
+      | Hoặc 
+      = link_to "Đăng kí", new_user_registration_path, style:"text-decoration:none"
