@@ -1,6 +1,6 @@
 .invoice-ribbon
   .ribbon-inner
-    =@cart.status
+    = I18n.t('order.' + @cart.status)
 .row.d-flex.justify-content-around
   .col-sm-6.top-left.text-center
     i.fa.fa-rocket

@@ -12,6 +12,7 @@ vi:
     signup: Đăng Ký
     logout: Đăng Xuất
     signout: Đăng Xuất
+    add_to_cart: Thêm Vào Giỏ Hàng
   label:
     email: Địa Chỉ Mail
     password: Mật Khẩu
@@ -34,3 +35,12 @@ vi:
   product:
     manufacturer: Nhà sản xuất
     description: Mô tả sản phẩm
+  order:
+    in_cart: Trong giỏ hàng
+    total: Thành tiền
+    fee: Chi phí vận chuyển
+    all: Tổng cộng
+    item: Sản Phẩm
+    quantity: Số Lượng
+    price: Đơn Giá
+    discount: Chiết khấu

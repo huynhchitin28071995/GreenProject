@@ -9,14 +9,28 @@
       i.fa.fa-envelope-o
       |  Mail Invoice
   .col-xs-6.text-right.pull-right.invoice-total
-    p.money
-      | Total : 
-      = @cart.total
-    p.money
-      | Fee : 
-    p.money
-      | VAT (10%) :
-      = @cart.total * @tax_rate
-    p.money
-      | Total :
-      = @cart.total - @cart.total * @tax_rate
+    .row 
+      .col-6
+        p
+          = I18n.t('order.total') 
+          |  :
+      .col-6.money
+        = number_with_delimiter(@cart.total, delimiter: ',')
+      .col-6
+        p
+          = I18n.t('order.fee') 
+          |  : 
+      .col-6.money
+      .col-6
+        p.
+          | VAT (
+          = (@tax_rate * 100).to_i
+          |%) :
+      .col-6.money
+        = number_with_delimiter(@cart.total * @tax_rate, delimiter: ',')
+      .col-6
+        p.
+          = I18n.t('order.all') 
+          |  :
+      .col-6.money
+        = number_with_delimiter(@cart.total + @cart.total * @tax_rate, delimiter: ',')

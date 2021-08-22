@@ -9,15 +9,15 @@
             table.table.table-striped
               thead
                 tr
-                  th.text-center[style="width:15%"]
+                  th.text-center[style="width:5%"]
                     | #
-                  th[style="width:45%"]
-                    | Item
+                  th[style="width:55%"]
+                    = I18n.t('order.item')
                   th.text-right[style="width:10%"]
-                    | Quantity
+                    = I18n.t('order.quantity')
                   th.text-right[style="width:10%"]
-                    | Unit Price
+                    = I18n.t('order.price')
                   th.text-right[style="width:10%"]
-                    | Discount
+                    = I18n.t('order.discount')
               = render './orders/partials/checkout/detail'
           = render './orders/partials/checkout/total'

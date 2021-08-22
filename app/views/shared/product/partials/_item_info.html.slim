@@ -8,6 +8,5 @@
     =product.name
   p.card-text
     =product.description
-  |  <button class="btn btn-dark" data-action='click->cart#add2Cart' data-id=
-  =product.id
-  | >ADD TO CART
+    button.btn.btn-dark data-action='click->cart#add2Cart' data-id=product.id
+      = I18n.t('btn.add_to_cart')

@@ -9,17 +9,15 @@ export default class extends Controller {
         perPage: '3',
         focus: 'center',
         visible: true,
-        arrows: false,
+        arrows: true,
         pagination: {
             size: '1em',
         }
     };
     connect() {
         this.initSplide();
-        console.log(`connect splide from related product splide!`);
     }
     initSplide() {
-        console.log(`init splide from related product splide!`);
         let id = this.splideTarget.getAttribute('id');
         let relateProducts = new Splide(`#${id}`, this.options);
         console.log(id);

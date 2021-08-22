@@ -12,6 +12,7 @@ en:
     signup: Sign Up
     logout: Log Out
     signout: Log Out
+    add_to_cart: Add To Cart
   label:
     email: Email
     password: Password
@@ -36,3 +37,10 @@ en:
     description: Description
   order:
     in_cart: Confirming
+    total: Total
+    fee: Fee
+    all: Total + Tax
+    item: Item
+    quantity: Quantity
+    price: Unit Price
+    discount: Discount

@@ -7,11 +7,11 @@ ul.list-inline
     p.text-muted
       strong
         =@product.manufacturer.name
-h6
-  =I18n.t('product.description')
-  | :
-p
-  =@product.description
+    h6
+      =I18n.t('product.description')
+      | :
+    p
+      =@product.description
 ul.list-inline
   li.list-inline-item
     h6
@@ -20,8 +20,8 @@ ul.list-inline
     p.text-muted
       strong
         | White / Black
-h6
-  | Specification:
+    h6
+      | Specification:
 ul.list-unstyled.pb-3
   li
     | Not defined yet
