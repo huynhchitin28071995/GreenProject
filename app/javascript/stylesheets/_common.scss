@@ -85,6 +85,27 @@ section {
   position: relative;
   padding: 30px;
 
+  &[name="last_step"] {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: -61%;
+    right: 293%;
+    background-color: white;
+    border-radius: 8px;
+
+    display: none !important;
+    z-index: 999;
+    padding: 0;
+    &.show {
+      display: block !important;
+    }
+
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+  }
   &[name="order"] {
     padding: 0px !important;
   }

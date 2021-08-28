@@ -10,14 +10,18 @@
       | this is service_fee
 .pay
   .row
-    .col
+    .col-5
       h5
         | Tổng sản phẩm:
       h5
         | Thành tiền:
-    .col
+    .col-4
       h6
         = @cart&.counter
       h6
         = @cart&.subtotal
         = I18n.t('money')
+    .col-3[data-controller="last_step"]
+      button.btn.btn-secondary[data-action="click->last_step#open"]
+        |  Pay 
+      =render 'last_step/last_step'

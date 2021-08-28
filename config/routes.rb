@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   }
   root to: 'landing#index'
   get '/inventory', controller: :inventory, action: :index
+  get '/last_step', controller: :last_step, action: :last_step
   get '/orders', controller: :orders, action: :index
   get '/checkout', controller: :checkout, action: :index
   
