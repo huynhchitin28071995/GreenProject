@@ -27,4 +27,10 @@ class Profile < ApplicationRecord
     "#{self.first_name} #{self.last_name}" 
   end
 
+  def thumbnail
+    if self.avatar.attached?
+      return url_for(self.avatar)
+    end
+  end
+
 end

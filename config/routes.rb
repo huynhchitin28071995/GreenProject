@@ -19,5 +19,13 @@ Rails.application.routes.draw do
     resources :orders
  end
 
+ mount ActionCable.server => '/cable'
+ resources :users, only: [] do
+   resource :profile, controller: :profile
+   resources :orders
+   get 'shipping_info', controller: :orders
+   post 'add_shipping_info', controller: :orders
+end
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
